@@ -20,7 +20,7 @@ Daily workflows bump `hellen-one` and `kicad6-libraries` submodule pointers.
 - `revision.txt`: `BOARD_PREFIX` + `BOARD_SUFFIX` must equal the KiCad basename (`micro` + `core` → `microcore`).
 - `bom_replace_${PREFIX}${SUFFIX}-${REVISION}.csv` → `bom_replace_microcore-a.csv`.
 - **`aux_axis_origin` required** in the PCB (drill/place origin).
-- Origin at **bottom-left**; **no negative coordinates** (hellen-one parser limitation).
+- Origin at **bottom-left** in KiCad Y-down (`aux_axis_origin 0 60` for 90×60 board); **no negative place coordinates** after drill-origin export (hellen-one/gerbmerge limitation).
 - Default branch must be **`main`** or CI will not push fab results.
 
 ## Intended Hellen modules (from SPEC)

@@ -9,7 +9,7 @@ On push to default branch `main`, `.github/workflows/create-board.yaml` calls `a
 1. Checkout with submodules
 2. Install KiCad 10
 3. `hellen-one/kicad/bin/export.sh` — gerbers, drill, pos, BOM, schematic PDF, VRML from `microcore.kicad_pcb` / `microcore.kicad_sch`
-4. Docker build + gerber merge into `boards/microcore-a/`
+4. Docker build + gerber merge into `boards/microcore-b/`
 5. Commit/push fab outputs when on `main`
 
 Daily workflows bump `hellen-one` and `kicad6-libraries` submodule pointers.
@@ -25,7 +25,7 @@ Daily workflows bump `hellen-one` and `kicad6-libraries` submodule pointers.
 
 ## Intended Hellen modules (from SPEC)
 
-MCU F4 (`modules/mcu`), input lite (1× VR + Hall + analog — `input` / `vr-discrete` / related), 4-ch injectors (frame + discrete or `output`), 4-ch 5 V ign (`ign8` or discrete), 3× LS, power (`power_12and5V` or `power5`+`power12`). Place module footprints from `hellen-one/modules/...` via `fp-lib-table`.
+Locked modules-v1: `mega-mcu100/0.3` (Value `Module:mega-mcu100/0.3`), `power_12and5V/0.3`, `vr-discrete/0.5`, TE `776231-1`; frame sheets INJ4/LS3/ANALOG/HALL with DPAKs. Skip mcu/0.7, output/0.3, input/0.1, wbo, knock, motor-driver, ign8, optional can.
 
 ## Firmware
 

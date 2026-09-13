@@ -1,0 +1,163 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "de8988db-b3b5-44d4-8ca1-88c5251472f1")
+	(paper "A4")
+	(title_block
+		(title "ANALOG")
+		(date "2026-09-13")
+		(rev "B")
+		(company "Core EFI")
+	)
+	(lib_symbols
+	)
+	(hierarchical_label "TPS"
+		(shape bidirectional)
+		(at 50.8 30.48 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bec5ad02-247f-47df-b9b6-9e7ab180bb7e")
+	)
+	(hierarchical_label "MCU_TPS"
+		(shape output)
+		(at 150 30.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cb0492c9-23c9-4b3d-934b-7974a4ad8cbc")
+	)
+	(hierarchical_label "MAP"
+		(shape bidirectional)
+		(at 50.8 40.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "12ad7311-c766-498b-8fd5-2dddab866613")
+	)
+	(hierarchical_label "MCU_MAP"
+		(shape output)
+		(at 150 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2db4f77c-0b4d-4a51-83df-ba081d8c26ab")
+	)
+	(hierarchical_label "CLT"
+		(shape bidirectional)
+		(at 50.8 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1a4940cc-8142-42e5-9214-1ea696f511c0")
+	)
+	(hierarchical_label "MCU_CLT"
+		(shape output)
+		(at 150 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dccff112-d633-4246-b0fc-fa6b7724fc5b")
+	)
+	(hierarchical_label "IAT"
+		(shape bidirectional)
+		(at 50.8 60.959999999999994 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e47dee28-a372-4528-9509-b87bbd1b9876")
+	)
+	(hierarchical_label "MCU_IAT"
+		(shape output)
+		(at 150 60.959999999999994 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e93f901e-a9b3-4159-a937-0d31b8019f14")
+	)
+	(hierarchical_label "AN1"
+		(shape bidirectional)
+		(at 50.8 71.11999999999999 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1cb0fda4-3f85-429a-8583-579741245fd1")
+	)
+	(hierarchical_label "MCU_AN1"
+		(shape output)
+		(at 150 71.11999999999999 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "00619c4b-26a1-454d-9372-d47e58349651")
+	)
+	(hierarchical_label "AN2"
+		(shape bidirectional)
+		(at 50.8 81.27999999999999 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "99837e46-817e-4290-83a6-a35c023f6534")
+	)
+	(hierarchical_label "MCU_AN2"
+		(shape output)
+		(at 150 81.27999999999999 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bcff5667-4ec4-4d7e-89bc-d4e96ce0b9e9")
+	)
+	(text "ANALOG input conditioning stub\nPull-ups / dividers / ESD TBD — passthrough hierarchy for pin map"
+		(at 25.4 15.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "58a93077-7f78-43ff-9155-00092dc4bdd2")
+	)
+	(sheet_instances
+		(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/de8988db-b3b5-44d4-8ca1-88c5251472f1"
+			(page "4")
+		)
+	)
+	(embedded_fonts no)
+)

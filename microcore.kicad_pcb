@@ -106,4 +106,27 @@
 			(justify left bottom)
 		)
 	)
+	(gr_poly
+		(pts
+			(xy 5 5)
+			(xy 85 5)
+			(xy 85 55)
+			(xy 5 55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill solid)
+		(layer "F.Cu")
+		(uuid "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee3")
+	)
+	(via
+		(at 10 10)
+		(size 0.8)
+		(drill 0.4)
+		(layers "F.Cu" "B.Cu")
+		(net 0)
+		(uuid "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeee4")
+	)
 )

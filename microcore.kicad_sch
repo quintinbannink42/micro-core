@@ -1,0 +1,34 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "e5f937c4-5465-42e7-ab18-1bebc49ea2c9")
+	(paper "A4")
+	(title_block
+		(title "Micro Core")
+		(date "2026-09-13")
+		(rev "A")
+		(company "Core EFI")
+		(comment 1 "Hellen-One frame scaffolding — place modules before Create Board fab")
+		(comment 2 "Firmware board: coreefi_micro")
+		(comment 3 "PCB basename: microcore (no dashes/underscores)")
+	)
+	(lib_symbols)
+	(text "Micro Core frame scaffold\nPlace Hellen modules: MCU F4, input lite,\n4-ch inj, 4-ch 5V ign, 3x LS, power\nTE 776231-1 vertical AMPSEAL 35"
+		(exclude_from_sim no)
+		(at 50.8 50.8 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left bottom)
+		)
+		(uuid "a0be82f1-70d9-400c-9eb2-bba2314ddf12")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

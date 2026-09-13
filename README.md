@@ -6,7 +6,7 @@ Core EFI Hellen-One rusEFI ECU. Microsquirt-class sealed box, 35-way AMPSEAL, **
 
 ## Status
 
-Spec freeze in progress. No gerbers yet.
+Spec freeze in progress. Hellen Create Board scaffolding imported (`hellen-import` branch). Frame PCB/schematic are placeholders until modules are placed.
 
 - Header: TE **776231-1** (straight / vertical)
 - Plug: TE **776164-1** black, key A
@@ -16,7 +16,17 @@ Spec freeze in progress. No gerbers yet.
 
 See [docs/SPEC.md](docs/SPEC.md).
 
+Hellen tips: [docs/HELLEN-FAQ.md](docs/HELLEN-FAQ.md).
+
 Firmware board name: `coreefi_micro`.
+
+KiCad board basename: `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`, rev `a`).
+
+## Hellen tooling
+
+- Submodules: `hellen-one` (andreika-git/hellen-one), `kicad6-libraries` (rusefi/kicad6-libraries)
+- CI: Create Board on push; daily submodule update workflows
+- Fab outputs land under `boards/microcore-a/` after a successful CI run on `main`
 
 ## License
 

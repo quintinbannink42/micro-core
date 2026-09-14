@@ -1,1 +1,6 @@
 Ref,Val,Package,PosX,PosY,Rot,Side
+"J1","TE_776231-1","TE_776231",45.000000,12.000000,0.000000,top
+"J8","USB_B_Mini","USB-MINI-B-VERTICAL",25.000000,57.000000,0.000000,top
+"M1","Module:mega-mcu100/0.3","mega-mcu100",30.000000,22.000000,0.000000,top
+"M2","Module-power_12and5V-0.3","power_12and5V",5.000000,35.000000,0.000000,top
+"M3","Module-vr-max9924-0.3","vr-max9924",70.000000,42.000000,0.000000,top

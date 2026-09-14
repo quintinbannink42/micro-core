@@ -7,9 +7,9 @@
 	(title_block
 		(title "Micro Core")
 		(date "2026-09-13")
-		(rev "B")
+		(rev "C")
 		(company "Core EFI")
-		(comment 1 "First real Hellen module content — modules-v1")
+		(comment 1 "modules-v1 rev C — vr-max9924 + USB Mini-B")
 		(comment 2 "Firmware board: coreefi_micro")
 		(comment 3 "PCB basename: microcore (no dashes/underscores)")
 	)
@@ -675,6 +675,24 @@
 					(hide yes)
 				)
 			)
+			(property "ki_keywords" "connector USB mini"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "USB*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 			(symbol "USB_B_Mini_0_1"
 				(rectangle
 					(start -5.08 -7.62)
@@ -685,6 +703,167 @@
 					)
 					(fill
 						(type background)
+					)
+				)
+				(circle
+					(center -3.81 2.159)
+					(radius 0.635)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center -0.635 3.429)
+					(radius 0.381)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -0.127 -7.62)
+					(end 0.127 -6.858)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 2.159) (xy 0.635 2.159)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 2.159) (xy -2.54 2.159) (xy -1.27 3.429) (xy -0.635 3.429)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 2.159) (xy -1.905 2.159) (xy -1.27 0.889) (xy 0 0.889)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 2.794) (xy 0.635 1.524) (xy 1.905 2.159) (xy 0.635 2.794)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.318 5.588) (xy -1.778 5.588) (xy -2.032 4.826) (xy -4.064 4.826) (xy -4.318 5.588)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.699 5.842) (xy -4.699 5.588) (xy -4.445 4.826) (xy -4.445 4.572) (xy -1.651 4.572) (xy -1.651 4.826)
+						(xy -1.397 5.588) (xy -1.397 5.842) (xy -4.699 5.842)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0.254 1.27)
+					(end -0.508 0.508)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 5.08 -5.207)
+					(end 4.318 -4.953)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 5.08 -2.667)
+					(end 4.318 -2.413)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 5.08 -0.127)
+					(end 4.318 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 5.08 4.953)
+					(end 4.318 5.207)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
@@ -1738,7 +1917,7 @@
 			)
 		)
 		(property "Sheetfile" "INJ4.kicad_sch"
-			(at 25.4 246.67000000000002 0)
+			(at 25.4 246.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1758,7 +1937,7 @@
 			(uuid "c3c0e1e2-da56-4e4a-8690-cdbcf27af7b4")
 		)
 		(pin "OUT2" output
-			(at 25.4 231.14000000000001 180)
+			(at 25.4 231.14 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1798,7 +1977,7 @@
 			(uuid "458a4647-f3ae-49ce-a63f-565cb8b3c73f")
 		)
 		(pin "IN2" input
-			(at 50.8 231.14000000000001 0)
+			(at 50.8 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1876,7 +2055,7 @@
 			(uuid "9995f5cb-4afe-41d7-878b-3a8b7da3fb09")
 		)
 		(pin "OUT2" output
-			(at 60 231.14000000000001 180)
+			(at 60 231.14 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1906,7 +2085,7 @@
 			(uuid "2f1aa623-41c3-483f-8256-eac0b45f16eb")
 		)
 		(pin "IN2" input
-			(at 85.4 231.14000000000001 0)
+			(at 85.4 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2150,7 +2329,7 @@
 		)
 	)
 	(label "CAN_H"
-		(at 119.38 -7.6200000000000045 180)
+		(at 119.38 -7.62 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2160,7 +2339,7 @@
 		(uuid "211b1d0b-d5e9-4944-9e2f-0a65d0447c64")
 	)
 	(label "CAN_L"
-		(at 119.38 -10.160000000000004 180)
+		(at 119.38 -10.16 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2210,7 +2389,7 @@
 		(uuid "8654c21d-789d-437e-b4e5-1444dc20edeb")
 	)
 	(label "V5_REF"
-		(at 193.04000000000002 12.7 180)
+		(at 193.04 12.7 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2220,7 +2399,7 @@
 		(uuid "fd2ede47-9eae-494a-8032-a0acd676e204")
 	)
 	(label "V5_REF"
-		(at 280.0 -15.240000000000002 0)
+		(at 280.0 -15.24 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2230,7 +2409,7 @@
 		(uuid "c76a8f57-3bef-4d90-8867-ccc59546f1db")
 	)
 	(label "GND"
-		(at 167.64000000000001 -2.5400000000000027 0)
+		(at 167.64 -2.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2240,7 +2419,7 @@
 		(uuid "a09bdf02-3131-4091-97e0-3d99b81876c3")
 	)
 	(label "GND"
-		(at 280.0 -30.480000000000004 0)
+		(at 280.0 -30.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2260,7 +2439,7 @@
 		(uuid "45d6533e-03c6-433d-82ee-940b7b54e071")
 	)
 	(label "GND"
-		(at 50.8 -142.23999999999998 0)
+		(at 50.8 -142.24 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2290,7 +2469,7 @@
 		(uuid "132e2ba7-4cc6-4930-bf7a-dd025d791324")
 	)
 	(label "VR_P"
-		(at 195.57999999999998 22.86 0)
+		(at 195.58 22.86 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2300,7 +2479,7 @@
 		(uuid "d5f6f6f0-b41f-4543-82f8-dd690e15d206")
 	)
 	(label "VR_N"
-		(at 195.57999999999998 20.32 0)
+		(at 195.58 20.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2320,7 +2499,7 @@
 		(uuid "c1a46940-687b-458e-9609-faeddf85671f")
 	)
 	(label "VR_N"
-		(at 280.0 -50.800000000000004 0)
+		(at 280.0 -50.80 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2330,7 +2509,7 @@
 		(uuid "7b8d59bc-1ebd-47c6-a03b-fc7116d005df")
 	)
 	(label "VR_OUT"
-		(at 243.83999999999997 22.86 180)
+		(at 243.84 22.86 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2350,7 +2529,7 @@
 		(uuid "46fb8f6f-bc19-4f2c-a825-d24d080f5377")
 	)
 	(label "V5_VR"
-		(at 195.57999999999998 15.239999999999998 0)
+		(at 195.58 15.24 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2360,7 +2539,7 @@
 		(uuid "29121980-8c48-42e7-8d82-0c6e3e354eda")
 	)
 	(label "V5_VR"
-		(at 193.04000000000002 12.7 180)
+		(at 193.04 12.7 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2370,7 +2549,7 @@
 		(uuid "7bc626e9-cf46-4d54-af2a-28553a12900f")
 	)
 	(label "VBAT"
-		(at 193.04000000000002 20.32 180)
+		(at 193.04 20.32 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2390,7 +2569,7 @@
 		(uuid "8835fe88-1038-4d25-a08e-0791e4d26ab4")
 	)
 	(label "VIGN"
-		(at 193.04000000000002 17.779999999999998 180)
+		(at 193.04 17.78 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2400,7 +2579,7 @@
 		(uuid "3daec7c6-45c1-427f-be46-2cb9ffdb135b")
 	)
 	(label "VIGN_SENSE"
-		(at 144.78 15.239999999999998 0)
+		(at 144.78 15.24 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2420,7 +2599,7 @@
 		(uuid "fd398f3e-d297-4ccd-bc5a-3cad5375d8f1")
 	)
 	(label "TPS"
-		(at 50.8 -58.419999999999995 0)
+		(at 50.8 -58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2460,7 +2639,7 @@
 		(uuid "eba61d34-d538-4399-a33a-9baa3e385f27")
 	)
 	(label "CLT"
-		(at 50.8 -68.58000000000001 0)
+		(at 50.8 -68.58 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2480,7 +2659,7 @@
 		(uuid "26365d79-865f-4353-81df-532dfec42b5c")
 	)
 	(label "IAT"
-		(at 50.8 -66.03999999999999 0)
+		(at 50.8 -66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2490,7 +2669,7 @@
 		(uuid "605a6632-8431-451c-946e-3dd58e888d3f")
 	)
 	(label "IAT"
-		(at 280.0 -40.64000000000001 0)
+		(at 280.0 -40.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2530,7 +2709,7 @@
 		(uuid "d3255041-d8f4-4f68-87c1-cb969f11e326")
 	)
 	(label "AN2"
-		(at 280.0 -27.940000000000005 0)
+		(at 280.0 -27.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2540,7 +2719,7 @@
 		(uuid "0dbc1681-df3f-4d13-a0f9-94df27d8fdc8")
 	)
 	(label "HALL_CAM"
-		(at 50.8 -50.800000000000004 0)
+		(at 50.8 -50.80 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2550,7 +2729,7 @@
 		(uuid "b6f997e0-bceb-4488-8f89-df77e2ae5c43")
 	)
 	(label "HALL_CAM"
-		(at 280.0 -45.720000000000006 0)
+		(at 280.0 -45.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2570,7 +2749,7 @@
 		(uuid "e4280f7b-481c-4ffd-ba4c-b1eb442df9f3")
 	)
 	(label "OUT_INJ2"
-		(at 50.8 -2.5400000000000027 0)
+		(at 50.8 -2.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2580,7 +2759,7 @@
 		(uuid "c93adbe3-4d7a-459d-b102-b077ae109b6d")
 	)
 	(label "OUT_INJ3"
-		(at 50.8 -5.080000000000002 0)
+		(at 50.8 -5.08 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2590,7 +2769,7 @@
 		(uuid "87697873-248b-4328-8bb7-2d1e7b1179f8")
 	)
 	(label "OUT_INJ4"
-		(at 50.8 -7.6200000000000045 0)
+		(at 50.8 -7.62 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2610,7 +2789,7 @@
 		(uuid "0c6f4952-e303-485a-b567-5172c909d4d4")
 	)
 	(label "OUT_LS2"
-		(at 50.8 -27.940000000000005 0)
+		(at 50.8 -27.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2620,7 +2799,7 @@
 		(uuid "4ca8b5f0-d4b3-4f5c-b234-fb9ba2a2d936")
 	)
 	(label "OUT_LS3"
-		(at 50.8 -30.480000000000004 0)
+		(at 50.8 -30.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2660,7 +2839,7 @@
 		(uuid "a70cfd4e-89d9-40cd-bd69-39999f796f83")
 	)
 	(label "IGN4"
-		(at 50.8 17.779999999999998 0)
+		(at 50.8 17.78 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2670,7 +2849,7 @@
 		(uuid "0545aa01-bafc-4aa1-a23e-3b6454e7f326")
 	)
 	(label "IGN1"
-		(at 280.0 -2.5400000000000027 0)
+		(at 280.0 -2.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2680,7 +2859,7 @@
 		(uuid "ddca227a-5d8f-4465-9fed-01b1ae103309")
 	)
 	(label "IGN2"
-		(at 280.0 -7.6200000000000045 0)
+		(at 280.0 -7.62 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2690,7 +2869,7 @@
 		(uuid "9d816797-fc28-4453-a990-355cbabaabe9")
 	)
 	(label "IGN3"
-		(at 280.0 -10.160000000000004 0)
+		(at 280.0 -10.16 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2700,7 +2879,7 @@
 		(uuid "b73cd966-6c9d-4214-96da-e3e98ee06432")
 	)
 	(label "IGN4"
-		(at 280.0 -12.700000000000003 0)
+		(at 280.0 -12.70 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2710,7 +2889,7 @@
 		(uuid "093a2c16-08d8-424c-94e4-9c1cdfee8ca2")
 	)
 	(label "NC_30"
-		(at 280.0 -53.339999999999996 0)
+		(at 280.0 -53.34 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2730,7 +2909,7 @@
 		(uuid "bc15faf3-0550-4f69-8718-3cdca084f8cd")
 	)
 	(label "NC_32"
-		(at 280.0 -58.419999999999995 0)
+		(at 280.0 -58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2750,7 +2929,7 @@
 		(uuid "a074a09e-b5f0-4e05-84d8-d491b163794f")
 	)
 	(label "NC_34"
-		(at 280.0 -63.50000000000001 0)
+		(at 280.0 -63.50 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2760,7 +2939,7 @@
 		(uuid "a924a6ee-558d-4f8f-8603-f87e722bdf22")
 	)
 	(label "NC_35"
-		(at 280.0 -66.03999999999999 0)
+		(at 280.0 -66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2780,7 +2959,7 @@
 		(uuid "0c45db59-b64f-421d-b37c-f9523e5cc31b")
 	)
 	(label "NC_10"
-		(at 280.0 2.539999999999999 0)
+		(at 280.0 2.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2800,7 +2979,7 @@
 		(uuid "402c61fc-2012-486c-ad97-8434635b127e")
 	)
 	(label "INJ1"
-		(at 280.0 17.779999999999998 0)
+		(at 280.0 17.78 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2810,7 +2989,7 @@
 		(uuid "98eaf2d5-bb4f-4724-8a92-33d53dbae266")
 	)
 	(label "INJ2"
-		(at 280.0 15.239999999999998 0)
+		(at 280.0 15.24 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2830,7 +3009,7 @@
 		(uuid "9e7f1157-707d-48e8-b597-540b51777aac")
 	)
 	(label "INJ4"
-		(at 280.0 10.159999999999998 0)
+		(at 280.0 10.16 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2840,7 +3019,7 @@
 		(uuid "4342961b-a101-427a-9ceb-f19b4150c805")
 	)
 	(label "LS1_FP"
-		(at 280.0 7.619999999999997 0)
+		(at 280.0 7.62 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2850,7 +3029,7 @@
 		(uuid "b51380e1-3044-464b-8f4c-4b80585be8f3")
 	)
 	(label "LS2_IDLE"
-		(at 280.0 5.079999999999998 0)
+		(at 280.0 5.08 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3151,7 +3330,7 @@
 		)
 	)
 	(label "VBUS"
-		(at 167.64000000000001 55.879999999999995 180)
+		(at 167.64 55.88 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3161,7 +3340,7 @@
 		(uuid "ef657ae0-3208-435e-867b-97f8f1a2a198")
 	)
 	(label "USBM_(PA11)"
-		(at 167.64000000000001 48.26 180)
+		(at 167.64 48.26 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3171,7 +3350,7 @@
 		(uuid "d1cf523f-a384-43a9-a508-fe8c2a87ebd3")
 	)
 	(label "USBP_(PA12)"
-		(at 167.64000000000001 50.8 180)
+		(at 167.64 50.8 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3181,7 +3360,7 @@
 		(uuid "00b9c783-daf0-4369-9b85-a308b7431f15")
 	)
 	(label "USBID_(PA10)"
-		(at 167.64000000000001 45.72 180)
+		(at 167.64 45.72 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3201,7 +3380,7 @@
 		(uuid "54dfca67-17f5-48c4-9173-06cd2ca6c0a5")
 	)
 	(label "GND"
-		(at 157.48000000000002 40.64 90)
+		(at 157.48 40.64 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3221,7 +3400,7 @@
 		(uuid "dd4506e9-3588-49df-bb04-62b1317f6648")
 	)
 	(label "USBM_(PA11)"
-		(at 119.38 -50.800000000000004 0)
+		(at 119.38 -50.80 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3241,7 +3420,7 @@
 		(uuid "f0edd5ac-b452-4141-afc0-19b0fd8f40b3")
 	)
 	(label "USBID_(PA10)"
-		(at 119.38 -53.339999999999996 0)
+		(at 119.38 -53.34 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3250,11 +3429,7 @@
 		)
 		(uuid "f47b3dbe-c8d5-4687-a34c-e1f1cd52e69b")
 	)
-	(text "Micro Core rev C — modules-v1
-MCU mega-mcu100/0.3 + power_12and5V/0.3 + vr-max9924/0.3
-USB Mini-B vertical (frame) + TE 776231-1 AMPSEAL
-Sheets: INJ4 LS3 ANALOG HALL (DPAK frame)
-Firmware: coreefi_micro"
+	(text "Micro Core rev C — modules-v1\nMCU mega-mcu100/0.3 + power_12and5V/0.3 + vr-max9924/0.3\nUSB Mini-B vertical (frame) + TE 776231-1 AMPSEAL\nSheets: INJ4 LS3 ANALOG HALL (DPAK frame)\nFirmware: coreefi_micro"
 		(exclude_from_sim no)
 		(at 25.4 280 0)
 		(effects

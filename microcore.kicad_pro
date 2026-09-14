@@ -140,8 +140,24 @@
   },
   "sheets": [
     [
-      "e5f937c4-5465-42e7-ab18-1bebc49ea2c9",
-      "Root"
+      "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      ""
+    ],
+    [
+      "62edc157-0304-4a0d-a7e9-01065a1d8b1e",
+      "INJ4.kicad_sch"
+    ],
+    [
+      "2681f3c6-8479-4cd3-8490-1f2d090e826c",
+      "LS3.kicad_sch"
+    ],
+    [
+      "de8988db-b3b5-44d4-8ca1-88c5251472f1",
+      "ANALOG.kicad_sch"
+    ],
+    [
+      "3f5037d3-88dd-453e-b2ad-4c39e992b400",
+      "HALL.kicad_sch"
     ]
   ],
   "text_variables": {}

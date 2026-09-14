@@ -10,9 +10,9 @@
 	(title_block
 		(title "Micro Core")
 		(date "2026-09-13")
-		(rev "B")
+		(rev "C")
 		(company "Core EFI")
-		(comment 1 "modules-v1: mega-mcu100 + power + VR + AMPSEAL")
+		(comment 1 "modules-v1: mega-mcu100 + power + vr-max9924 + USB Mini-B + AMPSEAL")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -94,7 +94,7 @@
 		(layer "Edge.Cuts")
 		(uuid "8a723e6b-51b7-444e-87c6-b70f983e5bc6")
 	)
-	(gr_text "Micro Core rev B\n90x60 4-layer\nmega-mcu100/0.3 + power + VR\nTE 776231-1 south"
+	(gr_text "Micro Core rev C\n90x60 4-layer\nmega-mcu100/0.3 + power + vr-max9924/0.3\nUSB Mini-B north + TE 776231-1 south"
 		(at 45 5 0)
 		(layer "Cmts.User")
 		(uuid "05346842-2b66-4bd1-9f66-3eef98340376")
@@ -3297,7 +3297,7 @@
 			)
 		)
 	)
-	(footprint "hellen-one-vr-discrete-0.5:vr-discrete"
+	(footprint "hellen-one-vr-max9924-0.3:vr-max9924"
 		(layer "F.Cu")
 		(uuid "db9be0ae-f0a0-41af-8774-5ad4ddb95b12")
 		(at 70 18)
@@ -3314,7 +3314,7 @@
 				)
 			)
 		)
-		(property "Value" "Module-vr-discrete-0.5"
+		(property "Value" "Module-vr-max9924-0.3"
 			(at 9.02 -16 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3327,7 +3327,7 @@
 				)
 			)
 		)
-		(property "Footprint" "hellen-one-vr-discrete-0.5:vr-discrete"
+		(property "Footprint" "hellen-one-vr-max9924-0.3:vr-max9924"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -3926,4 +3926,224 @@
 			(rotate (xyz 0 0 0))
 		)
 )
+	(footprint "hellen-one-common:USB-MINI-B-VERTICAL"
+		(layer "F.Cu")
+		(uuid "e180a54e-cdf9-476f-9a9c-40ab24019430")
+		(at 25.0 3.0)
+		(descr "http://www.tensility.com/pdffiles/54-00023.pdf")
+		(tags "usb mini receptacle vertical")
+		(property "Reference" "J8"
+			(at 0 -2.825 0)
+			(layer "F.SilkS")
+			(uuid "ca4ff588-4576-415c-9fd1-1a099445e542")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "USB_B_Mini"
+			(at -0.1 3.075 0)
+			(layer "F.Fab")
+			(uuid "0e77788c-b2f7-4b83-9470-eb4a396de1c7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "hellen-one-common:USB-MINI-B-VERTICAL"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e4a4a14d-6184-42f4-9c3c-c160cf75c678")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ca4615cb-9acf-4075-a3a8-0450c40e1543")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C13453"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "85d3960c-3905-4c90-84ba-4b9a7df49050")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(attr through_hole)
+		(fp_line
+			(start 3.9 -2.025)
+			(end 3.9 -1.425)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "f67aa505-faa0-4d9d-b4b3-603f523d9d3b")
+		)
+		(fp_line
+			(start -3.9 -2.025)
+			(end 3.9 -2.025)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "c1082eb6-5fe1-425f-b631-7ef44a358dbe")
+		)
+		(fp_line
+			(start -3.9 -1.425)
+			(end -3.9 -2.025)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "f67af4ef-1bb9-4f67-a038-53886fd04ada")
+		)
+		(fp_line
+			(start -3.9 1.475)
+			(end -3.9 2.075)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "bc2a14bd-273a-45a5-8e4e-74dbc39efa3c")
+		)
+		(fp_line
+			(start 3.9 2.075)
+			(end 3.9 1.475)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "93a24f38-feab-44f0-b65d-59b85f6424bd")
+		)
+		(fp_line
+			(start 3.9 2.075)
+			(end -3.9 2.075)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "10ed24a8-9629-4bfc-9a98-3e270a8ab4cf")
+		)
+		(fp_line
+			(start -3.75 -2.125)
+			(end -3.75 2.125)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "86f88128-a062-42fd-ba33-7154285fe417")
+		)
+		(fp_line
+			(start 3.75 -2.125)
+			(end -3.75 -2.125)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "d8a47e06-f04d-4bcc-b463-9aca1e409e98")
+		)
+		(fp_line
+			(start 3.75 2.125)
+			(end 3.75 -2.125)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "d8512129-8ccf-4d4a-92cc-8f03b5c32f7a")
+		)
+		(fp_line
+			(start -3.75 2.125)
+			(end 3.75 2.125)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "08e19ec6-8dc9-4b92-be0b-22fb04e2f365")
+		)
+		(pad "1" thru_hole rect
+			(at -1.6 0.875)
+			(size 1.1 1.1)
+			(drill 0.7)
+			(layers "*.Cu" "*.Mask")
+			(net 0 "")
+			(uuid "15929cdf-d071-4ca4-a32e-1223034ba9f5")
+		)
+		(pad "2" thru_hole circle
+			(at -0.8 -0.875)
+			(size 1.1 1.1)
+			(drill 0.7)
+			(layers "*.Cu" "*.Mask")
+			(net 0 "")
+			(uuid "c4cce21b-4ca9-4ff5-8bc4-8b143c379cf9")
+		)
+		(pad "3" thru_hole circle
+			(at 0 0.875)
+			(size 1.1 1.1)
+			(drill 0.7)
+			(layers "*.Cu" "*.Mask")
+			(net 0 "")
+			(uuid "d4a3d269-690f-4068-827c-12ab3755a3ef")
+		)
+		(pad "4" thru_hole circle
+			(at 0.8 -0.875)
+			(size 1.1 1.1)
+			(drill 0.7)
+			(layers "*.Cu" "*.Mask")
+			(net 0 "")
+			(uuid "6e1047a1-3b95-4fad-a796-497f21385c69")
+		)
+		(pad "5" thru_hole circle
+			(at 1.6 0.875)
+			(size 1.1 1.1)
+			(drill 0.7)
+			(layers "*.Cu" "*.Mask")
+			(net 0 "")
+			(uuid "a8469900-8980-4c75-ad6a-3aad32dd1782")
+		)
+		(pad "6" thru_hole oval
+			(at 3.65 0)
+			(size 1.1 2.4)
+			(drill oval 0.7 2)
+			(layers "*.Cu" "*.Mask")
+			(net 0 "")
+			(uuid "decbc396-4368-485d-a05c-5c32cbdb52e8")
+		)
+		(pad "6" thru_hole oval
+			(at -3.65 0)
+			(size 1.1 2.4)
+			(drill oval 0.7 2)
+			(layers "*.Cu" "*.Mask")
+			(net 0 "")
+			(uuid "5facf173-4104-4e31-99c4-e02617a6ea71")
+		)
+	)
+
 )

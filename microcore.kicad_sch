@@ -566,33 +566,30 @@
 				)
 			)
 		)
-	(symbol "hellen-one-vr-discrete-0.5:Module-vr-discrete-0.5" (in_bom yes) (on_board yes)
+	(symbol "hellen-one-vr-max9924-0.3:Module-vr-max9924-0.1" (in_bom yes) (on_board yes)
 			(property "Reference" "M" (at 1.27 1.27 0)
 				(effects (font (size 1.27 1.27)))
 			)
-			(property "Value" "Module-vr-discrete-0.5" (at 16.51 -16.51 0)
+			(property "Value" "Module-vr-max9924-0.3" (at 16.51 -16.51 0)
 				(effects (font (size 1.27 1.27)))
 			)
-			(property "Footprint" "hellen-one-vr-discrete-0.5:vr-discrete" (at 25.4 1.27 0)
+			(property "Footprint" "hellen-one-vr-max9924-0.3:vr-max9924" (at 25.4 1.27 0)
 				(effects (font (size 1.27 1.27)) hide)
 			)
 			(property "Datasheet" "" (at 0 0 0)
 				(effects (font (size 1.27 1.27)) hide)
 			)
-			(symbol "Module-vr-discrete-0.5_1_0"
+			(symbol "Module-vr-max9924-0.1_1_0"
 				(rectangle (start 0 0) (end 33.02 -15.24)
 					(stroke (width 0) (type default))
 					(fill (type background))
 				)
-				(text "Install R770 for use\nwith very hot VR signals, \nto dampen the signal" (at 5.08 -5.08 0)
-					(effects (font (size 1.27 1.27)) (justify left))
-				)
 				(pin passive line (at 40.64 -12.7 180) (length 7.62)
-					(name "Thresh_IN" (effects (font (size 1.27 1.27))))
+					(name "HALL_EN" (effects (font (size 1.27 1.27))))
 					(number "E1" (effects (font (size 1.27 1.27))))
 				)
 				(pin passive line (at 40.64 -7.62 180) (length 7.62)
-					(name "OUT_A" (effects (font (size 1.27 1.27))))
+					(name "NC" (effects (font (size 1.27 1.27))))
 					(number "E2" (effects (font (size 1.27 1.27))))
 				)
 				(pin passive line (at 40.64 -2.54 180) (length 7.62)
@@ -608,7 +605,7 @@
 					(number "G" (effects (font (size 1.27 1.27))))
 				)
 				(pin passive line (at -7.62 -5.08 0) (length 7.62)
-					(name "VR-" (effects (font (size 1.27 1.27))))
+					(name "VR-/HALL" (effects (font (size 1.27 1.27))))
 					(number "W1" (effects (font (size 1.27 1.27))))
 				)
 				(pin passive line (at -7.62 -2.54 0) (length 7.62)
@@ -617,6 +614,192 @@
 				)
 			)
 		)
+		(symbol "hellen-one-common:USB_B_Mini"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -5.08 11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "USB_B_Mini"
+				(at -5.08 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "hellen-one-common:USB-MINI-B-VERTICAL"
+				(at 3.81 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 3.81 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "USB Mini Type B connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C13453"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "USB_B_Mini_0_1"
+				(rectangle
+					(start -5.08 -7.62)
+					(end 5.08 7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "USB_B_Mini_1_1"
+				(pin power_out line
+					(at 7.62 5.08 180)
+					(length 2.54)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "D-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "D+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -5.08 180)
+					(length 2.54)
+					(name "ID"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 -10.16 90)
+					(length 2.54)
+					(name "Shield"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+
 	(symbol "kicad6-libraries:776231-1(-2)" (in_bom yes) (on_board yes)
 			(property "Reference" "J" (at 1.27 7.62 0)
 				(effects (font (size 1.27 1.27)))
@@ -1287,7 +1470,7 @@
 		)
 	)
 	(symbol
-		(lib_id "hellen-one-vr-discrete-0.5:Module-vr-discrete-0.5")
+		(lib_id "hellen-one-vr-max9924-0.3:Module-vr-max9924-0.1")
 		(at 203.2 25.4 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1303,7 +1486,7 @@
 				)
 			)
 		)
-		(property "Value" "Module-vr-discrete-0.5"
+		(property "Value" "Module-vr-max9924-0.3"
 			(at 203.2 25.4 0)
 			(effects
 				(font
@@ -1311,7 +1494,7 @@
 				)
 			)
 		)
-		(property "Footprint" "hellen-one-vr-discrete-0.5:vr-discrete"
+		(property "Footprint" "hellen-one-vr-max9924-0.3:vr-max9924"
 			(at 203.2 25.4 0)
 			(effects
 				(font
@@ -2886,7 +3069,192 @@
 		)
 		(uuid "097b5ef2-42f7-4035-acd4-8cd82fe10ec6")
 	)
-	(text "Micro Core rev B — modules-v1\nMCU mega-mcu100/0.3 + power_12and5V/0.3 + vr-discrete/0.5\nTE 776231-1 vertical AMPSEAL\nSheets: INJ4 LS3 ANALOG HALL (DPAK frame)\nFirmware: coreefi_micro"
+	(symbol
+		(lib_id "hellen-one-common:USB_B_Mini")
+		(at 160.02 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4c853eb1-c5d6-4715-b744-a3c1f14366af")
+		(property "Reference" "J8"
+			(at 154.94 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "USB_B_Mini"
+			(at 154.94 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "hellen-one-common:USB-MINI-B-VERTICAL"
+			(at 160.02 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "USB Mini Type B connector"
+			(at 160.02 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "438eca24-c67d-4878-a57f-a80b863dce15")
+		)
+		(pin "2"
+			(uuid "9fa48205-3b02-4471-9307-94f79477057d")
+		)
+		(pin "3"
+			(uuid "809a3956-834b-4c9a-9034-96abb5a25728")
+		)
+		(pin "4"
+			(uuid "ff044387-32f2-4a7c-a509-c642d1f1c5fe")
+		)
+		(pin "5"
+			(uuid "00292487-8639-4d81-a299-7b34bef6523f")
+		)
+		(pin "6"
+			(uuid "eb3db673-ee5d-40ca-afac-ab2791b31af3")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VBUS"
+		(at 167.64000000000001 55.879999999999995 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ef657ae0-3208-435e-867b-97f8f1a2a198")
+	)
+	(label "USBM_(PA11)"
+		(at 167.64000000000001 48.26 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d1cf523f-a384-43a9-a508-fe8c2a87ebd3")
+	)
+	(label "USBP_(PA12)"
+		(at 167.64000000000001 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "00b9c783-daf0-4369-9b85-a308b7431f15")
+	)
+	(label "USBID_(PA10)"
+		(at 167.64000000000001 45.72 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "08083dad-09cb-4742-b234-e5a44d495d09")
+	)
+	(label "GND"
+		(at 160.02 40.64 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "54dfca67-17f5-48c4-9173-06cd2ca6c0a5")
+	)
+	(label "GND"
+		(at 157.48000000000002 40.64 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "559b42e6-9007-4ba4-8d14-4145d54c6643")
+	)
+	(label "VBUS"
+		(at 119.38 -55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dd4506e9-3588-49df-bb04-62b1317f6648")
+	)
+	(label "USBM_(PA11)"
+		(at 119.38 -50.800000000000004 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "390cb7e3-70ee-4ead-a126-549207acad89")
+	)
+	(label "USBP_(PA12)"
+		(at 119.38 -48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f0edd5ac-b452-4141-afc0-19b0fd8f40b3")
+	)
+	(label "USBID_(PA10)"
+		(at 119.38 -53.339999999999996 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f47b3dbe-c8d5-4687-a34c-e1f1cd52e69b")
+	)
+	(text "Micro Core rev C — modules-v1
+MCU mega-mcu100/0.3 + power_12and5V/0.3 + vr-max9924/0.3
+USB Mini-B vertical (frame) + TE 776231-1 AMPSEAL
+Sheets: INJ4 LS3 ANALOG HALL (DPAK frame)
+Firmware: coreefi_micro"
 		(exclude_from_sim no)
 		(at 25.4 280 0)
 		(effects

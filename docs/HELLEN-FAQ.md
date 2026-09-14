@@ -25,7 +25,7 @@ Daily workflows bump `hellen-one` and `kicad6-libraries` submodule pointers.
 
 ## Intended Hellen modules (from SPEC)
 
-Locked modules-v1: `mega-mcu100/0.3` (Value `Module:mega-mcu100/0.3`), `power_12and5V/0.3`, `vr-discrete/0.5`, TE `776231-1`; frame sheets INJ4/LS3/ANALOG/HALL with DPAKs. Skip mcu/0.7, output/0.3, input/0.1, wbo, knock, motor-driver, ign8, optional can.
+Locked modules-v1: `mega-mcu100/0.3` (Value `Module:mega-mcu100/0.3`), `power_12and5V/0.3`, `vr-max9924/0.3`, USB Mini-B (`USB_B_Mini` / `USB-MINI-B-VERTICAL`), TE `776231-1`; frame sheets INJ4/LS3/ANALOG/HALL with DPAKs. Skip mcu/0.7, output/0.3, input/0.1, wbo, knock, motor-driver, ign8, optional can.
 
 ## Firmware
 

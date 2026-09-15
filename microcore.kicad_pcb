@@ -4162,7 +4162,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "Button_SPST"
+		(property "Value" "BTN"
 			(at 0 2.6 0)
 			(layer "F.Fab")
 			(uuid "f1821980-bbcf-4a98-b6a3-418688796036")
@@ -4309,7 +4309,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "Button_SPST"
+		(property "Value" "BTN"
 			(at 0 2.6 0)
 			(layer "F.Fab")
 			(uuid "623f129c-00a9-4fad-8c99-8d3176a5b145")

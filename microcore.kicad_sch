@@ -27,7 +27,7 @@
 				)
 			)
 		)
-		(property "Value" "Button_SPST"
+		(property "Value" "BTN"
 			(at 0 0 0)
 			(effects
 				(font
@@ -4517,7 +4517,7 @@
 				)
 			)
 		)
-		(property "Value" "Button_SPST"
+		(property "Value" "BTN"
 			(at 140 129.54 0)
 			(effects
 				(font
@@ -4593,7 +4593,7 @@
 				)
 			)
 		)
-		(property "Value" "Button_SPST"
+		(property "Value" "BTN"
 			(at 140 124.46 0)
 			(effects
 				(font

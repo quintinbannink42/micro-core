@@ -289,7 +289,7 @@
 	)
 	(symbol
 		(lib_id "hellen-one-common:Res")
-		(at 139.7 25.4 270)
+		(at 139.7 25.4 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -464,7 +464,7 @@
 	)
 	(symbol
 		(lib_id "hellen-one-common:Res")
-		(at 139.7 55.879999999999995 270)
+		(at 139.7 55.879999999999995 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -639,7 +639,7 @@
 	)
 	(symbol
 		(lib_id "hellen-one-common:Res")
-		(at 139.7 86.36 270)
+		(at 139.7 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -817,126 +817,6 @@
 		)
 		(uuid "659789c8-3581-42cc-914e-d4f823e74239")
 	)
-	(wire
-		(pts
-			(xy 50.8 25.4) (xy 101.6 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "18e6f32c-6a97-49dd-aaef-8c2c626971e6")
-	)
-	(wire
-		(pts
-			(xy 101.6 25.4) (xy 139.7 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "500e83a0-0209-476d-91a3-fbc761117a1c")
-	)
-	(wire
-		(pts
-			(xy 139.7 25.4) (xy 166.37 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "21c2d3f2-ccbc-4253-8d1c-4f98fb8ccb4f")
-	)
-	(wire
-		(pts
-			(xy 101.6 25.4) (xy 101.6 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e642edc-a441-4caa-8600-14fa758fe300")
-	)
-	(wire
-		(pts
-			(xy 50.8 55.879999999999995) (xy 101.6 55.879999999999995)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6ca0ec97-16cd-4df0-8cf5-cfe886aba190")
-	)
-	(wire
-		(pts
-			(xy 101.6 55.879999999999995) (xy 139.7 55.879999999999995)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "575e0e71-07b9-45b3-a381-0f1180f6f7fc")
-	)
-	(wire
-		(pts
-			(xy 139.7 55.879999999999995) (xy 166.37 55.879999999999995)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8a812340-b723-4734-adb5-c0164486bdbf")
-	)
-	(wire
-		(pts
-			(xy 101.6 55.879999999999995) (xy 101.6 66.03999999999999)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "944bb31f-1cbe-46cf-b1c7-0766431d7e76")
-	)
-	(wire
-		(pts
-			(xy 50.8 86.36) (xy 101.6 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "de04c217-a992-486d-9f43-88c17d313dbe")
-	)
-	(wire
-		(pts
-			(xy 101.6 86.36) (xy 139.7 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "475e19dd-7231-4534-9b56-463fa7d634a1")
-	)
-	(wire
-		(pts
-			(xy 139.7 86.36) (xy 166.37 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "692f061b-4881-4869-90dd-89906940aebe")
-	)
-	(wire
-		(pts
-			(xy 101.6 86.36) (xy 101.6 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f8025803-3bee-4319-9542-6dbb73f7af0a")
-	)
 	(text "LS3 Low-side\nDPAK N-FET drivers (alphax LS style)\n12 ohm gate; flyback/TVS TBD next pass\nSPEC: SMBJ33A + UF flyback + 2x12 ohm high-Z"
 		(at 25.4 15.24 0)
 		(effects
@@ -946,6 +826,156 @@
 			(justify left bottom)
 		)
 		(uuid "a70048f9-6b4f-4ccb-a99d-1ee5ef8fad46")
+	)
+	(wire
+		(pts
+			(xy 50.8 25.4) (xy 50.8 17.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b85ab209-0934-4ae4-a079-d1788ccb2d63")
+	)
+	(wire
+		(pts
+			(xy 50.8 17.78) (xy 101.6 17.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c90fd8a-3293-4180-9ac0-aa185a4bf73b")
+	)
+	(wire
+		(pts
+			(xy 101.6 33.02) (xy 101.6 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "091fef5c-729c-40b2-a45b-9c565aa47870")
+	)
+	(wire
+		(pts
+			(xy 166.37 25.4) (xy 149.86 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77f64442-8571-4b7d-bb1d-bc52f7546e9e")
+	)
+	(wire
+		(pts
+			(xy 139.7 25.4) (xy 91.44 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66e494b9-8e3e-4b07-9c9b-b24b2ac4693d")
+	)
+	(wire
+		(pts
+			(xy 50.8 55.88) (xy 50.8 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28fa655e-6d06-415d-bef3-77362772fd7d")
+	)
+	(wire
+		(pts
+			(xy 50.8 48.26) (xy 101.6 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a003e02b-8f10-4c97-8173-1f53fa832a41")
+	)
+	(wire
+		(pts
+			(xy 101.6 63.5) (xy 101.6 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2430a83-f2a8-474b-a915-1111d060cb7c")
+	)
+	(wire
+		(pts
+			(xy 166.37 55.88) (xy 149.86 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac516dd2-5f42-4e8f-b0ff-45a821b095ce")
+	)
+	(wire
+		(pts
+			(xy 139.7 55.88) (xy 91.44 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "856c87a0-67b6-4e42-b528-ac804c3ed857")
+	)
+	(wire
+		(pts
+			(xy 50.8 86.36) (xy 50.8 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a3da626-6c1f-4d89-94e3-db22c123352f")
+	)
+	(wire
+		(pts
+			(xy 50.8 78.74) (xy 101.6 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68b628b6-0261-4493-bf39-09a3a2caf143")
+	)
+	(wire
+		(pts
+			(xy 101.6 93.98) (xy 101.6 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58869f14-3d67-43ff-8513-d5a453e60b83")
+	)
+	(wire
+		(pts
+			(xy 166.37 86.36) (xy 149.86 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abb42c6a-d514-4b8f-9fc8-9b8383ef9267")
+	)
+	(wire
+		(pts
+			(xy 139.7 86.36) (xy 91.44 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6affb993-4a50-4c4a-afda-44f46345f66d")
 	)
 	(sheet_instances
 		(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/2681f3c6-8479-4cd3-8490-1f2d090e826c"

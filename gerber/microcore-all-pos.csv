@@ -4,5 +4,5 @@ Ref,Val,Package,PosX,PosY,Rot,Side
 "M1","Module:mega-mcu100/0.3","mega-mcu100",30.000000,22.000000,0.000000,top
 "M2","Module-power_12and5V-0.3","power_12and5V",5.000000,35.000000,0.000000,top
 "M3","Module-vr-max9924-0.3","vr-max9924",70.000000,42.000000,0.000000,top
-"SW_BOOT","Button_SPST","SMD-2_2.9x3.9x1.7",40.000000,55.000000,0.000000,top
-"SW_RESET","Button_SPST","SMD-2_2.9x3.9x1.7",50.000000,55.000000,0.000000,top
+"SW_BOOT","BTN","SMD-2_2.9x3.9x1.7",40.000000,55.000000,0.000000,top
+"SW_RESET","BTN","SMD-2_2.9x3.9x1.7",50.000000,55.000000,0.000000,top

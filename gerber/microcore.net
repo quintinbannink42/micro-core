@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/runner/work/micro-core/micro-core/microcore.kicad_sch</source>
-    <date>2026-09-15T18:43:55</date>
+    <date>2026-09-15T18:47:58</date>
     <tool>Eeschema 10.0.6-10.0.6~ubuntu24.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -345,7 +345,7 @@
       </units>
     </comp>
     <comp ref="SW_BOOT">
-      <value>Button_SPST</value>
+      <value>BTN</value>
       <footprint>hellen-one-common:SMD-2_2.9x3.9x1.7</footprint>
       <description>Frame BOOT0 to V33 (parallels mega S101)</description>
       <fields>
@@ -370,7 +370,7 @@
       </units>
     </comp>
     <comp ref="SW_RESET">
-      <value>Button_SPST</value>
+      <value>BTN</value>
       <footprint>hellen-one-common:SMD-2_2.9x3.9x1.7</footprint>
       <description>Frame nReset to GND (parallels mega S100)</description>
       <fields>
@@ -748,7 +748,7 @@
       <description>Single-Pole, Single-Throw Switch</description>
       <fields>
         <field name="Reference">S</field>
-        <field name="Value">Button_SPST</field>
+        <field name="Value">BTN</field>
         <field name="Footprint">hellen-one-common:SMD-2_2.9x3.9x1.7</field>
         <field name="Datasheet"/>
         <field name="Description">Single-Pole, Single-Throw Switch</field>

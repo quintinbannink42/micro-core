@@ -34,6 +34,16 @@
 		)
 		(uuid "bf778db8-88e1-46c2-8b94-e807625b67ed")
 	)
+	(wire
+		(pts
+			(xy 50.8 30.48) (xy 150 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5e20508-081a-43d5-90e4-d496eb1c564f")
+	)
 	(text "HALL input conditioning stub\nPull-ups / dividers / ESD TBD — passthrough hierarchy for pin map"
 		(at 25.4 15.24 0)
 		(effects

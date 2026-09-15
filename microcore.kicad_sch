@@ -7,9 +7,9 @@
 	(title_block
 		(title "Micro Core")
 		(date "2026-09-15")
-		(rev "D")
+		(rev "E")
 		(company "Core EFI")
-		(comment 1 "modules-v1 rev D — pin freeze + frame BOOT/RESET")
+		(comment 1 "modules-v1 rev E — nest DPAKs + frame routing + GND pours")
 		(comment 2 "Firmware board: coreefi_micro")
 		(comment 3 "PCB basename: microcore (no dashes/underscores)")
 	)
@@ -2539,7 +2539,7 @@
 			)
 		)
 	)
-	(text "Micro Core rev D — modules-v1\nMCU mega-mcu100/0.3 + power_12and5V/0.3 + vr-max9924/0.3\nUSB Mini-B + frame SW_BOOT/SW_RESET + TE 776231-1 AMPSEAL\nSheets: INJ4 LS3 ANALOG HALL (DPAK frame)\nFirmware: coreefi_micro"
+	(text "Micro Core rev E — modules-v1 nest+route\nMCU mega-mcu100/0.3 + power_12and5V/0.3 + vr-max9924/0.3\nUSB Mini-B + frame SW_BOOT/SW_RESET + TE 776231-1 AMPSEAL\nSheets: INJ4 LS3 ANALOG HALL (DPAK frame)\nFirmware: coreefi_micro"
 		(exclude_from_sim no)
 		(at 25.4 280 0)
 		(effects
@@ -2830,7 +2830,7 @@
 		)
 		(uuid "64bb12b9-749e-4bf6-81ef-76a1e2672b1b")
 	)
-	(label "GND"
+	(global_label "GND"
 		(at 48.26 193.04 180)
 		(effects
 			(font
@@ -2960,7 +2960,7 @@
 		)
 		(uuid "2efcad75-56ba-4419-a054-84d79841f736")
 	)
-	(label "GND"
+	(global_label "GND"
 		(at 167.64 53.34 90)
 		(effects
 			(font
@@ -3420,7 +3420,7 @@
 		)
 		(uuid "262b57e1-8e73-4066-8655-1e7400e064f4")
 	)
-	(label "GND"
+	(global_label "GND"
 		(at 277.46 81.28 180)
 		(effects
 			(font
@@ -3440,7 +3440,7 @@
 		)
 		(uuid "2b74545e-c943-4b66-9a3a-d43143a5ad1b")
 	)
-	(label "GND"
+	(global_label "GND"
 		(at 277.46 83.82 180)
 		(effects
 			(font
@@ -3590,7 +3590,7 @@
 		)
 		(uuid "a32105d7-c28a-4901-b981-5bc1c6b3bc9f")
 	)
-	(label "GND"
+	(global_label "GND"
 		(at 247.65 66.04 90)
 		(effects
 			(font
@@ -3600,7 +3600,7 @@
 		)
 		(uuid "d16a0be9-f17d-4946-9dc0-f8265c2742be")
 	)
-	(label "GND"
+	(global_label "GND"
 		(at 245.11 66.04 90)
 		(effects
 			(font
@@ -4170,7 +4170,7 @@
 		)
 		(uuid "4923b1d6-e437-42ff-bddc-c5515aea33ca")
 	)
-	(label "GND"
+	(global_label "GND"
 		(at 195.58 38.1 180)
 		(effects
 			(font
@@ -4340,7 +4340,7 @@
 		)
 		(uuid "e21451fe-5004-46f4-8005-d20793bbfaa2")
 	)
-	(label "GND"
+	(global_label "GND"
 		(at 277.46 116.84 180)
 		(effects
 			(font
@@ -4682,7 +4682,7 @@
 		)
 		(uuid "4aa71107-396b-43fc-ab38-91c210bdab4a")
 	)
-	(label "GND"
+	(global_label "GND"
 		(at 150.16 127.0 0)
 		(effects
 			(font

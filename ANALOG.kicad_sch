@@ -144,6 +144,66 @@
 		)
 		(uuid "bcff5667-4ec4-4d7e-89bc-d4e96ce0b9e9")
 	)
+	(wire
+		(pts
+			(xy 50.8 30.48) (xy 150 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6de9141d-9cfa-47fb-8ace-cf90f36eebef")
+	)
+	(wire
+		(pts
+			(xy 50.8 40.64) (xy 150 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5cd51dfb-d364-4b65-a39f-79a81cd5b6d1")
+	)
+	(wire
+		(pts
+			(xy 50.8 50.8) (xy 150 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90338d30-5bcc-43ff-b0da-0d676c3e64b1")
+	)
+	(wire
+		(pts
+			(xy 50.8 60.959999999999994) (xy 150 60.959999999999994)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cd11864-ec1b-4de0-9801-6328933c13ac")
+	)
+	(wire
+		(pts
+			(xy 50.8 71.11999999999999) (xy 150 71.11999999999999)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f32534ce-9a0a-4773-b314-6172dd32bf24")
+	)
+	(wire
+		(pts
+			(xy 50.8 81.27999999999999) (xy 150 81.27999999999999)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4134bd21-4971-4dc3-b1b8-dd690ece2892")
+	)
 	(text "ANALOG input conditioning stub\nPull-ups / dividers / ESD TBD — passthrough hierarchy for pin map"
 		(at 25.4 15.24 0)
 		(effects

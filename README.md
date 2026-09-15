@@ -6,7 +6,7 @@ Core EFI Hellen-One rusEFI ECU. Microsquirt-class sealed box, 35-way AMPSEAL, **
 
 ## Status
 
-Spec freeze in progress. Hellen Create Board scaffolding imported (`hellen-import` branch). Rev **e**: frame nest of INJ/LS DPAKs + gate resistors, schematic netlist on pads, GND pours, and scripted frame routing (module copper still via Create Board gerber merge).
+Spec freeze in progress. Hellen Create Board scaffolding imported (`hellen-import` branch). Rev **e**: nest INJ/LS DPAKs + gate Rs, apply netlist to pads, scripted frame tracks/vias. Full GND pours deferred (gerbmerge zone-trim float crash). Module copper still via Create Board merge.
 
 - Header: TE **776231-1** (straight / vertical)
 - Plug: TE **776164-1** black, key A

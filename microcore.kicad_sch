@@ -6,14 +6,144 @@
 	(paper "A3")
 	(title_block
 		(title "Micro Core")
-		(date "2026-09-13")
-		(rev "C")
+		(date "2026-09-15")
+		(rev "D")
 		(company "Core EFI")
-		(comment 1 "modules-v1 rev C — vr-max9924 + USB Mini-B")
+		(comment 1 "modules-v1 rev D — pin freeze + frame BOOT/RESET")
 		(comment 2 "Firmware board: coreefi_micro")
 		(comment 3 "PCB basename: microcore (no dashes/underscores)")
 	)
 	(lib_symbols
+	(symbol "hellen-one-common:Button_SPST"
+		(pin_numbers hide)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "S"
+			(at -5.08 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Button_SPST"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "hellen-one-common:SMD-2_2.9x3.9x1.7"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single-Pole, Single-Throw Switch"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C115357"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Button_SPST_1_0"
+			(polyline
+				(pts
+					(xy 1.016 -2.54) (xy 5.08 -0.254)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0.508 -2.54)
+				(radius 0.508)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 4.572 -2.54)
+				(radius 0.508)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 5.08)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 -2.54 180)
+				(length 5.08)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+	)
 	(symbol "hellen-one-mega-mcu100-0.3:Module{colon}mega-mcu100/0.3" (in_bom yes) (on_board yes)
 			(property "Reference" "M100" (at 7.62 2.54 0)
 				(effects (font (size 1.27 1.27)) (justify left bottom))
@@ -2409,7 +2539,7 @@
 			)
 		)
 	)
-	(text "Micro Core rev C — modules-v1\nMCU mega-mcu100/0.3 + power_12and5V/0.3 + vr-max9924/0.3\nUSB Mini-B vertical (frame) + TE 776231-1 AMPSEAL\nSheets: INJ4 LS3 ANALOG HALL (DPAK frame)\nFirmware: coreefi_micro"
+	(text "Micro Core rev D — modules-v1\nMCU mega-mcu100/0.3 + power_12and5V/0.3 + vr-max9924/0.3\nUSB Mini-B + frame SW_BOOT/SW_RESET + TE 776231-1 AMPSEAL\nSheets: INJ4 LS3 ANALOG HALL (DPAK frame)\nFirmware: coreefi_micro"
 		(exclude_from_sim no)
 		(at 25.4 280 0)
 		(effects
@@ -3420,38 +3550,6 @@
 		)
 		(uuid "e25113b7-5841-4d39-abf9-91635727a836")
 	)
-	(no_connect
-		(at 280 50.8)
-		(uuid "32018ccd-a2d1-4c14-88d4-3ce2f88f68ec")
-	)
-	(no_connect
-		(at 280 93.98)
-		(uuid "16d6cf96-9856-443b-82d7-d19d62ad69d6")
-	)
-	(no_connect
-		(at 280 104.14)
-		(uuid "9536306a-489f-40c5-b898-d9da07b2f988")
-	)
-	(no_connect
-		(at 280 106.68)
-		(uuid "d2fcde88-b20b-46d2-b9fe-c4cf896421ec")
-	)
-	(no_connect
-		(at 280 109.22)
-		(uuid "cc6615b9-49e9-4c7c-a45a-766f01b46631")
-	)
-	(no_connect
-		(at 280 111.76)
-		(uuid "c22fccce-e382-44f7-91ee-3f3b1abb2a78")
-	)
-	(no_connect
-		(at 280 114.3)
-		(uuid "75098be0-39e2-45f6-ae98-3aa134d74021")
-	)
-	(no_connect
-		(at 280 116.84)
-		(uuid "a0257a62-9e25-4d62-9cb1-390b7e7e83bb")
-	)
 	(label "VBUS"
 		(at 255.27 50.8 0)
 		(effects
@@ -4091,6 +4189,508 @@
 			(justify left bottom)
 		)
 		(uuid "e397a2b2-df42-4f1e-a4a1-d22eb9053bc8")
+	)
+	(wire
+		(pts
+			(xy 280 50.8) (xy 277.46 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcb29720-9c19-48ba-b0ed-3a3f7092a7f4")
+	)
+	(label "DIN1"
+		(at 277.46 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "56389dd4-9864-433d-bdd0-29d799535239")
+	)
+	(wire
+		(pts
+			(xy 280 93.98) (xy 277.46 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ce21c45-f274-4981-864e-a45a54b6d453")
+	)
+	(label "DIN2"
+		(at 277.46 93.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d41d1254-9619-4660-995e-52ff506d4f43")
+	)
+	(wire
+		(pts
+			(xy 280 104.14) (xy 277.46 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1663a0fb-6d2e-41a5-a8e1-f0463b5df128")
+	)
+	(label "IGN5"
+		(at 277.46 104.14 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "277f531d-ed43-44f2-8cf4-20698bd76327")
+	)
+	(wire
+		(pts
+			(xy 280 106.68) (xy 277.46 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f71750c-7632-41f1-adbb-e6f7059d893a")
+	)
+	(label "IGN6"
+		(at 277.46 106.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a0776a33-9e2a-495e-a8e8-3ed0d9a8ac59")
+	)
+	(wire
+		(pts
+			(xy 280 109.22) (xy 277.46 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd194c95-b48b-40e4-a844-b9f8f6b677b8")
+	)
+	(label "IGN7"
+		(at 277.46 109.22 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8fa781fa-6bdc-420a-bf72-916037665d77")
+	)
+	(wire
+		(pts
+			(xy 280 111.76) (xy 277.46 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7529cfe6-9d08-4a77-a52f-b578d00d2fc5")
+	)
+	(label "IGN8"
+		(at 277.46 111.76 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fae8dc60-55bf-4ae6-9d67-a571e19d0ba6")
+	)
+	(wire
+		(pts
+			(xy 280 114.3) (xy 277.46 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b422e36-51d4-462e-b31f-fa2480aa8409")
+	)
+	(label "SGND"
+		(at 277.46 114.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5090cc5c-f085-4e7b-b741-7383eb0f2a77")
+	)
+	(wire
+		(pts
+			(xy 280 116.84) (xy 277.46 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e21451fe-5004-46f4-8005-d20793bbfaa2")
+	)
+	(label "GND"
+		(at 277.46 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f3cfdaf7-e6ff-4cc7-8736-38869ca9fc2b")
+	)
+	(wire
+		(pts
+			(xy 50.8 35.56) (xy 48.26 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c779dc55-8bfd-42d2-9cd3-c7a9fb093cba")
+	)
+	(label "IGN5"
+		(at 48.26 35.56 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "52da8706-c187-4b18-8ff7-384c28b8576c")
+	)
+	(wire
+		(pts
+			(xy 50.8 38.1) (xy 48.26 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25380617-c5a7-4782-a83b-72e23bb00a44")
+	)
+	(label "IGN6"
+		(at 48.26 38.1 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4b5ff0fe-563e-4c74-84ba-45e80271b9f7")
+	)
+	(wire
+		(pts
+			(xy 50.8 40.64) (xy 48.26 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3209f796-956e-449e-8d12-d7e5cf472488")
+	)
+	(label "IGN7"
+		(at 48.26 40.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "51b6c222-a7ca-4cf5-8016-1128ff454536")
+	)
+	(wire
+		(pts
+			(xy 50.8 43.18) (xy 48.26 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e242889-7678-43f5-80e6-d4e77a0d9883")
+	)
+	(label "IGN8"
+		(at 48.26 43.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "be045cf6-5b5b-480a-a038-b95580c7785c")
+	)
+	(wire
+		(pts
+			(xy 50.8 157.48) (xy 48.26 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03cf29dd-6604-4930-97b7-c5b90a41d424")
+	)
+	(label "DIN1"
+		(at 48.26 157.48 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "733d6612-bf12-40e8-995e-1004f9fd0d43")
+	)
+	(wire
+		(pts
+			(xy 50.8 160.02) (xy 48.26 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63440490-917e-4b67-b1eb-5bf18a88eece")
+	)
+	(label "DIN2"
+		(at 48.26 160.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "81b3e864-0025-48a0-95c3-1b23fff7fc00")
+	)
+	(label "nReset"
+		(at 119.38 127.0 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2a1cef22-6f9c-4e49-95a2-d5938f55db91")
+	)
+	(label "BOOT0"
+		(at 119.38 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4113c4f6-dc10-4712-9355-49073b3be529")
+	)
+	(label "V33"
+		(at 119.38 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cfa486cb-657e-4e5e-9c8b-efbe7ac439aa")
+	)
+	(symbol
+		(lib_id "hellen-one-common:Button_SPST")
+		(at 140 129.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8deccdf8-f9c2-4674-8b09-654f1789d6dc")
+		(property "Reference" "SW_BOOT"
+			(at 134.92 126.99999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Button_SPST"
+			(at 140 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "hellen-one-common:SMD-2_2.9x3.9x1.7"
+			(at 140 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Frame BOOT0 to V33 (parallels mega S101)"
+			(at 140 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C115357"
+			(at 140 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b0075aa8-a440-40a9-96e8-39b21fcf27d9")
+		)
+		(pin "2"
+			(uuid "31ce359e-d2cf-49e4-9712-0fdb0bc145a0")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+					(reference "SW_BOOT")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "hellen-one-common:Button_SPST")
+		(at 140 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "52649a1e-9aaf-45a8-8be1-0313a13cb6c6")
+		(property "Reference" "SW_RESET"
+			(at 134.92 121.91999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Button_SPST"
+			(at 140 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "hellen-one-common:SMD-2_2.9x3.9x1.7"
+			(at 140 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Frame nReset to GND (parallels mega S100)"
+			(at 140 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C115357"
+			(at 140 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ac3041f2-8992-463d-8ad6-1c08334420b7")
+		)
+		(pin "2"
+			(uuid "f3e35a90-a498-4f7f-8484-4839a4b4e698")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+					(reference "SW_RESET")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "BOOT0"
+		(at 134.92 132.08 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eccb4045-a45f-447a-af42-d6689a9a5bd2")
+	)
+	(label "V33"
+		(at 150.16 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "93e3cae0-036f-43dc-83db-f50c606018bb")
+	)
+	(label "nReset"
+		(at 134.92 127.0 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4aa71107-396b-43fc-ab38-91c210bdab4a")
+	)
+	(label "GND"
+		(at 150.16 127.0 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8ca672ca-c64d-4334-a66f-94661d401e97")
 	)
 	(sheet_instances
 		(path "/"

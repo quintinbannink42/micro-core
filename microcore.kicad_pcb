@@ -12,7 +12,7 @@
 		(date "2026-09-13")
 		(rev "C")
 		(company "Core EFI")
-		(comment 1 "modules-v1: mega-mcu100 + power + vr-max9924 + USB Mini-B + AMPSEAL")
+		(comment 1 "modules-v1: mega-mcu100 + power + vr-max9924 + USB Mini-B + SW_BOOT/SW_RESET + AMPSEAL pin freeze")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -94,7 +94,7 @@
 		(layer "Edge.Cuts")
 		(uuid "8a723e6b-51b7-444e-87c6-b70f983e5bc6")
 	)
-	(gr_text "Micro Core rev C\n90x60 4-layer\nmega-mcu100/0.3 + power + vr-max9924/0.3\nUSB Mini-B north + TE 776231-1 south"
+	(gr_text "Micro Core rev D\n90x60 4-layer\nmega-mcu100/0.3 + power + vr-max9924/0.3\nUSB Mini-B + SW_BOOT/SW_RESET north + TE 776231-1 south"
 		(at 45 5 0)
 		(layer "Cmts.User")
 		(uuid "05346842-2b66-4bd1-9f66-3eef98340376")
@@ -4143,6 +4143,301 @@
 			(layers "*.Cu" "*.Mask")
 			(net 0 "")
 			(uuid "5facf173-4104-4e31-99c4-e02617a6ea71")
+		)
+	)
+
+	(footprint "hellen-one-common:SMD-2_2.9x3.9x1.7"
+		(layer "F.Cu")
+		(uuid "cc33954c-6f9b-44b8-9b71-446377e1429f")
+		(at 40.0 5.0 0)
+		(property "Reference" "SW_BOOT"
+			(at -3.1 0.9 90)
+			(layer "F.SilkS")
+			(uuid "c875c689-a77a-427b-b337-1c284e27a219")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "Button_SPST"
+			(at 0 2.6 0)
+			(layer "F.Fab")
+			(uuid "f1821980-bbcf-4a98-b6a3-418688796036")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "hellen-one-common:SMD-2_2.9x3.9x1.7"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "704d8258-79e2-4070-8d31-532e773870cc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "094b166a-df32-4fde-a42c-37abca01dceb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C115357"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8e225629-a994-4f1e-b338-0402e6923e61")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(attr smd)
+		(fp_line
+			(start 2.154 -1.45)
+			(end 2.754 -1.45)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "5c320c3a-64b8-4eed-88f6-caa6ba8d8ce7")
+		)
+		(fp_line
+			(start 2.154 1.45)
+			(end 2.754 1.45)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "11519da7-c25f-4936-a070-85f8eac68d5a")
+		)
+		(fp_line
+			(start 2.754 1.45)
+			(end 2.754 -1.45)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "1438ff97-4349-443c-b364-24e07d26e6d0")
+		)
+		(fp_line
+			(start -2.75 -1.45)
+			(end -2.15 -1.45)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "b0c2a7ca-dc6d-419d-86e6-bbf1c174b4d5")
+		)
+		(fp_line
+			(start -2.75 1.45)
+			(end -2.75 -1.45)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "aa14cf41-28e8-4d87-bd8c-d16483e10bfb")
+		)
+		(fp_line
+			(start -2.75 1.45)
+			(end -2.15 1.45)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "877142bb-a709-4c73-8078-c2f8e652f9a0")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 0 -1.09)
+			(stroke
+				(width 0.254)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "d3ed9d0e-2eaf-4811-be5c-ec4f28b60120")
+		)
+		(pad "1" smd roundrect
+			(at -2.1 0)
+			(size 1.2 2.2)
+			(layers "F.Cu" "F.Paste" "F.Mask")
+			(roundrect_rratio 0.1)
+			(uuid "a2695b45-e779-455d-98e6-561f959600a2")
+		)
+		(pad "2" smd roundrect
+			(at 2.1 0)
+			(size 1.2 2.2)
+			(layers "F.Cu" "F.Paste" "F.Mask")
+			(roundrect_rratio 0.1)
+			(uuid "a42dbe0f-b402-4b1b-a63c-a75b89a59a99")
+		)
+	)
+	(footprint "hellen-one-common:SMD-2_2.9x3.9x1.7"
+		(layer "F.Cu")
+		(uuid "af4e95a9-c694-49e8-af39-1b55a0f24469")
+		(at 50.0 5.0 0)
+		(property "Reference" "SW_RESET"
+			(at -3.1 0.9 90)
+			(layer "F.SilkS")
+			(uuid "c31beb06-dacb-4853-98a6-d7336c1d2da1")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "Button_SPST"
+			(at 0 2.6 0)
+			(layer "F.Fab")
+			(uuid "623f129c-00a9-4fad-8c99-8d3176a5b145")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "hellen-one-common:SMD-2_2.9x3.9x1.7"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "88ba77cb-f41c-46e6-89ce-c46844f58c76")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6b8d4b2b-ecb4-4bef-a1a3-8eaa2869c64b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C115357"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f8794aea-62f0-4533-bd5e-e3709c6e9759")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(attr smd)
+		(fp_line
+			(start 2.154 -1.45)
+			(end 2.754 -1.45)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "c5115f64-b7be-43fb-a06e-964522932f54")
+		)
+		(fp_line
+			(start 2.154 1.45)
+			(end 2.754 1.45)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "22814b3b-5da0-4216-b049-687d3a9fabaf")
+		)
+		(fp_line
+			(start 2.754 1.45)
+			(end 2.754 -1.45)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "d05fcca9-1c83-4435-9127-028b2bd762f1")
+		)
+		(fp_line
+			(start -2.75 -1.45)
+			(end -2.15 -1.45)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "0b7dc7ce-da5d-4e4b-a85b-affd991cfc74")
+		)
+		(fp_line
+			(start -2.75 1.45)
+			(end -2.75 -1.45)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "4d0535ca-1c70-4e13-bf63-21e1b97f3bc7")
+		)
+		(fp_line
+			(start -2.75 1.45)
+			(end -2.15 1.45)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "ebb6389d-c24a-40bc-8729-a65682ed4b1d")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 0 -1.09)
+			(stroke
+				(width 0.254)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "5f5e7b41-d5ec-4412-8ef9-38054123269c")
+		)
+		(pad "1" smd roundrect
+			(at -2.1 0)
+			(size 1.2 2.2)
+			(layers "F.Cu" "F.Paste" "F.Mask")
+			(roundrect_rratio 0.1)
+			(uuid "2c5aaa54-388d-4d7d-bcf5-aa23807f3245")
+		)
+		(pad "2" smd roundrect
+			(at 2.1 0)
+			(size 1.2 2.2)
+			(layers "F.Cu" "F.Paste" "F.Mask")
+			(roundrect_rratio 0.1)
+			(uuid "9812f1ab-8f68-4fed-8ff0-db413e716a34")
 		)
 	)
 

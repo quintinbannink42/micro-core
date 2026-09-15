@@ -21,13 +21,13 @@ Hellen tips: [docs/HELLEN-FAQ.md](docs/HELLEN-FAQ.md).
 
 Firmware board name: `coreefi_micro`.
 
-KiCad board basename: `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`, rev `c`).
+KiCad board basename: `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`, rev `d`).
 
 ## Hellen tooling
 
 - Submodules: `hellen-one` (andreika-git/hellen-one), `kicad6-libraries` (rusefi/kicad6-libraries)
 - CI: Create Board on push; daily submodule update workflows
-- Fab outputs land under `boards/microcore-c/` after a successful CI run on `main`
+- Fab outputs land under `boards/microcore-d/` after a successful CI run on `main`
 
 ## License
 

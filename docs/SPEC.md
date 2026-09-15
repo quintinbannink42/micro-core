@@ -1,4 +1,4 @@
-# Micro Core — product spec (rev C, 2026-09-13)
+# Micro Core — product spec (rev D, 2026-09-15)
 
 First Core EFI Hellen-One ECU.
 
@@ -32,7 +32,7 @@ Keepout: header body + plug + strain-relief is the tallest stack on the board. R
 | USB | gasketed flap or pigtail, not on the 35-way |
 
 ## AMPSEAL I/O (35 pins)
-4 inj, 4 logic coils, 2 PGND, SGND, +12, 5 V, CLT, IAT, MAP, TPS, VR crank ±, Hall cam, CAN H/L, FP, 2× LS, tach, 2× analog spare.
+4 inj, 8 logic coils (IGN1–8), 3 PGND, 2 SGND, +12, 5 V, CLT, IAT, MAP, TPS, VR crank ±, Hall cam, CAN H/L, FP, 2× LS, 2× DIN, 2× analog spare.
 
 No ETB and no onboard LSU on this connector.
 
@@ -46,7 +46,7 @@ No ETB and no onboard LSU on this connector.
 | 8 | Fuel pump LS |
 | 9 | Idle / VVT LS |
 | 10 | Boost / spare LS |
-| 11 | Tach / spare LS |
+| 11 | DIN1 (IN_D1 / PE12) |
 | 12–15 | Ignition 1–4 (5 V) |
 | 16 | +5 V ref |
 | 17 | TPS |
@@ -57,11 +57,16 @@ No ETB and no onboard LSU on this connector.
 | 22–23 | Power ground |
 | 24 | CLT |
 | 25 | IAT |
-| 26 | Flex / launch |
+| 26 | DIN2 (IN_D2 / PE13) |
 | 27 | Hall cam |
 | 28 | VR crank + |
 | 29 | VR crank − |
-| 30–35 | spare — freeze after schematic |
+| 30 | IGN5 (PE2) |
+| 31 | IGN6 (PB8) |
+| 32 | IGN7 (PB9) |
+| 33 | IGN8 (PE6) |
+| 34 | SGND |
+| 35 | PGND |
 
 Core pinout, not a Microsquirt copy.
 
@@ -72,3 +77,10 @@ Core pinout, not a Microsquirt copy.
 MCU F4, input lite (1× VR + Hall + analog), 4-ch Core injectors, 4-ch 5 V ign, 3× LS, power. Knock / WBO as pads or CAN.
 
 Firmware board: `coreefi_micro`.
+
+## Frame controls (rev D)
+Gasketed tactile switches near USB Mini-B (north edge), paralleling mega-mcu100 internal buttons:
+| Ref | Net | Polarity |
+|---|---|---|
+| SW_BOOT | BOOT0 ↔ V33 | BOOT0 pulled down on mega; button pulls to V33 (bootloader) |
+| SW_RESET | nReset ↔ GND | Active-low; button pulls nReset to GND |

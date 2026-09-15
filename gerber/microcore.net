@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/runner/work/micro-core/micro-core/microcore.kicad_sch</source>
-    <date>2026-09-15T17:07:46</date>
+    <date>2026-09-15T17:24:08</date>
     <tool>Eeschema 10.0.6-10.0.6~ubuntu24.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -346,9 +346,9 @@
     </comp>
     <comp ref="Q1">
       <value>VND14NV04-E</value>
-      <footprint>hellen-one-common:DPAK</footprint>
+      <footprint>microcore-fp:DPAK</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:DPAK</field>
+        <field name="Footprint">microcore-fp:DPAK</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -371,9 +371,9 @@
     </comp>
     <comp ref="Q2">
       <value>VND14NV04-E</value>
-      <footprint>hellen-one-common:DPAK</footprint>
+      <footprint>microcore-fp:DPAK</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:DPAK</field>
+        <field name="Footprint">microcore-fp:DPAK</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -396,9 +396,9 @@
     </comp>
     <comp ref="Q3">
       <value>VND14NV04-E</value>
-      <footprint>hellen-one-common:DPAK</footprint>
+      <footprint>microcore-fp:DPAK</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:DPAK</field>
+        <field name="Footprint">microcore-fp:DPAK</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -421,9 +421,9 @@
     </comp>
     <comp ref="Q4">
       <value>VND14NV04-E</value>
-      <footprint>hellen-one-common:DPAK</footprint>
+      <footprint>microcore-fp:DPAK</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:DPAK</field>
+        <field name="Footprint">microcore-fp:DPAK</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -446,9 +446,9 @@
     </comp>
     <comp ref="R1">
       <value>12</value>
-      <footprint>hellen-one-common:R0603</footprint>
+      <footprint>microcore-fp:R0603</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:R0603</field>
+        <field name="Footprint">microcore-fp:R0603</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -468,9 +468,9 @@
     </comp>
     <comp ref="R2">
       <value>12</value>
-      <footprint>hellen-one-common:R0603</footprint>
+      <footprint>microcore-fp:R0603</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:R0603</field>
+        <field name="Footprint">microcore-fp:R0603</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -490,9 +490,9 @@
     </comp>
     <comp ref="R3">
       <value>12</value>
-      <footprint>hellen-one-common:R0603</footprint>
+      <footprint>microcore-fp:R0603</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:R0603</field>
+        <field name="Footprint">microcore-fp:R0603</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -512,9 +512,9 @@
     </comp>
     <comp ref="R4">
       <value>12</value>
-      <footprint>hellen-one-common:R0603</footprint>
+      <footprint>microcore-fp:R0603</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:R0603</field>
+        <field name="Footprint">microcore-fp:R0603</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -534,9 +534,9 @@
     </comp>
     <comp ref="Q5">
       <value>VND14NV04-E</value>
-      <footprint>hellen-one-common:DPAK</footprint>
+      <footprint>microcore-fp:DPAK</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:DPAK</field>
+        <field name="Footprint">microcore-fp:DPAK</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -559,9 +559,9 @@
     </comp>
     <comp ref="Q6">
       <value>VND14NV04-E</value>
-      <footprint>hellen-one-common:DPAK</footprint>
+      <footprint>microcore-fp:DPAK</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:DPAK</field>
+        <field name="Footprint">microcore-fp:DPAK</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -584,9 +584,9 @@
     </comp>
     <comp ref="Q7">
       <value>VND14NV04-E</value>
-      <footprint>hellen-one-common:DPAK</footprint>
+      <footprint>microcore-fp:DPAK</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:DPAK</field>
+        <field name="Footprint">microcore-fp:DPAK</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -609,9 +609,9 @@
     </comp>
     <comp ref="R5">
       <value>12</value>
-      <footprint>hellen-one-common:R0603</footprint>
+      <footprint>microcore-fp:R0603</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:R0603</field>
+        <field name="Footprint">microcore-fp:R0603</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -631,9 +631,9 @@
     </comp>
     <comp ref="R6">
       <value>12</value>
-      <footprint>hellen-one-common:R0603</footprint>
+      <footprint>microcore-fp:R0603</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:R0603</field>
+        <field name="Footprint">microcore-fp:R0603</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -653,9 +653,9 @@
     </comp>
     <comp ref="R7">
       <value>12</value>
-      <footprint>hellen-one-common:R0603</footprint>
+      <footprint>microcore-fp:R0603</footprint>
       <fields>
-        <field name="Footprint">hellen-one-common:R0603</field>
+        <field name="Footprint">microcore-fp:R0603</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -699,7 +699,7 @@
       <fields>
         <field name="Reference">R</field>
         <field name="Value">Res</field>
-        <field name="Footprint">hellen-one-common:R0603</field>
+        <field name="Footprint">microcore-fp:R0603</field>
         <field name="Datasheet"/>
         <field name="Description">Resistor</field>
         <field name="LCSC"/>

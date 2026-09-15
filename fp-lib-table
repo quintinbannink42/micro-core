@@ -1,5 +1,6 @@
 (fp_lib_table
   (version 7)
+  (lib (name "microcore-fp")(type "KiCad")(uri "${KIPRJMOD}/footprints")(options "")(descr "Vendored frame footprints (DPAK, R0603, SOD-323)"))
   (lib (name "hellen-one-mega-mcu100-0.3")(type "KiCad")(uri "${KIPRJMOD}/hellen-one/modules/mega-mcu100/0.3")(options "")(descr "Hellen One MEGA-MCU100 Module"))
   (lib (name "hellen-one-power_12and5V-0.3")(type "KiCad")(uri "${KIPRJMOD}/hellen-one/modules/power_12and5V/0.3")(options "")(descr "Hellen-One Power 12V+5V Module"))
   (lib (name "hellen-one-vr-max9924-0.3")(type "KiCad")(uri "${KIPRJMOD}/hellen-one/modules/vr-max9924/0.3")(options "")(descr "Hellen-One VR max9924 Module"))

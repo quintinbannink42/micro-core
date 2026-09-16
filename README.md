@@ -6,7 +6,7 @@ Core EFI Hellen-One rusEFI ECU. Microsquirt-class sealed box, 35-way AMPSEAL, **
 
 ## Status
 
-Spec freeze in progress. Hellen Create Board scaffolding imported (`hellen-import` branch). Rev **g**: GND pours on F.Cu+B.Cu; AMPSEAL keepout clear (DPAKs at y=15/22/29, Q7 in M2-M1 corridor). Module copper via Create Board merge.
+Spec locked in [docs/SPEC.md](docs/SPEC.md). Hardware rev **g** on `main`: F.Cu+B.Cu GND pours; AMPSEAL keepout clear (DPAKs at y=15/22/29, Q7 in M2–M1 corridor). Create Board artifacts under `boards/microcore-g/`. See [docs/HARDWARE_STATUS_rev_g.md](docs/HARDWARE_STATUS_rev_g.md) for fab-ready leftovers.
 
 - Header: TE **776231-1** (straight / vertical)
 - Plug: TE **776164-1** black, key A
@@ -15,11 +15,11 @@ Spec freeze in progress. Hellen Create Board scaffolding imported (`hellen-impor
 
 ## Spec
 
-See [docs/SPEC.md](docs/SPEC.md).
+See [docs/SPEC.md](docs/SPEC.md). Boss brief: [MICROCORE_BRIEF.md](MICROCORE_BRIEF.md).
 
 Hellen tips: [docs/HELLEN-FAQ.md](docs/HELLEN-FAQ.md).
 
-Firmware board name: `coreefi_micro`.
+Firmware board name: `coreefi_micro` (sibling tree `/workspace/fw-coreefi-micro`, not in this repo).
 
 KiCad board basename: `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`, rev `g`).
 
@@ -27,7 +27,7 @@ KiCad board basename: `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`, re
 
 - Submodules: `hellen-one` (andreika-git/hellen-one), `kicad6-libraries` (rusefi/kicad6-libraries)
 - CI: Create Board on push; daily submodule update workflows
-- Fab outputs land under `boards/microcore-e/` after a successful CI run on `main`
+- Fab outputs land under `boards/microcore-g/` after a successful CI run on `main`
 
 ## License
 

@@ -6,7 +6,7 @@ Core EFI Hellen-One rusEFI ECU. Microsquirt-class sealed box, 35-way AMPSEAL, **
 
 ## Status
 
-Spec freeze in progress. Hellen Create Board scaffolding imported (`hellen-import` branch). Rev **f**: clear AMPSEAL silk keepout — DPAKs at y=15/22/29, Q7 in M2–M1 corridor; re-routed FET nets. Full GND pours deferred (gerbmerge). Module copper via Create Board merge.
+Spec freeze in progress. Hellen Create Board scaffolding imported (`hellen-import` branch). Rev **g**: GND pours on F.Cu+B.Cu; AMPSEAL keepout clear (DPAKs at y=15/22/29, Q7 in M2-M1 corridor). Module copper via Create Board merge.
 
 - Header: TE **776231-1** (straight / vertical)
 - Plug: TE **776164-1** black, key A
@@ -21,7 +21,7 @@ Hellen tips: [docs/HELLEN-FAQ.md](docs/HELLEN-FAQ.md).
 
 Firmware board name: `coreefi_micro`.
 
-KiCad board basename: `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`, rev `f`).
+KiCad board basename: `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`, rev `g`).
 
 ## Hellen tooling
 

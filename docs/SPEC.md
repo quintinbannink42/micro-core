@@ -1,4 +1,4 @@
-# Micro Core — product spec (rev E, 2026-09-15)
+# Micro Core — product spec (rev F, 2026-09-16)
 
 First Core EFI Hellen-One ECU.
 
@@ -78,7 +78,7 @@ MCU F4, input lite (1× VR + Hall + analog), 4-ch Core injectors, 4-ch 5 V ign, 
 
 Firmware board: `coreefi_micro`.
 
-## Frame controls (rev E)
+## Frame controls (rev F)
 Gasketed tactile switches near USB Mini-B (north edge), paralleling mega-mcu100 internal buttons:
 | Ref | Net | Polarity |
 |---|---|---|

@@ -817,7 +817,7 @@
 		)
 		(uuid "659789c8-3581-42cc-914e-d4f823e74239")
 	)
-	(text "LS3 Low-side\nDPAK N-FET drivers (alphax LS style)\n12 ohm gate; flyback/TVS TBD next pass\nSPEC: SMBJ33A + UF flyback + 2x12 ohm high-Z"
+	(text "LS3 Low-side\nDPAK N-FET drivers (alphax LS style)\n12 ohm gate; flyback/TVS not in SPEC power-stage (injectors only)\nINJ4 rev J has SMAJ33A + US1M + 2x12 ohm high-Z"
 		(at 25.4 15.24 0)
 		(effects
 			(font

@@ -7,7 +7,7 @@
 	(title_block
 		(title "INJ4 Injectors")
 		(date "2026-09-13")
-		(rev "B")
+		(rev "J")
 		(company "Core EFI")
 	)
 	(lib_symbols
@@ -926,6 +926,1335 @@
 			)
 		)
 	)
+	(hierarchical_label "V12_RAW"
+		(shape input)
+		(at 25.4 7.62 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6cabf7f7-e563-5ac2-b36a-f023c3b9139e")
+	)
+	(wire
+		(pts
+			(xy 25.4 7.62) (xy 25.4 5.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "834390a3-a85a-5e91-9e37-7216ad4e6d78")
+	)
+	(symbol
+		(lib_id "hellen-one-common:Res")
+		(at 63.5 17.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c9a67750-1023-5ebd-ae49-6b33cc0723e1")
+		(property "Reference" "R8"
+			(at 66.04 15.240000000000002 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "12"
+			(at 68.58 15.240000000000002 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "microcore-fp:R0603"
+			(at 63.5 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22783"
+			(at 63.5 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9aed53e9-b9b1-5965-920a-cd036678d9b8")
+		)
+		(pin "2"
+			(uuid "4097a1ca-44a7-5ce4-82e2-fc6264de983a")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 50.8 17.78) (xy 63.5 17.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bcb2185-642c-5f90-a078-a2af3adffbcc")
+	)
+	(wire
+		(pts
+			(xy 73.66 17.78) (xy 101.6 17.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a65a8c4d-b685-593a-94ca-03ab65d011fd")
+	)
+	(symbol
+		(lib_id "hellen-one-common:1N4148WS")
+		(at 55.88 5.080000000000002 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "46b03f9a-27fb-591c-a5e7-6b4978964580")
+		(property "Reference" "D1"
+			(at 55.88 1.2700000000000018 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "US1M"
+			(at 55.88 8.890000000000002 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "microcore-fp:DO214AC"
+			(at 55.88 5.080000000000002 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 5.080000000000002 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C112545"
+			(at 55.88 5.080000000000002 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2f4831a7-07bd-53ed-861d-e0d5ce547a89")
+		)
+		(pin "2"
+			(uuid "64069e6e-e662-591b-b564-25571d48b367")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 50.8 17.78) (xy 50.8 5.080000000000002)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef6dbbc1-fec7-5ed9-a82c-e8a29eeb46b3")
+	)
+	(wire
+		(pts
+			(xy 63.5 5.080000000000002) (xy 25.4 5.080000000000002)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f870690-5384-58f1-8331-84bb4497f1b4")
+	)
+	(wire
+		(pts
+			(xy 25.4 5.080000000000002) (xy 25.4 5.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc0a5d4a-756a-51f6-a850-12d59fcab235")
+	)
+	(symbol
+		(lib_id "hellen-one-common:1N4148WS")
+		(at 43.18 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4e2cfd09-f6be-500a-843b-a0cf7c979eab")
+		(property "Reference" "D5"
+			(at 43.18 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMAJ33A"
+			(at 43.18 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "microcore-fp:DO214AC"
+			(at 43.18 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C143131"
+			(at 43.18 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e9933647-341b-54ce-955b-3e26180ee26a")
+		)
+		(pin "2"
+			(uuid "2ee4148d-1334-520f-8457-e69cdbb289be")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 50.8 17.78) (xy 50.8 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69ab18d0-69f2-544f-b4b2-9078a6c97585")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 38.1 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "78cb2471-7980-5d26-8f07-b14df4c970fc")
+		(property "Reference" "#PWR11"
+			(at 38.1 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 38.1 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 38.1 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7fa4459b-e3f6-5be5-8d4e-e72876af269e")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "#PWR11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 38.1 30.48) (xy 38.1 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed3286dd-c4a0-5df1-99b4-6802bcd66ea5")
+	)
+	(symbol
+		(lib_id "hellen-one-common:Res")
+		(at 63.5 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8d802cf7-4a7d-543c-9afc-67567a7e0af0")
+		(property "Reference" "R9"
+			(at 66.04 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "12"
+			(at 68.58 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "microcore-fp:R0603"
+			(at 63.5 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22783"
+			(at 63.5 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e514a336-16d5-5271-bb91-0da6e7741ce3")
+		)
+		(pin "2"
+			(uuid "83fcd674-9d67-5d9d-8e8e-3c3e869eacea")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 50.8 48.26) (xy 63.5 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c621c76-68bc-5de4-9f26-5d9e6f991563")
+	)
+	(wire
+		(pts
+			(xy 73.66 48.26) (xy 101.6 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bf26158-a895-5461-962e-2e009265197a")
+	)
+	(symbol
+		(lib_id "hellen-one-common:1N4148WS")
+		(at 55.88 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "597ccea8-72cd-553e-b34a-bd9e76cdfcb9")
+		(property "Reference" "D2"
+			(at 55.88 31.750000000000004 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "US1M"
+			(at 55.88 39.370000000000005 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "microcore-fp:DO214AC"
+			(at 55.88 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C112545"
+			(at 55.88 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "148b8ae9-59ca-5df0-90e6-48d84ceeca9c")
+		)
+		(pin "2"
+			(uuid "3645833e-b0fd-5f80-b031-fc8840a4dfff")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 50.8 48.26) (xy 50.8 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bdd77dd6-4f20-5dc2-ab37-aa381b5f6270")
+	)
+	(wire
+		(pts
+			(xy 63.5 35.56) (xy 25.4 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98c15fdc-2585-50cb-b652-decd67e77ece")
+	)
+	(wire
+		(pts
+			(xy 25.4 35.56) (xy 25.4 5.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c2942bc-a12e-5944-a473-67ce080b9863")
+	)
+	(symbol
+		(lib_id "hellen-one-common:1N4148WS")
+		(at 43.18 60.959999999999994 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "00116ad7-fb92-5b96-8c91-47f77f20d806")
+		(property "Reference" "D6"
+			(at 43.18 57.14999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMAJ33A"
+			(at 43.18 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "microcore-fp:DO214AC"
+			(at 43.18 60.959999999999994 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 60.959999999999994 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C143131"
+			(at 43.18 60.959999999999994 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "57004d99-bd44-55d6-b0df-bdaedbc34baf")
+		)
+		(pin "2"
+			(uuid "befb94c1-6d20-5100-bc90-659f76af2946")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 50.8 48.26) (xy 50.8 60.959999999999994)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61cb637e-6428-5faa-b46e-ca57105ddf09")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 38.1 66.03999999999999 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4d371902-c103-5e99-8972-27b539e455a0")
+		(property "Reference" "#PWR12"
+			(at 38.1 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 38.1 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 38.1 66.03999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 66.03999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e3e65e5b-9478-55f2-b450-b301a51350d6")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "#PWR12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 38.1 60.959999999999994) (xy 38.1 66.03999999999999)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e9c6346-b3d6-5ab3-a82c-9aced2bdb85d")
+	)
+	(symbol
+		(lib_id "hellen-one-common:Res")
+		(at 63.5 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "883c6c99-7dd1-5d56-9df0-d8cdb6bf1e62")
+		(property "Reference" "R10"
+			(at 66.04 76.19999999999999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "12"
+			(at 68.58 76.19999999999999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "microcore-fp:R0603"
+			(at 63.5 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22783"
+			(at 63.5 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d1cc5e64-a135-57ab-aac7-88110a77cc6f")
+		)
+		(pin "2"
+			(uuid "d883324a-188a-55d3-81cd-8db9d7ed1386")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 50.8 78.74) (xy 63.5 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7c46a0e-8efc-5138-ae93-a0b8bc2edb0b")
+	)
+	(wire
+		(pts
+			(xy 73.66 78.74) (xy 101.6 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "caf22a24-1353-5be9-88c5-590135e951ca")
+	)
+	(symbol
+		(lib_id "hellen-one-common:1N4148WS")
+		(at 55.88 66.03999999999999 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "27db3699-6adb-5bf8-9892-75b017dd3cba")
+		(property "Reference" "D3"
+			(at 55.88 62.22999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "US1M"
+			(at 55.88 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "microcore-fp:DO214AC"
+			(at 55.88 66.03999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 66.03999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C112545"
+			(at 55.88 66.03999999999999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f07fd79f-d37a-5822-a575-cbd0b15849b9")
+		)
+		(pin "2"
+			(uuid "eecdd82c-b286-59ea-83a4-dd842c97c549")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 50.8 78.74) (xy 50.8 66.03999999999999)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c69d08d8-758f-5a9e-9054-4212bc52f911")
+	)
+	(wire
+		(pts
+			(xy 63.5 66.03999999999999) (xy 25.4 66.03999999999999)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d764d240-f7c5-5668-b1c6-e6466add17e6")
+	)
+	(wire
+		(pts
+			(xy 25.4 66.03999999999999) (xy 25.4 5.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42255d1b-a155-5d4e-9400-591c9d074e4d")
+	)
+	(symbol
+		(lib_id "hellen-one-common:1N4148WS")
+		(at 43.18 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1ad6b67f-45a7-5104-9180-e47ae59e834c")
+		(property "Reference" "D7"
+			(at 43.18 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMAJ33A"
+			(at 43.18 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "microcore-fp:DO214AC"
+			(at 43.18 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C143131"
+			(at 43.18 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "044b69d9-12bb-5251-bf43-29a3f00cf894")
+		)
+		(pin "2"
+			(uuid "7384874d-b572-566e-9306-3d12ade8071d")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 50.8 78.74) (xy 50.8 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfb30044-2ee0-5b46-80af-44de37cb01f6")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 38.1 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e33cb56a-152d-51f8-8337-9c15273ddf04")
+		(property "Reference" "#PWR13"
+			(at 38.1 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 38.1 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 38.1 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2001fffe-9a76-5801-aa92-e1a763719705")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "#PWR13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 38.1 91.44) (xy 38.1 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "490ef15c-475a-5bf4-9800-bc9ad6f5442f")
+	)
+	(symbol
+		(lib_id "hellen-one-common:Res")
+		(at 63.5 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "85bb61e9-99da-56ea-b426-d597580aea25")
+		(property "Reference" "R11"
+			(at 66.04 106.67999999999999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "12"
+			(at 68.58 106.67999999999999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "microcore-fp:R0603"
+			(at 63.5 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22783"
+			(at 63.5 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "282fba6d-4d19-55de-b090-aba568a9fad4")
+		)
+		(pin "2"
+			(uuid "0243b739-c7b6-5bea-86c6-2f8d60259941")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 50.8 109.22) (xy 63.5 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf80ace8-6d9b-5de1-b6b5-0dea3da8c461")
+	)
+	(wire
+		(pts
+			(xy 73.66 109.22) (xy 101.6 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6afdb38-04f8-508d-b2e7-10c8304ffb4b")
+	)
+	(symbol
+		(lib_id "hellen-one-common:1N4148WS")
+		(at 55.88 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8923417f-ee79-59ba-a885-ee072d6eb0f7")
+		(property "Reference" "D4"
+			(at 55.88 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "US1M"
+			(at 55.88 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "microcore-fp:DO214AC"
+			(at 55.88 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C112545"
+			(at 55.88 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d34aae3a-ebbb-550d-8a03-49510745cb87")
+		)
+		(pin "2"
+			(uuid "b5e51629-cdd5-5939-b794-00de30a2fc3c")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 50.8 109.22) (xy 50.8 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "568381f4-8b8d-5c1b-adcb-1586458a35fe")
+	)
+	(wire
+		(pts
+			(xy 63.5 96.52) (xy 25.4 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e1fc3ca-a79c-5602-b210-f9e1d7640aa4")
+	)
+	(wire
+		(pts
+			(xy 25.4 96.52) (xy 25.4 5.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d81baa6c-5f7d-5b1e-81ea-995d3e211bbc")
+	)
+	(symbol
+		(lib_id "hellen-one-common:1N4148WS")
+		(at 43.18 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a20a157e-1638-5a70-8e3c-ac0865e56635")
+		(property "Reference" "D8"
+			(at 43.18 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMAJ33A"
+			(at 43.18 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "microcore-fp:DO214AC"
+			(at 43.18 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C143131"
+			(at 43.18 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "422367e4-32dc-5137-b2a7-ee28b6801bcc")
+		)
+		(pin "2"
+			(uuid "535d17e8-4f67-5fcb-888c-295b42a743ad")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 50.8 109.22) (xy 50.8 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b83c2a59-c5af-5851-9753-81efc684bd40")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 38.1 127.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fe03f3ce-6c06-53ef-974d-8b95f3e43cab")
+		(property "Reference" "#PWR14"
+			(at 38.1 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 38.1 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 38.1 127.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 127.0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5196b0f7-1837-577f-abfc-bba8be76eec4")
+		)
+		(instances
+			(project "microcore"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/62edc157-0304-4a0d-a7e9-01065a1d8b1e"
+					(reference "#PWR14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 38.1 121.92) (xy 38.1 127.0)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4cc0b5c-2927-5323-bdf9-dd6e1a113e8f")
+	)
 	(hierarchical_label "IN1"
 		(shape input)
 		(at 166.37 25.4 0)
@@ -1014,7 +2343,7 @@
 		)
 		(uuid "2ad6f45b-d22f-4a6a-b36a-f06d5b610c0c")
 	)
-	(text "INJ4 Injectors\nDPAK N-FET drivers (alphax LS style)\n12 ohm gate; flyback/TVS TBD next pass\nSPEC: SMBJ33A + UF flyback + 2x12 ohm high-Z"
+	(text "INJ4 Injectors\nDPAK N-FET + SMAJ33A (DO-214AC) + US1M UF flyback\n2x12 ohm high-Z per channel (gate R1-R4 + ballast R8-R11)\nrev J: SPEC power-stage protection landed"
 		(at 25.4 15.24 0)
 		(effects
 			(font
@@ -1036,7 +2365,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 17.78) (xy 101.6 17.78)
+			(xy 50.8 17.78) (xy 50.8 17.78)
 		)
 		(stroke
 			(width 0)
@@ -1086,7 +2415,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 48.26) (xy 101.6 48.26)
+			(xy 50.8 48.26) (xy 50.8 48.26)
 		)
 		(stroke
 			(width 0)
@@ -1136,7 +2465,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 78.74) (xy 101.6 78.74)
+			(xy 50.8 78.74) (xy 50.8 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1186,7 +2515,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 109.22) (xy 101.6 109.22)
+			(xy 50.8 109.22) (xy 50.8 109.22)
 		)
 		(stroke
 			(width 0)

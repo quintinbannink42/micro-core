@@ -1,3 +1,5 @@
+> **Superseded for current work:** see [HARDWARE_STATUS_rev_j.md](HARDWARE_STATUS_rev_j.md) (rev j injector protection, 2026-09-21).
+
 # Micro Core hardware status — rev h → i
 
 **Date:** 2026-09-21 (UTC+2)  

@@ -1,4 +1,4 @@
-# Micro Core — product spec (rev H/I, 2026-09-21)
+# Micro Core — product spec (rev K, 2026-09-21)
 
 First Core EFI Hellen-One ECU.
 
@@ -78,12 +78,9 @@ MCU F4, input lite (1× VR + Hall + analog), 4-ch Core injectors, 4-ch 5 V ign, 
 
 Firmware board: `coreefi_micro`.
 
-## Frame controls (rev G+)
-Gasketed tactile switches near USB Mini-B (north edge), paralleling mega-mcu100 internal buttons:
-| Ref | Net | Polarity |
-|---|---|---|
-| SW_BOOT | BOOT0 ↔ V33 | BOOT0 pulled down on mega; button pulls to V33 (bootloader) |
-| SW_RESET | nReset ↔ GND | Active-low; button pulls nReset to GND |
+## Frame controls (rev K)
+
+mega-mcu100 already has internal tactile switches (S100 nReset, S101 BOOT0). **Frame SW_BOOT / SW_RESET were removed in rev k** (schematic + PCB) so they no longer parallel those module buttons. Boot/reset on the sealed box is module-only unless a later rev adds external switches again.
 
 ## Analog / Hall conditioning (waiver — rev H)
 

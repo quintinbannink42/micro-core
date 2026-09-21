@@ -1,3 +1,5 @@
+> **Superseded for current work:** see [HARDWARE_STATUS_rev_k.md](HARDWARE_STATUS_rev_k.md) (rev k: diodes on B.Cu near J1, frame buttons removed).
+
 # Micro Core hardware status — rev j
 
 **Date:** 2026-09-21  

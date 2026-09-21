@@ -1,0 +1,43 @@
+# removal example: R66006 would be removed from BOM
+# R66006,
+
+# replacement example - replace specific fuse part number
+# F42333310,"nSMD050-24V","SMD1206","C70076"
+
+# VR module: vr-max9924/0.3 (was vr-discrete/0.5 on rev b)
+
+# Note: hellen-one submodule points at quintinbannink42/hellen-one with
+# vr-max9924/0.3 D751 comment aligned to LED-GREEN-0603 (matches mega-mcu100).
+
+# rev k: frame SW_BOOT/SW_RESET removed (mega-mcu100 S100/S101 remain)
+# injector protection LCSC unchanged from rev j (SMAJ33A + US1M + 2nd 12 ohm)
+
+# Frame power-stage FETs + gate Rs
+Q1,"VND14NV04-E","DPAK","C155647"
+Q2,"VND14NV04-E","DPAK","C155647"
+Q3,"VND14NV04-E","DPAK","C155647"
+Q4,"VND14NV04-E","DPAK","C155647"
+Q5,"VND14NV04-E","DPAK","C155647"
+Q6,"VND14NV04-E","DPAK","C155647"
+Q7,"VND14NV04-E","DPAK","C155647"
+R1,"12","R0603","C22783"
+R2,"12","R0603","C22783"
+R3,"12","R0603","C22783"
+R4,"12","R0603","C22783"
+R5,"12","R0603","C22783"
+R6,"12","R0603","C22783"
+R7,"12","R0603","C22783"
+
+# SPEC injector protection: 2nd 12 ohm high-Z ballast + UF flyback + 33V TVS (DO-214AC)
+R8,"12","R0603","C22783"
+R9,"12","R0603","C22783"
+R10,"12","R0603","C22783"
+R11,"12","R0603","C22783"
+D1,"US1M","DO214AC","C112545"
+D2,"US1M","DO214AC","C112545"
+D3,"US1M","DO214AC","C112545"
+D4,"US1M","DO214AC","C112545"
+D5,"SMAJ33A","DO214AC","C143131"
+D6,"SMAJ33A","DO214AC","C143131"
+D7,"SMAJ33A","DO214AC","C143131"
+D8,"SMAJ33A","DO214AC","C143131"

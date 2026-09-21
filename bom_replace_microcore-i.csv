@@ -9,7 +9,7 @@
 # Note: hellen-one submodule points at quintinbannink42/hellen-one with
 # vr-max9924/0.3 D751 comment aligned to LED-GREEN-0603 (matches mega-mcu100).
 
-# rev h/i: Q1-Q7 + gate R LCSC; J8 stitch lands on rev i
+# rev i: J8 GND stitch (via+tracks); carry rev h BOM assigns
 SW_BOOT,"BTN","SMD-2_2.9x3.9x1.7","C115357"
 SW_RESET,"BTN","SMD-2_2.9x3.9x1.7","C115357"
 

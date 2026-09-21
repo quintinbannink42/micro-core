@@ -1,4 +1,4 @@
-# Micro Core — product spec (rev G, 2026-09-16)
+# Micro Core — product spec (rev H/I, 2026-09-21)
 
 First Core EFI Hellen-One ECU.
 
@@ -78,9 +78,17 @@ MCU F4, input lite (1× VR + Hall + analog), 4-ch Core injectors, 4-ch 5 V ign, 
 
 Firmware board: `coreefi_micro`.
 
-## Frame controls (rev G)
+## Frame controls (rev G+)
 Gasketed tactile switches near USB Mini-B (north edge), paralleling mega-mcu100 internal buttons:
 | Ref | Net | Polarity |
 |---|---|---|
 | SW_BOOT | BOOT0 ↔ V33 | BOOT0 pulled down on mega; button pulls to V33 (bootloader) |
 | SW_RESET | nReset ↔ GND | Active-low; button pulls nReset to GND |
+
+## Analog / Hall conditioning (waiver — rev H)
+
+Frame sheets `ANALOG.kicad_sch` / `HALL.kicad_sch` remain hierarchy passthrough stubs.
+
+**Accepted for Micro Core v1:** sensor conditioning is **mega-module-only** via Hellen `mega-mcu100` input lite (1× VR + Hall + analog paths on the module). No additional frame dividers / pull-ups / ESD required for fab of the first sealed-box rev, unless a later product change reopens this.
+
+Firmware pin freeze still follows this SPEC + `fw-coreefi-micro/connectors/main.yaml`.

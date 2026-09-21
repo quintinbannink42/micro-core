@@ -1,3 +1,5 @@
+> **Superseded for current work:** see [HARDWARE_STATUS_rev_h.md](HARDWARE_STATUS_rev_h.md) (rev h→i, 2026-09-21).
+
 # Micro Core hardware status — rev g
 
 **Date:** 2026-09-16 (Africa/Johannesburg)  

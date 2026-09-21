@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/runner/work/micro-core/micro-core/microcore.kicad_sch</source>
-    <date>2026-09-21T04:39:02</date>
+    <date>2026-09-21T11:05:02</date>
     <tool>Eeschema 10.0.6-10.0.6~ubuntu24.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -26,7 +26,7 @@
       <title_block>
         <title>INJ4 Injectors</title>
         <company>Core EFI</company>
-        <rev>J</rev>
+        <rev>K</rev>
         <date>2026-09-13</date>
         <source>INJ4.kicad_sch</source>
         <comment number="1" value=""/>
@@ -340,56 +340,6 @@
             <pin num="E3"/>
             <pin num="E2"/>
             <pin num="E1"/>
-          </pins>
-        </unit>
-      </units>
-    </comp>
-    <comp ref="SW_BOOT">
-      <value>BTN</value>
-      <footprint>hellen-one-common:SMD-2_2.9x3.9x1.7</footprint>
-      <description>Frame BOOT0 to V33 (parallels mega S101)</description>
-      <fields>
-        <field name="LCSC">C115357</field>
-        <field name="Footprint">hellen-one-common:SMD-2_2.9x3.9x1.7</field>
-        <field name="Datasheet"/>
-        <field name="Description">Frame BOOT0 to V33 (parallels mega S101)</field>
-      </fields>
-      <libsource lib="hellen-one-common" part="Button_SPST" description="Single-Pole, Single-Throw Switch"/>
-      <property name="LCSC" value="C115357"/>
-      <property name="Sheetname" value="microcore"/>
-      <property name="Sheetfile" value="microcore.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>8deccdf8-f9c2-4674-8b09-654f1789d6dc</tstamps>
-      <units>
-        <unit name="A">
-          <pins>
-            <pin num="1"/>
-            <pin num="2"/>
-          </pins>
-        </unit>
-      </units>
-    </comp>
-    <comp ref="SW_RESET">
-      <value>BTN</value>
-      <footprint>hellen-one-common:SMD-2_2.9x3.9x1.7</footprint>
-      <description>Frame nReset to GND (parallels mega S100)</description>
-      <fields>
-        <field name="LCSC">C115357</field>
-        <field name="Footprint">hellen-one-common:SMD-2_2.9x3.9x1.7</field>
-        <field name="Datasheet"/>
-        <field name="Description">Frame nReset to GND (parallels mega S100)</field>
-      </fields>
-      <libsource lib="hellen-one-common" part="Button_SPST" description="Single-Pole, Single-Throw Switch"/>
-      <property name="LCSC" value="C115357"/>
-      <property name="Sheetname" value="microcore"/>
-      <property name="Sheetfile" value="microcore.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>52649a1e-9aaf-45a8-8be1-0313a13cb6c6</tstamps>
-      <units>
-        <unit name="A">
-          <pins>
-            <pin num="1"/>
-            <pin num="2"/>
           </pins>
         </unit>
       </units>
@@ -1046,21 +996,6 @@
         <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="hellen-one-common" part="Button_SPST">
-      <description>Single-Pole, Single-Throw Switch</description>
-      <fields>
-        <field name="Reference">S</field>
-        <field name="Value">BTN</field>
-        <field name="Footprint">hellen-one-common:SMD-2_2.9x3.9x1.7</field>
-        <field name="Datasheet"/>
-        <field name="Description">Single-Pole, Single-Throw Switch</field>
-        <field name="LCSC">C115357</field>
-      </fields>
-      <pins>
-        <pin num="1" name="" type="passive"/>
-        <pin num="2" name="" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="hellen-one-common" part="Res">
       <description>Resistor</description>
       <fields>
@@ -1324,7 +1259,6 @@
     </net>
     <net code="3" name="/BOOT0" class="Default">
       <node ref="M1" pin="N16" pinfunction="BOOT0_N16" pintype="passive"/>
-      <node ref="SW_BOOT" pin="1" pintype="passive"/>
     </net>
     <net code="4" name="/CAN_H" class="Default">
       <node ref="J1" pin="2" pinfunction="2_2" pintype="passive"/>
@@ -1491,7 +1425,6 @@
     </net>
     <net code="41" name="/V33" class="Default">
       <node ref="M1" pin="N21" pinfunction="V33_N21" pintype="passive"/>
-      <node ref="SW_BOOT" pin="2" pintype="passive"/>
     </net>
     <net code="42" name="/VBAT" class="Default">
       <node ref="M1" pin="N17" pinfunction="VBAT_N17" pintype="passive"/>
@@ -1522,7 +1455,6 @@
     </net>
     <net code="49" name="/nReset" class="Default">
       <node ref="M1" pin="N7" pinfunction="nReset_N7" pintype="passive"/>
-      <node ref="SW_RESET" pin="1" pintype="passive"/>
     </net>
     <net code="50" name="GND" class="Default">
       <node ref="D5" pin="2" pinfunction="A_2" pintype="passive"/>
@@ -1544,7 +1476,6 @@
       <node ref="Q5" pin="3" pinfunction="S_3" pintype="power_in"/>
       <node ref="Q6" pin="3" pinfunction="S_3" pintype="power_in"/>
       <node ref="Q7" pin="3" pinfunction="S_3" pintype="power_in"/>
-      <node ref="SW_RESET" pin="2" pintype="passive"/>
     </net>
     <net code="51" name="Net-(Q1-D)" class="Default">
       <node ref="Q1" pin="2" pinfunction="D_2" pintype="passive"/>

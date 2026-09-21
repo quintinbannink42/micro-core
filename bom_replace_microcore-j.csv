@@ -9,7 +9,7 @@
 # Note: hellen-one submodule points at quintinbannink42/hellen-one with
 # vr-max9924/0.3 D751 comment aligned to LED-GREEN-0603 (matches mega-mcu100).
 
-# rev j: injector protection (SMAJ33A + US1M + 2nd 12Ω); carry rev i BOM assigns
+# rev j: injector protection (SMAJ33A + US1M + 2nd 12 ohm); carry rev i BOM assigns
 SW_BOOT,"BTN","SMD-2_2.9x3.9x1.7","C115357"
 SW_RESET,"BTN","SMD-2_2.9x3.9x1.7","C115357"
 
@@ -29,7 +29,7 @@ R5,"12","R0603","C22783"
 R6,"12","R0603","C22783"
 R7,"12","R0603","C22783"
 
-# SPEC injector protection: 2nd 12Ω high-Z ballast + UF flyback + 33V TVS (DO-214AC)
+# SPEC injector protection: 2nd 12 ohm high-Z ballast + UF flyback + 33V TVS (DO-214AC)
 R8,"12","R0603","C22783"
 R9,"12","R0603","C22783"
 R10,"12","R0603","C22783"

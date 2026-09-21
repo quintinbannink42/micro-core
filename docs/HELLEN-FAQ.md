@@ -9,10 +9,10 @@ On push to default branch `main`, `.github/workflows/create-board.yaml` calls `a
 1. Checkout with submodules
 2. Install KiCad 10
 3. `hellen-one/kicad/bin/export.sh` — gerbers, drill, pos, BOM, schematic PDF, VRML from `microcore.kicad_pcb` / `microcore.kicad_sch`
-4. Docker build + gerber merge into `boards/microcore-j/` (revision letter from `revision.txt`)
+4. Docker build + gerber merge into `boards/microcore-k/` (revision letter from `revision.txt`)
 5. Commit/push fab outputs when on `main`
 
-A pull-request branch may *run* Create Board; **fab files are only pushed when the workflow runs on `main`**. After merging injector-protection rev **j**, the next green run should create `boards/microcore-j/`. Manual path: GitHub → Actions → **Create Board** → Run workflow (on `main`).
+A pull-request branch may *run* Create Board; **fab files are only pushed when the workflow runs on `main`**. After merging rev **k**, the next green run on `main` should create `boards/microcore-k/`. Manual path: GitHub → Actions → **Create Board** → Run workflow (on `main`).
 
 Daily workflows bump `hellen-one` and `kicad6-libraries` submodule pointers.
 

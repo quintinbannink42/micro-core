@@ -681,7 +681,7 @@
         "uuid": "00000000-0000-0000-0000-000000000000"
       }
     ],
-    "used_designators": "SW_BOOT1,SW_RESET1",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [

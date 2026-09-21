@@ -1,4 +1,4 @@
-> **Superseded for current work:** see [HARDWARE_STATUS_rev_k.md](HARDWARE_STATUS_rev_k.md) (rev k diodes on B.Cu / frame buttons removed).
+> **Superseded for current work:** see [HARDWARE_STATUS_rev_l.md](HARDWARE_STATUS_rev_l.md) (rev l: GND pour refill + Core EFI silk).
 
 # Micro Core hardware status — rev h → i
 

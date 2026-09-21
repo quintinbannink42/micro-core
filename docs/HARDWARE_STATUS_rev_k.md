@@ -1,3 +1,5 @@
+> **Superseded for current work:** see [HARDWARE_STATUS_rev_l.md](HARDWARE_STATUS_rev_l.md) (rev l: GND pour refill + Core EFI silk).
+
 # Micro Core hardware status — rev k
 
 **Date:** 2026-09-21  

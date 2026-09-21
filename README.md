@@ -6,7 +6,7 @@ Core EFI Hellen-One rusEFI ECU. Microsquirt-class sealed box, 35-way AMPSEAL, **
 
 ## Status
 
-Spec locked in [docs/SPEC.md](docs/SPEC.md). Hardware on `main`: **rev i** (J8 GND stitch after rev h restore/origin). Last green Create Board package: `boards/microcore-h/` (CI will populate `boards/microcore-i/` on this push). See [docs/HARDWARE_STATUS_rev_h.md](docs/HARDWARE_STATUS_rev_h.md) for fab-ready leftovers — **not fab-ready**.
+Spec locked in [docs/SPEC.md](docs/SPEC.md). Hardware on `main`: **rev i** (J8 GND stitch after rev h restore/origin). Last green Create Board package: `boards/microcore-i/`. See [docs/HARDWARE_STATUS_rev_h.md](docs/HARDWARE_STATUS_rev_h.md) for fab-ready leftovers — **not fab-ready**.
 
 - Header: TE **776231-1** (straight / vertical)
 - Plug: TE **776164-1** black, key A
@@ -27,7 +27,7 @@ KiCad board basename: `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`, re
 
 - Submodules: `hellen-one` (andreika-git/hellen-one), `kicad6-libraries` (rusefi/kicad6-libraries)
 - CI: Create Board on push; daily submodule update workflows
-- Fab outputs land under `boards/microcore-h/` (last green) and `boards/microcore-i/` after the next successful Create Board on `main`
+- Fab outputs land under `boards/microcore-i/` after a successful Create Board on `main`
 - Local DRC needs **KiCad 10** (`kicad-cli`); board file is generator_version 10.0
 
 ## License

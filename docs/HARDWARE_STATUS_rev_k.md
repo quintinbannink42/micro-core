@@ -1,4 +1,4 @@
-> **Superseded for current work:** see [HARDWARE_STATUS_rev_l.md](HARDWARE_STATUS_rev_l.md) (rev l: GND pour refill + Core EFI silk).
+> **Superseded for current work:** see [HARDWARE_STATUS_rev_m.md](HARDWARE_STATUS_rev_m.md) (rev m: D1–D8 collector re-route).
 
 # Micro Core hardware status — rev k
 

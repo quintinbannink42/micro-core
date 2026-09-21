@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/runner/work/micro-core/micro-core/microcore.kicad_sch</source>
-    <date>2026-09-21T04:15:15</date>
+    <date>2026-09-21T04:39:02</date>
     <tool>Eeschema 10.0.6-10.0.6~ubuntu24.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -26,7 +26,7 @@
       <title_block>
         <title>INJ4 Injectors</title>
         <company>Core EFI</company>
-        <rev>B</rev>
+        <rev>J</rev>
         <date>2026-09-13</date>
         <source>INJ4.kicad_sch</source>
         <comment number="1" value=""/>
@@ -394,6 +394,198 @@
         </unit>
       </units>
     </comp>
+    <comp ref="D1">
+      <value>US1M</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C112545</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C112545"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>46b03f9a-27fb-591c-a5e7-6b4978964580</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D2">
+      <value>US1M</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C112545</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C112545"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>597ccea8-72cd-553e-b34a-bd9e76cdfcb9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D3">
+      <value>US1M</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C112545</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C112545"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>27db3699-6adb-5bf8-9892-75b017dd3cba</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D4">
+      <value>US1M</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C112545</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C112545"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>8923417f-ee79-59ba-a885-ee072d6eb0f7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D5">
+      <value>SMAJ33A</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C143131</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C143131"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>4e2cfd09-f6be-500a-843b-a0cf7c979eab</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D6">
+      <value>SMAJ33A</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C143131</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C143131"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>00116ad7-fb92-5b96-8c91-47f77f20d806</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D7">
+      <value>SMAJ33A</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C143131</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C143131"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>1ad6b67f-45a7-5104-9180-e47ae59e834c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D8">
+      <value>SMAJ33A</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C143131</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C143131"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>a20a157e-1638-5a70-8e3c-ac0865e56635</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="Q1">
       <value>VND14NV04-E</value>
       <footprint>microcore-fp:DPAK</footprint>
@@ -582,6 +774,102 @@
         </unit>
       </units>
     </comp>
+    <comp ref="R8">
+      <value>12</value>
+      <footprint>microcore-fp:R0603</footprint>
+      <fields>
+        <field name="LCSC">C22783</field>
+        <field name="Footprint">microcore-fp:R0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="Res" description="Resistor"/>
+      <property name="LCSC" value="C22783"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>c9a67750-1023-5ebd-ae49-6b33cc0723e1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>12</value>
+      <footprint>microcore-fp:R0603</footprint>
+      <fields>
+        <field name="LCSC">C22783</field>
+        <field name="Footprint">microcore-fp:R0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="Res" description="Resistor"/>
+      <property name="LCSC" value="C22783"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>8d802cf7-4a7d-543c-9afc-67567a7e0af0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>12</value>
+      <footprint>microcore-fp:R0603</footprint>
+      <fields>
+        <field name="LCSC">C22783</field>
+        <field name="Footprint">microcore-fp:R0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="Res" description="Resistor"/>
+      <property name="LCSC" value="C22783"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>883c6c99-7dd1-5d56-9df0-d8cdb6bf1e62</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>12</value>
+      <footprint>microcore-fp:R0603</footprint>
+      <fields>
+        <field name="LCSC">C22783</field>
+        <field name="Footprint">microcore-fp:R0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="Res" description="Resistor"/>
+      <property name="LCSC" value="C22783"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>85bb61e9-99da-56ea-b426-d597580aea25</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="Q5">
       <value>VND14NV04-E</value>
       <footprint>microcore-fp:DPAK</footprint>
@@ -742,6 +1030,20 @@
         <pin num="1" name="IN" type="input"/>
         <pin num="2" name="D" type="passive"/>
         <pin num="3" name="S" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="hellen-one-common" part="1N4148WS">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4148WS</field>
+        <field name="Footprint">microcore-fp:SOD-323</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+        <field name="LCSC">C2128</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="hellen-one-common" part="Button_SPST">
@@ -1085,20 +1387,28 @@
       <node ref="M1" pin="W3" pinfunction="IGN8_(PE6)_W3" pintype="passive"/>
     </net>
     <net code="19" name="/INJ1" class="Default">
+      <node ref="D1" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D5" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J1" pin="4" pinfunction="4_4" pintype="passive"/>
-      <node ref="Q1" pin="2" pinfunction="D_2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
     </net>
     <net code="20" name="/INJ2" class="Default">
+      <node ref="D2" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D6" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J1" pin="5" pinfunction="5_5" pintype="passive"/>
-      <node ref="Q2" pin="2" pinfunction="D_2" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
     </net>
     <net code="21" name="/INJ3" class="Default">
+      <node ref="D3" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D7" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J1" pin="6" pinfunction="6_6" pintype="passive"/>
-      <node ref="Q3" pin="2" pinfunction="D_2" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
     </net>
     <net code="22" name="/INJ4" class="Default">
+      <node ref="D4" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D8" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J1" pin="7" pinfunction="7_7" pintype="passive"/>
-      <node ref="Q4" pin="2" pinfunction="D_2" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
     </net>
     <net code="23" name="/LS1_FP" class="Default">
       <node ref="J1" pin="8" pinfunction="8_8" pintype="passive"/>
@@ -1172,6 +1482,10 @@
       <node ref="M3" pin="E4" pinfunction="V5_IN_E4" pintype="passive"/>
     </net>
     <net code="40" name="/V12_RAW" class="Default">
+      <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J1" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="M2" pin="V3" pinfunction="V12_RAW_V3" pintype="passive"/>
     </net>
@@ -1211,6 +1525,10 @@
       <node ref="SW_RESET" pin="1" pintype="passive"/>
     </net>
     <net code="50" name="GND" class="Default">
+      <node ref="D5" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D6" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D7" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D8" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="J1" pin="22" pinfunction="22_22" pintype="passive"/>
       <node ref="J1" pin="23" pinfunction="23_23" pintype="passive"/>
       <node ref="J1" pin="35" pinfunction="17_35" pintype="passive"/>
@@ -1228,191 +1546,207 @@
       <node ref="Q7" pin="3" pinfunction="S_3" pintype="power_in"/>
       <node ref="SW_RESET" pin="2" pintype="passive"/>
     </net>
-    <net code="51" name="Net-(Q1-IN)" class="Default">
+    <net code="51" name="Net-(Q1-D)" class="Default">
+      <node ref="Q1" pin="2" pinfunction="D_2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="52" name="Net-(Q1-IN)" class="Default">
       <node ref="Q1" pin="1" pinfunction="IN_1" pintype="input"/>
       <node ref="R1" pin="1" pintype="passive"/>
     </net>
-    <net code="52" name="Net-(Q2-IN)" class="Default">
+    <net code="53" name="Net-(Q2-D)" class="Default">
+      <node ref="Q2" pin="2" pinfunction="D_2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="54" name="Net-(Q2-IN)" class="Default">
       <node ref="Q2" pin="1" pinfunction="IN_1" pintype="input"/>
       <node ref="R2" pin="1" pintype="passive"/>
     </net>
-    <net code="53" name="Net-(Q3-IN)" class="Default">
+    <net code="55" name="Net-(Q3-D)" class="Default">
+      <node ref="Q3" pin="2" pinfunction="D_2" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+    </net>
+    <net code="56" name="Net-(Q3-IN)" class="Default">
       <node ref="Q3" pin="1" pinfunction="IN_1" pintype="input"/>
       <node ref="R3" pin="1" pintype="passive"/>
     </net>
-    <net code="54" name="Net-(Q4-IN)" class="Default">
+    <net code="57" name="Net-(Q4-D)" class="Default">
+      <node ref="Q4" pin="2" pinfunction="D_2" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+    </net>
+    <net code="58" name="Net-(Q4-IN)" class="Default">
       <node ref="Q4" pin="1" pinfunction="IN_1" pintype="input"/>
       <node ref="R4" pin="1" pintype="passive"/>
     </net>
-    <net code="55" name="Net-(Q5-IN)" class="Default">
+    <net code="59" name="Net-(Q5-IN)" class="Default">
       <node ref="Q5" pin="1" pinfunction="IN_1" pintype="input"/>
       <node ref="R5" pin="1" pintype="passive"/>
     </net>
-    <net code="56" name="Net-(Q6-IN)" class="Default">
+    <net code="60" name="Net-(Q6-IN)" class="Default">
       <node ref="Q6" pin="1" pinfunction="IN_1" pintype="input"/>
       <node ref="R6" pin="1" pintype="passive"/>
     </net>
-    <net code="57" name="Net-(Q7-IN)" class="Default">
+    <net code="61" name="Net-(Q7-IN)" class="Default">
       <node ref="Q7" pin="1" pinfunction="IN_1" pintype="input"/>
       <node ref="R7" pin="1" pintype="passive"/>
     </net>
-    <net code="58" name="unconnected-(M1-I2C_SCL_(PB10)-PadE3)" class="Default">
+    <net code="62" name="unconnected-(M1-I2C_SCL_(PB10)-PadE3)" class="Default">
       <node ref="M1" pin="E3" pinfunction="I2C_SCL_(PB10)_E3" pintype="passive"/>
     </net>
-    <net code="59" name="unconnected-(M1-I2C_SDA_(PB11)-PadE4)" class="Default">
+    <net code="63" name="unconnected-(M1-I2C_SDA_(PB11)-PadE4)" class="Default">
       <node ref="M1" pin="E4" pinfunction="I2C_SDA_(PB11)_E4" pintype="passive"/>
     </net>
-    <net code="60" name="unconnected-(M1-IN_AUX3_(PA7)-PadS7)" class="Default">
+    <net code="64" name="unconnected-(M1-IN_AUX3_(PA7)-PadS7)" class="Default">
       <node ref="M1" pin="S7" pinfunction="IN_AUX3_(PA7)_S7" pintype="passive"/>
     </net>
-    <net code="61" name="unconnected-(M1-IN_AUX4_(PC5)-PadS6)" class="Default">
+    <net code="65" name="unconnected-(M1-IN_AUX4_(PC5)-PadS6)" class="Default">
       <node ref="M1" pin="S6" pinfunction="IN_AUX4_(PC5)_S6" pintype="passive"/>
     </net>
-    <net code="62" name="unconnected-(M1-IN_D3_(PE14)-PadS2)" class="Default">
+    <net code="66" name="unconnected-(M1-IN_D3_(PE14)-PadS2)" class="Default">
       <node ref="M1" pin="S2" pinfunction="IN_D3_(PE14)_S2" pintype="passive"/>
     </net>
-    <net code="63" name="unconnected-(M1-IN_D4_(PE15)-PadS1)" class="Default">
+    <net code="67" name="unconnected-(M1-IN_D4_(PE15)-PadS1)" class="Default">
       <node ref="M1" pin="S1" pinfunction="IN_D4_(PE15)_S1" pintype="passive"/>
     </net>
-    <net code="64" name="unconnected-(M1-IN_KNOCK_(PA2)-PadS15)" class="Default">
+    <net code="68" name="unconnected-(M1-IN_KNOCK_(PA2)-PadS15)" class="Default">
       <node ref="M1" pin="S15" pinfunction="IN_KNOCK_(PA2)_S15" pintype="passive"/>
     </net>
-    <net code="65" name="unconnected-(M1-IN_MAP2_(PC1)-PadS12)" class="Default">
+    <net code="69" name="unconnected-(M1-IN_MAP2_(PC1)-PadS12)" class="Default">
       <node ref="M1" pin="S12" pinfunction="IN_MAP2_(PC1)_S12" pintype="passive"/>
     </net>
-    <net code="66" name="unconnected-(M1-IN_O2S2_(PA1)-PadS10)" class="Default">
+    <net code="70" name="unconnected-(M1-IN_O2S2_(PA1)-PadS10)" class="Default">
       <node ref="M1" pin="S10" pinfunction="IN_O2S2_(PA1)_S10" pintype="passive"/>
     </net>
-    <net code="67" name="unconnected-(M1-IN_O2S_{slash}_CAN_WAKEUP_(PA0)-PadS11)" class="Default">
+    <net code="71" name="unconnected-(M1-IN_O2S_{slash}_CAN_WAKEUP_(PA0)-PadS11)" class="Default">
       <node ref="M1" pin="S11" pinfunction="IN_O2S_/_CAN_WAKEUP_(PA0)_S11" pintype="passive"/>
     </net>
-    <net code="68" name="unconnected-(M1-IN_PPS_(PA3)-PadS19)" class="Default">
+    <net code="72" name="unconnected-(M1-IN_PPS_(PA3)-PadS19)" class="Default">
       <node ref="M1" pin="S19" pinfunction="IN_PPS_(PA3)_S19" pintype="passive"/>
     </net>
-    <net code="69" name="unconnected-(M1-IN_VSS_(PE11)-PadS17)" class="Default">
+    <net code="73" name="unconnected-(M1-IN_VSS_(PE11)-PadS17)" class="Default">
       <node ref="M1" pin="S17" pinfunction="IN_VSS_(PE11)_S17" pintype="passive"/>
     </net>
-    <net code="70" name="unconnected-(M1-LED_GREEN-PadN14a)" class="Default">
+    <net code="74" name="unconnected-(M1-LED_GREEN-PadN14a)" class="Default">
       <node ref="M1" pin="N14a" pinfunction="LED_GREEN_N14a" pintype="passive"/>
     </net>
-    <net code="71" name="unconnected-(M1-LED_YELLOW-PadN14b)" class="Default">
+    <net code="75" name="unconnected-(M1-LED_YELLOW-PadN14b)" class="Default">
       <node ref="M1" pin="N14b" pinfunction="LED_YELLOW_N14b" pintype="passive"/>
     </net>
-    <net code="72" name="unconnected-(M1-OUT_INJ5_(PD2)-PadE13)" class="Default">
+    <net code="76" name="unconnected-(M1-OUT_INJ5_(PD2)-PadE13)" class="Default">
       <node ref="M1" pin="E13" pinfunction="OUT_INJ5_(PD2)_E13" pintype="passive"/>
     </net>
-    <net code="73" name="unconnected-(M1-OUT_INJ6_(PA8)-PadE12)" class="Default">
+    <net code="77" name="unconnected-(M1-OUT_INJ6_(PA8)-PadE12)" class="Default">
       <node ref="M1" pin="E12" pinfunction="OUT_INJ6_(PA8)_E12" pintype="passive"/>
     </net>
-    <net code="74" name="unconnected-(M1-OUT_INJ7_(PD15)-PadE11)" class="Default">
+    <net code="78" name="unconnected-(M1-OUT_INJ7_(PD15)-PadE11)" class="Default">
       <node ref="M1" pin="E11" pinfunction="OUT_INJ7_(PD15)_E11" pintype="passive"/>
     </net>
-    <net code="75" name="unconnected-(M1-OUT_INJ8_(PD12)-PadE10)" class="Default">
+    <net code="79" name="unconnected-(M1-OUT_INJ8_(PD12)-PadE10)" class="Default">
       <node ref="M1" pin="E10" pinfunction="OUT_INJ8_(PD12)_E10" pintype="passive"/>
     </net>
-    <net code="76" name="unconnected-(M1-OUT_PWM4_(PC8)-PadE21)" class="Default">
+    <net code="80" name="unconnected-(M1-OUT_PWM4_(PC8)-PadE21)" class="Default">
       <node ref="M1" pin="E21" pinfunction="OUT_PWM4_(PC8)_E21" pintype="passive"/>
     </net>
-    <net code="77" name="unconnected-(M1-OUT_PWM5_(PC9)-PadE22)" class="Default">
+    <net code="81" name="unconnected-(M1-OUT_PWM5_(PC9)-PadE22)" class="Default">
       <node ref="M1" pin="E22" pinfunction="OUT_PWM5_(PC9)_E22" pintype="passive"/>
     </net>
-    <net code="78" name="unconnected-(M1-OUT_PWM6_(PD14)-PadE23)" class="Default">
+    <net code="82" name="unconnected-(M1-OUT_PWM6_(PD14)-PadE23)" class="Default">
       <node ref="M1" pin="E23" pinfunction="OUT_PWM6_(PD14)_E23" pintype="passive"/>
     </net>
-    <net code="79" name="unconnected-(M1-OUT_PWR_EN_(PE10)-PadN20)" class="Default">
+    <net code="83" name="unconnected-(M1-OUT_PWR_EN_(PE10)-PadN20)" class="Default">
       <node ref="M1" pin="N20" pinfunction="OUT_PWR_EN_(PE10)_N20" pintype="passive"/>
     </net>
-    <net code="80" name="unconnected-(M1-SPI2_CS_{slash}_CAN2_RX_(PB12)-PadE6)" class="Default">
+    <net code="84" name="unconnected-(M1-SPI2_CS_{slash}_CAN2_RX_(PB12)-PadE6)" class="Default">
       <node ref="M1" pin="E6" pinfunction="SPI2_CS_/_CAN2_RX_(PB12)_E6" pintype="passive"/>
     </net>
-    <net code="81" name="unconnected-(M1-SPI2_MISO_(PB14)-PadE8)" class="Default">
+    <net code="85" name="unconnected-(M1-SPI2_MISO_(PB14)-PadE8)" class="Default">
       <node ref="M1" pin="E8" pinfunction="SPI2_MISO_(PB14)_E8" pintype="passive"/>
     </net>
-    <net code="82" name="unconnected-(M1-SPI2_MOSI_(PB15)-PadE9)" class="Default">
+    <net code="86" name="unconnected-(M1-SPI2_MOSI_(PB15)-PadE9)" class="Default">
       <node ref="M1" pin="E9" pinfunction="SPI2_MOSI_(PB15)_E9" pintype="passive"/>
     </net>
-    <net code="83" name="unconnected-(M1-SPI2_SCK_{slash}_CAN2_TX_(PB13)-PadE7)" class="Default">
+    <net code="87" name="unconnected-(M1-SPI2_SCK_{slash}_CAN2_TX_(PB13)-PadE7)" class="Default">
       <node ref="M1" pin="E7" pinfunction="SPI2_SCK_/_CAN2_TX_(PB13)_E7" pintype="passive"/>
     </net>
-    <net code="84" name="unconnected-(M1-SPI3_CS_(PA15)-PadN9)" class="Default">
+    <net code="88" name="unconnected-(M1-SPI3_CS_(PA15)-PadN9)" class="Default">
       <node ref="M1" pin="N9" pinfunction="SPI3_CS_(PA15)_N9" pintype="passive"/>
     </net>
-    <net code="85" name="unconnected-(M1-SPI3_MISO_(PC11)-PadN11)" class="Default">
+    <net code="89" name="unconnected-(M1-SPI3_MISO_(PC11)-PadN11)" class="Default">
       <node ref="M1" pin="N11" pinfunction="SPI3_MISO_(PC11)_N11" pintype="passive"/>
     </net>
-    <net code="86" name="unconnected-(M1-SPI3_MOSI_(PC12)-PadN12)" class="Default">
+    <net code="90" name="unconnected-(M1-SPI3_MOSI_(PC12)-PadN12)" class="Default">
       <node ref="M1" pin="N12" pinfunction="SPI3_MOSI_(PC12)_N12" pintype="passive"/>
     </net>
-    <net code="87" name="unconnected-(M1-SPI3_SCK_(PC10)-PadN10)" class="Default">
+    <net code="91" name="unconnected-(M1-SPI3_SCK_(PC10)-PadN10)" class="Default">
       <node ref="M1" pin="N10" pinfunction="SPI3_SCK_(PC10)_N10" pintype="passive"/>
     </net>
-    <net code="88" name="unconnected-(M1-SWCLK_(PA14)-PadN6)" class="Default">
+    <net code="92" name="unconnected-(M1-SWCLK_(PA14)-PadN6)" class="Default">
       <node ref="M1" pin="N6" pinfunction="SWCLK_(PA14)_N6" pintype="passive"/>
     </net>
-    <net code="89" name="unconnected-(M1-SWDIO_(PA13)-PadN5)" class="Default">
+    <net code="93" name="unconnected-(M1-SWDIO_(PA13)-PadN5)" class="Default">
       <node ref="M1" pin="N5" pinfunction="SWDIO_(PA13)_N5" pintype="passive"/>
     </net>
-    <net code="90" name="unconnected-(M1-SWO_(PB3)-PadN8)" class="Default">
+    <net code="94" name="unconnected-(M1-SWO_(PB3)-PadN8)" class="Default">
       <node ref="M1" pin="N8" pinfunction="SWO_(PB3)_N8" pintype="passive"/>
     </net>
-    <net code="91" name="unconnected-(M1-UART2_RX_(PD6)-PadN14)" class="Default">
+    <net code="95" name="unconnected-(M1-UART2_RX_(PD6)-PadN14)" class="Default">
       <node ref="M1" pin="N14" pinfunction="UART2_RX_(PD6)_N14" pintype="passive"/>
     </net>
-    <net code="92" name="unconnected-(M1-UART2_TX_(PD5)-PadN13)" class="Default">
+    <net code="96" name="unconnected-(M1-UART2_TX_(PD5)-PadN13)" class="Default">
       <node ref="M1" pin="N13" pinfunction="UART2_TX_(PD5)_N13" pintype="passive"/>
     </net>
-    <net code="93" name="unconnected-(M1-UART8_RX_(PE0)-PadN18)" class="Default">
+    <net code="97" name="unconnected-(M1-UART8_RX_(PE0)-PadN18)" class="Default">
       <node ref="M1" pin="N18" pinfunction="UART8_RX_(PE0)_N18" pintype="passive"/>
     </net>
-    <net code="94" name="unconnected-(M1-UART8_TX_(PE1)-PadN19)" class="Default">
+    <net code="98" name="unconnected-(M1-UART8_TX_(PE1)-PadN19)" class="Default">
       <node ref="M1" pin="N19" pinfunction="UART8_TX_(PE1)_N19" pintype="passive"/>
     </net>
-    <net code="95" name="unconnected-(M1-V5A_SWITCHABLE-PadE1)" class="Default">
+    <net code="99" name="unconnected-(M1-V5A_SWITCHABLE-PadE1)" class="Default">
       <node ref="M1" pin="E1" pinfunction="V5A_SWITCHABLE_E1" pintype="passive"/>
     </net>
-    <net code="96" name="unconnected-(M1-V5A_SWITCHABLE-PadW2)" class="Default">
+    <net code="100" name="unconnected-(M1-V5A_SWITCHABLE-PadW2)" class="Default">
       <node ref="M1" pin="W2" pinfunction="V5A_SWITCHABLE_W2" pintype="passive"/>
     </net>
-    <net code="97" name="unconnected-(M1-V5A_SWITCHABLE-PadW14)" class="Default">
+    <net code="101" name="unconnected-(M1-V5A_SWITCHABLE-PadW14)" class="Default">
       <node ref="M1" pin="W14" pinfunction="V5A_SWITCHABLE_W14" pintype="passive"/>
     </net>
-    <net code="98" name="unconnected-(M1-V33-PadN23)" class="Default">
+    <net code="102" name="unconnected-(M1-V33-PadN23)" class="Default">
       <node ref="M1" pin="N23" pinfunction="V33_N23" pintype="passive"/>
     </net>
-    <net code="99" name="unconnected-(M1-V33_REF-PadW13)" class="Default">
+    <net code="103" name="unconnected-(M1-V33_REF-PadW13)" class="Default">
       <node ref="M1" pin="W13" pinfunction="V33_REF_W13" pintype="passive"/>
     </net>
-    <net code="100" name="unconnected-(M1-V33_SWITCHABLE-PadN15)" class="Default">
+    <net code="104" name="unconnected-(M1-V33_SWITCHABLE-PadN15)" class="Default">
       <node ref="M1" pin="N15" pinfunction="V33_SWITCHABLE_N15" pintype="passive"/>
     </net>
-    <net code="101" name="unconnected-(M1-VCC-PadN22)" class="Default">
+    <net code="105" name="unconnected-(M1-VCC-PadN22)" class="Default">
       <node ref="M1" pin="N22" pinfunction="VCC_N22" pintype="passive"/>
     </net>
-    <net code="102" name="unconnected-(M1-VREF1-PadS22)" class="Default">
+    <net code="106" name="unconnected-(M1-VREF1-PadS22)" class="Default">
       <node ref="M1" pin="S22" pinfunction="VREF1_S22" pintype="passive"/>
     </net>
-    <net code="103" name="unconnected-(M1-VREF2-PadS5)" class="Default">
+    <net code="107" name="unconnected-(M1-VREF2-PadS5)" class="Default">
       <node ref="M1" pin="S5" pinfunction="VREF2_S5" pintype="passive"/>
     </net>
-    <net code="104" name="unconnected-(M2-5VP-PadV4)" class="Default">
+    <net code="108" name="unconnected-(M2-5VP-PadV4)" class="Default">
       <node ref="M2" pin="V4" pinfunction="5VP_V4" pintype="passive"/>
     </net>
-    <net code="105" name="unconnected-(M2-EN_5VP-PadE5)" class="Default">
+    <net code="109" name="unconnected-(M2-EN_5VP-PadE5)" class="Default">
       <node ref="M2" pin="E5" pinfunction="EN_5VP_E5" pintype="passive"/>
     </net>
-    <net code="106" name="unconnected-(M2-PG_5VP-PadE6)" class="Default">
+    <net code="110" name="unconnected-(M2-PG_5VP-PadE6)" class="Default">
       <node ref="M2" pin="E6" pinfunction="PG_5VP_E6" pintype="passive"/>
     </net>
-    <net code="107" name="unconnected-(M2-V12-PadE2)" class="Default">
+    <net code="111" name="unconnected-(M2-V12-PadE2)" class="Default">
       <node ref="M2" pin="E2" pinfunction="V12_E2" pintype="passive"/>
     </net>
-    <net code="108" name="unconnected-(M2-V12_PERM-PadV1)" class="Default">
+    <net code="112" name="unconnected-(M2-V12_PERM-PadV1)" class="Default">
       <node ref="M2" pin="V1" pinfunction="V12_PERM_V1" pintype="passive"/>
     </net>
-    <net code="109" name="unconnected-(M3-HALL_EN-PadE1)" class="Default">
+    <net code="113" name="unconnected-(M3-HALL_EN-PadE1)" class="Default">
       <node ref="M3" pin="E1" pinfunction="HALL_EN_E1" pintype="passive"/>
     </net>
-    <net code="110" name="unconnected-(M3-NC-PadE2)" class="Default">
+    <net code="114" name="unconnected-(M3-NC-PadE2)" class="Default">
       <node ref="M3" pin="E2" pinfunction="NC_E2" pintype="passive"/>
     </net>
   </nets>

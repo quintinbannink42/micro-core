@@ -100,3 +100,7 @@ Top shorting net-pairs (unique pairs ~93):
 - This status document.
 
 **No PCB content change** → revision stays **g**.
+
+## Incident: empty PCB on main (ce63db4)
+
+Commit `ce63db4` (“Fix drill origin…”) **wiped** `microcore.kicad_pcb` to ~49 bytes (16063 lines → 1). Cause: an edit that replaced the whole file instead of only changing `aux_axis_origin` / `grid_origin`. Restored from `298ebd5` (rev h content) and set drill/place origin to Edge.Cuts bottom-left `(107.5, 148.0872)` (Hellen practice: Y grows downward → bottom-left = `(min_x, max_y)`). Guard: `bin/check-pcb-not-empty.sh` + Create Board job `guard-pcb-not-empty`.

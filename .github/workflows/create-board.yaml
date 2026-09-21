@@ -5,7 +5,15 @@ on:
   workflow_dispatch:
 
 jobs:
+  guard-pcb-not-empty:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refuse near-empty microcore.kicad_pcb
+        run: bash bin/check-pcb-not-empty.sh microcore.kicad_pcb
+
   call-workflow-passing-data:
+    needs: guard-pcb-not-empty
     uses: andreika-git/hellen-one/.github/workflows/create-board.yaml@master
     permissions:
       contents: write

@@ -2056,6 +2056,16 @@
 				(hide yes)
 			)
 		)
+		(pin "V12_RAW" input
+			(at 17.78 44.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "1d31d270-c78c-5bcf-aadd-b463534ade90")
+		)
 		(pin "OUT1" output
 			(at 5.08 50.8 180)
 			(effects
@@ -3619,6 +3629,26 @@
 			(type default)
 		)
 		(uuid "64026bf5-c778-45c9-b49c-fab2011dbef6")
+	)
+	(wire
+		(pts
+			(xy 17.78 44.74) (xy 17.78 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c8ad867-f323-513d-9fb7-1550a4bbe699")
+	)
+	(label "V12_RAW"
+		(at 17.78 41.91 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "43636531-9ae5-580e-aeb4-db8aef01da1b")
 	)
 	(label "INJ1"
 		(at 7.62 50.8 0)

@@ -6,7 +6,7 @@ Core EFI Hellen-One rusEFI ECU. Microsquirt-class sealed box, 35-way AMPSEAL, **
 
 ## Status
 
-Spec locked in [docs/SPEC.md](docs/SPEC.md). Hardware on `main`: **rev i** (J8 GND stitch after rev h restore/origin). Last green Create Board package: `boards/microcore-i/`. See [docs/HARDWARE_STATUS_rev_h.md](docs/HARDWARE_STATUS_rev_h.md) for fab-ready leftovers — **not fab-ready**.
+Spec locked in [docs/SPEC.md](docs/SPEC.md). Hardware on this branch: **rev j** (injector SMAJ33A + US1M flyback + 2nd 12 ohm ballast per INJ channel). Last green Create Board package on main: `boards/microcore-i/`. `boards/microcore-j/` lands when Create Board succeeds on `main` after merge. See [docs/HARDWARE_STATUS_rev_j.md](docs/HARDWARE_STATUS_rev_j.md).
 
 - Header: TE **776231-1** (straight / vertical)
 - Plug: TE **776164-1** black, key A
@@ -21,14 +21,15 @@ Hellen tips: [docs/HELLEN-FAQ.md](docs/HELLEN-FAQ.md).
 
 Firmware board name: `coreefi_micro` (sibling tree `/workspace/fw-coreefi-micro`, not in this repo).
 
-KiCad board basename: `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`, rev `i`).
+KiCad board basename: `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`, rev `j`).
 
 ## Hellen tooling
 
 - Submodules: `hellen-one` (andreika-git/hellen-one), `kicad6-libraries` (rusefi/kicad6-libraries)
-- CI: Create Board on push; daily submodule update workflows
-- Fab outputs land under `boards/microcore-i/` after a successful Create Board on `main`
+- CI: Create Board on push to `main`; daily submodule update workflows
+- Fab outputs land under `boards/microcore-i/` (last green on main). After merge, Create Board writes `boards/microcore-j/`
 - Local DRC needs **KiCad 10** (`kicad-cli`); board file is generator_version 10.0
+- Empty-PCB guard: `bin/check-pcb-not-empty.sh` (Create Board job `guard-pcb-not-empty`)
 
 ## License
 

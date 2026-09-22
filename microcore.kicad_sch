@@ -6,11 +6,11 @@
 	(paper "A3")
 	(title_block
 		(title "Micro Core")
-		(date "2026-09-15")
-		(rev "E")
+		(date "2026-09-22")
+		(rev "N")
 		(company "Core EFI")
-		(comment 1 "modules-v1 rev E — nest DPAKs + frame routing + GND pours")
-		(comment 2 "Firmware board: coreefi_micro")
+		(comment 1 "rev n cost-down: F407VGT6 on mega-mcu100; LS Q5-Q7 removed")
+		(comment 2 "Firmware board: coreefi_micro — needs F407 target later; fw not in this repo")
 		(comment 3 "PCB basename: microcore (no dashes/underscores)")
 	)
 	(lib_symbols
@@ -2165,7 +2165,7 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "2681f3c6-8479-4cd3-8490-1f2d090e826c")
-		(property "Sheetname" "LS3"
+		(property "Sheetname" "LS3-NC"
 			(at 5.08 68.87 0)
 			(effects
 				(font
@@ -2183,66 +2183,6 @@
 				(justify left top)
 				(hide yes)
 			)
-		)
-		(pin "OUT1" output
-			(at 5.08 76.2 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "9995f5cb-4afe-41d7-878b-3a8b7da3fb09")
-		)
-		(pin "OUT2" output
-			(at 5.08 81.28 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "c7ba9e1f-e0b0-4b22-ade6-d416b8bcd6e6")
-		)
-		(pin "OUT3" output
-			(at 5.08 86.36 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "0d8d4bef-b750-40b5-81b8-c9d9463705d5")
-		)
-		(pin "IN1" input
-			(at 30.48 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "2f1aa623-41c3-483f-8256-eac0b45f16eb")
-		)
-		(pin "IN2" input
-			(at 30.48 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "83690c93-52b5-4d3e-98af-b500c6c3122b")
-		)
-		(pin "IN3" input
-			(at 30.48 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "a0aeb214-2e1a-47c0-812d-cea9dafd4a15")
 		)
 		(instances
 			(project "microcore"
@@ -2549,7 +2489,7 @@
 			)
 		)
 	)
-	(text "Micro Core rev E — modules-v1 nest+route\nMCU mega-mcu100/0.3 + power_12and5V/0.3 + vr-max9924/0.3\nUSB Mini-B + TE 776231-1 AMPSEAL (frame SW_BOOT/SW_RESET removed rev K)\nSheets: INJ4 LS3 ANALOG HALL (DPAK frame)\nFirmware: coreefi_micro"
+	(text "Micro Core rev N — cost-down\nMCU mega-mcu100/0.3 STM32F407VGT6 (not mega-mcu64) + power_12and5V/0.3 + vr-max9924/0.3\nUSB Mini-B + TE 776231-1 AMPSEAL; pins 8/9/10 reserved / NC\nSheets: INJ4 (Q1-Q4) LS3-NC stub ANALOG HALL\nFirmware: coreefi_micro needs F407 target later"
 		(exclude_from_sim no)
 		(at 25.4 280 0)
 		(effects
@@ -3162,66 +3102,6 @@
 	)
 	(wire
 		(pts
-			(xy 280 43.18) (xy 277.46 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e1e3581d-4bc5-44fb-8358-d1e2f736a2ca")
-	)
-	(label "LS1_FP"
-		(at 277.46 43.18 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5a58044e-f4ac-4c22-8ac8-fa8f7a892418")
-	)
-	(wire
-		(pts
-			(xy 280 45.72) (xy 277.46 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c3b33fca-94ea-43b2-9d8e-949079c3eb70")
-	)
-	(label "LS2_IDLE"
-		(at 277.46 45.72 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c636821d-def1-4368-9481-7f8dac42bbeb")
-	)
-	(wire
-		(pts
-			(xy 280 48.26) (xy 277.46 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0319867a-6bf6-4b08-914e-017657b00083")
-	)
-	(label "LS3_BOOST"
-		(at 277.46 48.26 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f9335bcd-3908-4538-a11e-171d370e6a37")
-	)
-	(wire
-		(pts
 			(xy 280 53.34) (xy 277.46 53.34)
 		)
 		(stroke
@@ -3799,126 +3679,6 @@
 			(justify left bottom)
 		)
 		(uuid "7e1e6517-85aa-4864-b9f5-e84a018ae5cf")
-	)
-	(wire
-		(pts
-			(xy 5.08 76.2) (xy 7.62 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09c39c48-93b9-47fe-88b7-eae249cbacbc")
-	)
-	(label "LS1_FP"
-		(at 7.62 76.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bfd4d5ef-52af-4eb0-836f-d5d77a973cc6")
-	)
-	(wire
-		(pts
-			(xy 5.08 81.28) (xy 7.62 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9ea31730-a9d0-420d-8e9f-5487c42b87fa")
-	)
-	(label "LS2_IDLE"
-		(at 7.62 81.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d9c5c153-9e30-4c48-942a-a10dc5a49dc2")
-	)
-	(wire
-		(pts
-			(xy 5.08 86.36) (xy 7.62 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e320322-9f20-4de5-a807-c7e378a70dac")
-	)
-	(label "LS3_BOOST"
-		(at 7.62 86.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "161091ee-42b4-4cec-bad2-7fd8e1686444")
-	)
-	(wire
-		(pts
-			(xy 30.48 76.2) (xy 27.94 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f2f1e045-1454-4e7e-8e35-e59b684790d0")
-	)
-	(label "OUT_LS1"
-		(at 27.94 76.2 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d37fab91-e113-4008-ab89-e34d3fcffdae")
-	)
-	(wire
-		(pts
-			(xy 30.48 81.28) (xy 27.94 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cdf72f0c-4f39-47a9-8afc-062e8774c6e6")
-	)
-	(label "OUT_LS2"
-		(at 27.94 81.28 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8c1f19ee-5203-4acd-ad77-b98ad820f844")
-	)
-	(wire
-		(pts
-			(xy 30.48 86.36) (xy 27.94 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e29b241a-b5bb-473e-bac3-e3bd44a88432")
-	)
-	(label "OUT_LS3"
-		(at 27.94 86.36 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5c846c48-2266-415a-ac2f-8a58530e6c6d")
 	)
 	(wire
 		(pts
@@ -4530,6 +4290,30 @@
 		)
 		(uuid "cfa486cb-657e-4e5e-9c8b-efbe7ac439aa")
 	)
+	(no_connect
+		(at 280 43.18)
+		(uuid "c1a0e5b2-7d44-4a11-9c30-6b8f2e1a0018")
+	)
+	(no_connect
+		(at 280 45.72)
+		(uuid "c1a0e5b2-7d44-4a11-9c30-6b8f2e1a0019")
+	)
+	(no_connect
+		(at 280 48.26)
+		(uuid "c1a0e5b2-7d44-4a11-9c30-6b8f2e1a001a")
+	)
+	(text "AMPSEAL pins 8/9/10 reserved / NC\nunstuffed LS — future option (rev n)\nQ5-Q7 and R5-R7 removed"
+		(exclude_from_sim no)
+		(at 230 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d2b1f6c3-8e55-4b22-ad41-7c903f2b0020")
+	)
+
 	(sheet_instances
 		(path "/"
 			(page "1")

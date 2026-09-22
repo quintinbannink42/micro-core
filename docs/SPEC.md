@@ -1,11 +1,11 @@
-# Micro Core — product spec (rev K, 2026-09-21)
+# Micro Core — product spec (rev N cost-down, 2026-09-22)
 
 First Core EFI Hellen-One ECU.
 
 **Name:** Micro Core  
 **Form:** Microsquirt-class sealed box  
 **Connector:** 35-way AMPSEAL, **vertical header**  
-**Brain:** rusEFI Hellen-One / STM32F4  
+**Brain:** rusEFI Hellen-One / **STM32F407VGT6** on `mega-mcu100/0.3` (not mega-mcu64)  
 **Job:** 4-cylinder sequential wire-in
 
 ## Header (locked)
@@ -32,7 +32,7 @@ Keepout: header body + plug + strain-relief is the tallest stack on the board. R
 | USB | gasketed flap or pigtail, not on the 35-way |
 
 ## AMPSEAL I/O (35 pins)
-4 inj, 8 logic coils (IGN1–8), 3 PGND, 2 SGND, +12, 5 V, CLT, IAT, MAP, TPS, VR crank ±, Hall cam, CAN H/L, FP, 2× LS, 2× DIN, 2× analog spare.
+4 inj, 8 logic coils (IGN1–8), 3 PGND, 2 SGND, +12, 5 V, CLT, IAT, MAP, TPS, VR crank ±, Hall cam, CAN H/L, 2× DIN, 2× analog spare. Pins 8/9/10 are **reserved / NC** on rev n (unstuffed LS — future option).
 
 No ETB and no onboard LSU on this connector.
 
@@ -43,9 +43,9 @@ No ETB and no onboard LSU on this connector.
 | 2 | CAN H |
 | 3 | CAN L |
 | 4–7 | Injector 1–4 |
-| 8 | Fuel pump LS |
-| 9 | Idle / VVT LS |
-| 10 | Boost / spare LS |
+| 8 | Reserved / NC (unstuffed LS — future option; was fuel pump) |
+| 9 | Reserved / NC (unstuffed LS — future option; was idle / VVT) |
+| 10 | Reserved / NC (unstuffed LS — future option; was boost / spare) |
 | 11 | DIN1 (IN_D1 / PE12) |
 | 12–15 | Ignition 1–4 (5 V) |
 | 16 | +5 V ref |
@@ -71,12 +71,16 @@ No ETB and no onboard LSU on this connector.
 Core pinout, not a Microsquirt copy.
 
 ## Power stage
-4× DPAK N-FET + SMBJ33A + UF flyback. Two 12 Ω high-Z per channel. FETs on the lid-facing copper, gap-pad, clear of the AMPSEAL well.
+4× injector DPAK N-FET (Q1–Q4) + SMAJ33A + UF flyback. Two 12 Ω high-Z per channel (gate R1–R4 + ballast R8–R11). FETs on the lid-facing copper, gap-pad, clear of the AMPSEAL well.
+
+Rev n removes the low-side stage Q5–Q7 (FP / idle / boost) and gate resistors R5–R7. No copper left to those footprints. Pins 8/9/10 stay in the connector as reserved / NC so a later rev can restuff LS.
 
 ## Hellen modules
-MCU F4, input lite (1× VR + Hall + analog), 4-ch Core injectors, 4-ch 5 V ign, 3× LS, power. Knock / WBO as pads or CAN.
+MCU **STM32F407VGT6** (LQFP100, LCSC **C12345**) inside Hellen `mega-mcu100/0.3`. Do not switch this cost-down to `mega-mcu64`. Input lite (1× VR + Hall + analog), 4-ch Core injectors, 4-ch 5 V ign, power. LS drivers are unstuffed on this rev. Knock / WBO as pads or CAN.
 
-Firmware board: `coreefi_micro`.
+`bom_replace_microcore-n.csv` replaces module `U105` `STM32F429VIT6` / `C92002` with `STM32F407VGT6` / `C12345`. C15815 and C2252 are not this MCU (op-amp and 22.1184 MHz crystal).
+
+Firmware board: `coreefi_micro` (sibling tree `/workspace/fw-coreefi-micro`, not published from this hardware repo). That tree will need an **F407** target later; this rev does not add a firmware remote.
 
 ## Frame controls (rev K)
 

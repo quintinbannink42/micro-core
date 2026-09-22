@@ -1,4 +1,4 @@
-# Micro Core — product spec (rev N cost-down, 2026-09-22)
+# Micro Core — product spec (rev O, 2026-09-22)
 
 First Core EFI Hellen-One ECU.
 
@@ -32,7 +32,7 @@ Keepout: header body + plug + strain-relief is the tallest stack on the board. R
 | USB | gasketed flap or pigtail, not on the 35-way |
 
 ## AMPSEAL I/O (35 pins)
-4 inj, 8 logic coils (IGN1–8), 3 PGND, 2 SGND, +12, 5 V, CLT, IAT, MAP, TPS, VR crank ±, Hall cam, CAN H/L, 2× DIN, 2× analog spare. Pins 8/9/10 are **reserved / NC** on rev n (unstuffed LS — future option).
+4 inj, 8 logic coils (IGN1–8), 3 PGND, 2 SGND, +12, 5 V, CLT, IAT, MAP, TPS, VR crank ±, Hall cam, CAN H/L, 2× DIN, 2× analog spare. Pins 8/9/10 are the low-side outputs (fuel pump, idle / VVT, boost / spare).
 
 No ETB and no onboard LSU on this connector.
 
@@ -43,9 +43,9 @@ No ETB and no onboard LSU on this connector.
 | 2 | CAN H |
 | 3 | CAN L |
 | 4–7 | Injector 1–4 |
-| 8 | Reserved / NC (unstuffed LS — future option; was fuel pump) |
-| 9 | Reserved / NC (unstuffed LS — future option; was idle / VVT) |
-| 10 | Reserved / NC (unstuffed LS — future option; was boost / spare) |
+| 8 | Fuel pump LS (Q5) |
+| 9 | Idle / VVT LS (Q6) |
+| 10 | Boost / spare LS (Q7) |
 | 11 | DIN1 (IN_D1 / PE12) |
 | 12–15 | Ignition 1–4 (5 V) |
 | 16 | +5 V ref |
@@ -71,14 +71,18 @@ No ETB and no onboard LSU on this connector.
 Core pinout, not a Microsquirt copy.
 
 ## Power stage
-4× injector DPAK N-FET (Q1–Q4) + SMAJ33A + UF flyback. Two 12 Ω high-Z per channel (gate R1–R4 + ballast R8–R11). FETs on the lid-facing copper, gap-pad, clear of the AMPSEAL well.
+7× DPAK-class N-FET, all **NCE4080K** (TO-252-2L, LCSC **C191380**) on the existing `microcore-fp:DPAK` land (pad pitch 4.56 mm; LCSC land is P4.57).
 
-Rev n removes the low-side stage Q5–Q7 (FP / idle / boost) and gate resistors R5–R7. No copper left to those footprints. Pins 8/9/10 stay in the connector as reserved / NC so a later rev can restuff LS.
+4× injector (Q1–Q4) + SMAJ33A + UF flyback. Two 12 ohm high-Z per channel (gate R1–R4 + ballast R8–R11). FETs on the lid-facing copper, gap-pad, clear of the AMPSEAL well.
+
+3× low-side (Q5 fuel pump, Q6 idle / VVT, Q7 boost / spare) with gate R5–R7 at 12 ohm. LS channels have no flyback and no TVS (same as before rev n). Pins 8/9/10 are those drains.
+
+NCE4080K is a discrete MOSFET, not a protected smart FET. RDS(on) is specified at Vgs = 10 V only. The gate is driven from the 3.3 V MCU through 12 ohm. See `docs/HARDWARE_STATUS_rev_o.md` before treating the 7 mohm figure as the on-resistance in the car.
 
 ## Hellen modules
-MCU **STM32F407VGT6** (LQFP100, LCSC **C12345**) inside Hellen `mega-mcu100/0.3`. Do not switch this cost-down to `mega-mcu64`. Input lite (1× VR + Hall + analog), 4-ch Core injectors, 4-ch 5 V ign, power. LS drivers are unstuffed on this rev. Knock / WBO as pads or CAN.
+MCU **STM32F407VGT6** (LQFP100, LCSC **C12345**) inside Hellen `mega-mcu100/0.3`. Do not switch to `mega-mcu64`. Input lite (1× VR + Hall + analog), 4-ch Core injectors, 4-ch 5 V ign, power, 3× LS. Knock / WBO as pads or CAN.
 
-`bom_replace_microcore-n.csv` replaces module `U105` `STM32F429VIT6` / `C92002` with `STM32F407VGT6` / `C12345`. C15815 and C2252 are not this MCU (op-amp and 22.1184 MHz crystal).
+`bom_replace_microcore-o.csv` keeps `U105` `STM32F407VGT6` / `C12345` and sets Q1–Q7 to `NCE4080K` / `C191380`. C15815 and C2252 are not this MCU (op-amp and 22.1184 MHz crystal).
 
 Firmware board: `coreefi_micro` (sibling tree `/workspace/fw-coreefi-micro`, not published from this hardware repo). That tree will need an **F407** target later; this rev does not add a firmware remote.
 

@@ -115,9 +115,8 @@ Workflow: `.github/workflows/create-board.yaml`
 ## Leftovers — before ordering boards
 
 1. Green Create Board `boards/microcore-n/` and confirm JLC BOM shows `STM32F407VGT6` / `C12345` on `U105`, and that Q5–Q7 / R5–R7 are absent.
-2. KiCad 10 zone refill + DRC after the LS deletion (thermal voids in the old FET courtyards).
-3. Residual Hellen keepout / padstack noise and the preexisting In1 `/INJ3`↔`/VR_OUT` short (rev m leftover).
-4. Firmware `coreefi_micro` F407 target in the sibling tree (not this PR).
+2. Residual Hellen keepout / padstack noise and the preexisting In1 `/INJ3`↔`/VR_OUT` short (rev m leftover). Zone refill for this rev is already in the board file.
+3. Firmware `coreefi_micro` F407 target in the sibling tree (not this PR).
 
 ## Incident guard
 

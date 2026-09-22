@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "10.0.6-10.0.6~ubuntu24.04.1"
     },
-    "CreationDate": "2026-09-22T03:22:19+00:00"
+    "CreationDate": "2026-09-22T06:05:57+00:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "microcore",
       "GUID": "6d696372-6f63-46f7-9265-2e6b69636164",
-      "Revision": "N"
+      "Revision": "O"
     },
     "Size": {
       "X": 90.1,

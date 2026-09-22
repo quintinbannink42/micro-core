@@ -2,11 +2,11 @@
 
 Core EFI Hellen-One rusEFI ECU. Microsquirt-class sealed box, 35-way AMPSEAL, **vertical header**.
 
-4-cylinder sequential wire-in. STM32F4. Discrete DPAK injector drivers (2× high-Z per channel).
+4-cylinder sequential wire-in. **STM32F407VGT6** on Hellen `mega-mcu100/0.3` (not mega-mcu64). Discrete DPAK injector drivers, 4 channels only (2× high-Z per channel).
 
 ## Status
 
-Spec locked in [docs/SPEC.md](docs/SPEC.md). Hardware on this branch: **rev m** (D1–D8 collectors re-routed south of J1; GND pours refilled; Core EFI silkscreen). Last Create Board packages on main include `boards/microcore-j/`. `boards/microcore-m/` lands when Create Board succeeds on `main` after merge. See [docs/HARDWARE_STATUS_rev_m.md](docs/HARDWARE_STATUS_rev_m.md). **Not production-ready.**
+Spec locked in [docs/SPEC.md](docs/SPEC.md). Hardware on this branch: **rev n** cost-down (F429→F407 BOM swap on mega-mcu100; Q5–Q7 LS FETs and R5–R7 removed; AMPSEAL pins 8/9/10 reserved / NC). GND pours and Core EFI silkscreen kept. Last Create Board packages on main include `boards/microcore-m/`. `boards/microcore-n/` lands when Create Board succeeds on `main` after merge. See [docs/HARDWARE_STATUS_rev_n.md](docs/HARDWARE_STATUS_rev_n.md). **Not production-ready.**
 
 - Header: TE **776231-1** (straight / vertical)
 - Plug: TE **776164-1** black, key A
@@ -19,15 +19,15 @@ See [docs/SPEC.md](docs/SPEC.md). Boss brief: [MICROCORE_BRIEF.md](MICROCORE_BRI
 
 Hellen tips: [docs/HELLEN-FAQ.md](docs/HELLEN-FAQ.md).
 
-Firmware board name: `coreefi_micro` (sibling tree `/workspace/fw-coreefi-micro`, not in this repo).
+Firmware board name: `coreefi_micro` (sibling tree `/workspace/fw-coreefi-micro`, not in this repo). Hardware rev n swaps the MCU to F407; that firmware tree will need an F407 target later. This repo does not publish a firmware remote.
 
-KiCad board basename: `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`, rev `m`).
+KiCad board basename: `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`, rev `n`).
 
 ## Hellen tooling
 
 - Submodules: `hellen-one` (andreika-git/hellen-one), `kicad6-libraries` (rusefi/kicad6-libraries)
 - CI: Create Board on push to `main`; daily submodule update workflows
-- Fab outputs land under `boards/microcore-j/` (last on main). After merge, Create Board writes `boards/microcore-m/`
+- Fab outputs land under `boards/microcore-m/` (last on main). After merge, Create Board writes `boards/microcore-n/`
 - Local DRC needs **KiCad 10** (`kicad-cli`); board file is generator_version 10.0
 - Empty-PCB guard: `bin/check-pcb-not-empty.sh` (Create Board job `guard-pcb-not-empty`)
 

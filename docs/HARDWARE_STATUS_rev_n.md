@@ -68,11 +68,39 @@ No explicit GND track ended on the Q5–Q7 source pads (sources were on the GND 
 
 Schematic: local labels `LS1_FP` / `LS2_IDLE` / `LS3_BOOST` removed from J1; `no_connect` on those pins.
 
-## DRC
+## DRC summary (kicad-cli **10.0.6**)
 
-Local `kicad-cli` 10 was not installed in this environment when the copper edit landed. Create Board on `main` is still the fab check. Known rev-m DRC (Hellen keepout / padstack, In1 `/INJ3`↔`/VR_OUT`) is unchanged by this pass except where LS copper was deleted.
+Command: `kicad-cli pcb drc --format json --severity-all --units mm --refill-zones --save-board`
 
-Zone fill was **not** refilled here (needs `kicad-cli pcb drc --refill-zones` or `pcb export` refill). F.Cu and B.Cu GND zone outlines are unchanged, so the previous fill can still show thermal-relief voids where Q5–Q7 pads used to sit. That is pour geometry, not a track to a missing FET. Refill on the next KiCad 10 pass will close those voids.
+F.Cu+B.Cu GND zones were refilled after the LS deletion. Fill diff is polygon geometry only (footprints, drill origin, and zone outlines unchanged).
+
+| Category | Count | Triage |
+|---|---:|---|
+| **Total violations** | **456** | 217 error / 239 warning (rev m was 469: 219 / 250) |
+| items_not_allowed | 199 | Hellen module keepout (M1/M2/M3) — merge noise |
+| padstack | 159 | Hellen merge noise |
+| silk_over_copper | 56 | Was 65 on rev m (LS ref silk gone) |
+| silk_overlap | 18 | Cosmetic / module |
+| **shorting_items** | **10** | Was 12 on rev m. **No LS net** (`/LS*`, `Net-(Q5-IN)` …) remains |
+| clearance | 5 | FET cluster / merge; not the removed LS stage |
+| lib_footprint_issues | 5 | Vendored / Hellen |
+| solder_mask_bridge | 2 | Same class as rev m (not the removed FETs) |
+| copper_edge_clearance | 1 | Edge |
+| holes_co_located | 1 | Duplicate via leftover (Hellen), same class as rev m |
+| **unconnected_items** | **2** | M2 pad S1 keepout vs F.Cu GND; one F.Cu GND island. **Not** J1 pins 8/9/10 |
+| tracks_crossing | **0** | |
+| via_dangling | **0** | LS vias removed with their nets |
+
+### Shorts still present (rev m leftovers, not this pass)
+
+- `/INJ3`↔`/VR_OUT` on In1 (Hellen leftover fanout vs VR).
+- `/VR_N`↔`Net-(Q1-D)` and `/VR_N`↔`Net-(Q3-D)`.
+- `Net-(Q4-D)`↔`Net-(Q2-D)`.
+- GND or `/VR_OUT` vs an empty-net module pad.
+
+No short names `/LS1_FP`, `/LS2_IDLE`, `/LS3_BOOST`, or `Net-(Q5-IN)` / `Q6` / `Q7`.
+
+**Not a fab order yet.** Create Board `boards/microcore-n/` and a human look at the JLC `U105` line are still required. The DRC blockers above are the preexisting Hellen merge / injector-VR shorts, not the F407 swap or the removed LS stage.
 
 ## Create Board / fab path
 

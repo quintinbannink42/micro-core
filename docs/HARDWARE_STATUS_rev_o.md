@@ -1,5 +1,7 @@
 # Micro Core hardware status — rev o
 
+**Superseded by rev p (2026-09-24).** Quintin chose AOD4184A (LCSC C99124) plus LS TVS for budget and reliability. See `docs/HARDWARE_STATUS_rev_p.md`.
+
 **Date:** 2026-09-22  
 **Repo:** `quintinbannink42/micro-core`  
 **KiCad basename:** `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`)  

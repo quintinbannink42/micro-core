@@ -6,10 +6,10 @@
 	(paper "A3")
 	(title_block
 		(title "Micro Core")
-		(date "2026-09-22")
-		(rev "O")
+		(date "2026-09-24")
+		(rev "P")
 		(company "Core EFI")
-		(comment 1 "rev o: NCE4080K Q1-Q7; LS Q5-Q7 restored; F407VGT6 stays")
+		(comment 1 "rev p: AOD4184A Q1-Q7 C99124; LS flyback+TVS; F407VGT6 stays")
 		(comment 2 "Firmware board: coreefi_micro — needs F407 target later; fw not in this repo")
 		(comment 3 "PCB basename: microcore (no dashes/underscores)")
 	)
@@ -2244,6 +2244,16 @@
 			)
 			(uuid "a0aeb214-2e1a-47c0-812d-cea9dafd4a15")
 		)
+		(pin "V12_RAW" input
+			(at 17.78 70.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e5018c5e-b073-4fcd-884d-65c8d854920b")
+		)
 		(instances
 			(project "microcore"
 				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890"
@@ -2549,7 +2559,7 @@
 			)
 		)
 	)
-	(text "Micro Core rev O\nMCU mega-mcu100/0.3 STM32F407VGT6 (not mega-mcu64) + power_12and5V/0.3 + vr-max9924/0.3\nUSB Mini-B + TE 776231-1 AMPSEAL; pins 8/9/10 FP / Idle / Boost\nSheets: INJ4 (Q1-Q4) LS3 (Q5-Q7) ANALOG HALL\nPower FETs NCE4080K C191380. coreefi_micro needs F407 target later"
+	(text "Micro Core rev P\nMCU mega-mcu100/0.3 STM32F407VGT6 (not mega-mcu64) + power_12and5V/0.3 + vr-max9924/0.3\nUSB Mini-B + TE 776231-1 AMPSEAL; pins 8/9/10 FP / Idle / Boost\nSheets: INJ4 (Q1-Q4) LS3 (Q5-Q7) ANALOG HALL\nPower FETs AOD4184A C99124. RDS(on) at 4.5 V; gate is 3.3 V. coreefi_micro needs F407 target later"
 		(exclude_from_sim no)
 		(at 25.4 280 0)
 		(effects
@@ -4530,7 +4540,7 @@
 		)
 		(uuid "f9335bcd-3908-4538-a11e-171d370e6a37")
 	)
-	(text "AMPSEAL pins 8/9/10: FP / Idle / Boost (rev o)\nQ5-Q7 NCE4080K + gate R5-R7 12 ohm"
+	(text "AMPSEAL pins 8/9/10: FP / Idle / Boost (rev p)\nQ5-Q7 AOD4184A + gate R5-R7 12 ohm + US1M flyback + SMAJ33A"
 		(exclude_from_sim no)
 		(at 230 43.18 0)
 		(effects
@@ -4542,6 +4552,26 @@
 		(uuid "d2b1f6c3-8e55-4b22-ad41-7c903f2b0020")
 	)
 
+	(wire
+		(pts
+			(xy 17.78 70.14) (xy 17.78 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "770c4cfb-9cb5-4da4-968d-80661758b65e")
+	)
+	(label "V12_RAW"
+		(at 17.78 67.31 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b3e389d-6b7d-44be-8cea-b1a0e077e93b")
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")

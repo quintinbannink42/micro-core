@@ -117,7 +117,7 @@ Workflow: `.github/workflows/create-board.yaml`
 ## Leftovers — before ordering boards
 
 1. Green Create Board `boards/microcore-o/` and confirm the JLC BOM shows `NCE4080K` / `C191380` on Q1–Q7, `STM32F407VGT6` / `C12345` on `U105`, and R5–R7 present.
-2. Decide the 3.3 V gate vs 10 V RDS(on) question (driver, or a logic-level FET) before relying on injector or fuel-pump current.
+2. Decide the 3.3 V gate vs 10 V RDS(on) question (driver, or a logic-level FET) before relying on injector or fuel-pump current. Comparison and recommendation (keep NCE4080K; DMTH4004LK3 is the wrong swap at 3.3 V): [FET_COMPARISON.md](FET_COMPARISON.md).
 3. LS inductive loads have no external clamp.
 4. Residual Hellen keepout / padstack noise and the preexisting injector-VR shorts called out on rev n.
 5. Firmware `coreefi_micro` F407 target in the sibling tree (not this PR). This repo does not publish firmware.

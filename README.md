@@ -6,7 +6,7 @@ Core EFI Hellen-One rusEFI ECU. Microsquirt-class sealed box, 35-way AMPSEAL, **
 
 ## Status
 
-Spec locked in [docs/SPEC.md](docs/SPEC.md). Hardware on this branch: **rev o** (power FETs are NCE4080K / LCSC C191380; Q5–Q7 and R5–R7 restored; AMPSEAL pins 8/9/10 are FP / Idle / Boost). F407VGT6 on mega-mcu100, GND pours, and Core EFI silkscreen kept. `boards/microcore-o/` lands when Create Board succeeds on `main` after merge. See [docs/HARDWARE_STATUS_rev_o.md](docs/HARDWARE_STATUS_rev_o.md). **Not production-ready.** The NCE4080K RDS(on) rating is at 10 V; the gate is 3.3 V and there is no gate driver.
+Spec locked in [docs/SPEC.md](docs/SPEC.md). Hardware on this branch: **rev o** (power FETs are NCE4080K / LCSC C191380; Q5–Q7 and R5–R7 restored; AMPSEAL pins 8/9/10 are FP / Idle / Boost). F407VGT6 on mega-mcu100, GND pours, and Core EFI silkscreen kept. `boards/microcore-o/` lands when Create Board succeeds on `main` after merge. See [docs/HARDWARE_STATUS_rev_o.md](docs/HARDWARE_STATUS_rev_o.md). **Not production-ready.** The NCE4080K RDS(on) rating is at 10 V; the gate is 3.3 V and there is no gate driver. FET alternatives (keep NCE; do not swap to DMTH4004LK3) are in [docs/FET_COMPARISON.md](docs/FET_COMPARISON.md).
 
 - Header: TE **776231-1** (straight / vertical)
 - Plug: TE **776164-1** black, key A

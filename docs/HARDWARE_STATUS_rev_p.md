@@ -3,40 +3,40 @@
 **Date:** 2026-09-24  
 **Repo:** `quintinbannink42/micro-core`  
 **KiCad basename:** `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`)  
-**BOARD_REVISION:** **p** (fab-affecting: Q1–Q7 FET swap to AOD4184A; LS flyback + TVS; frame short fixes)  
+**BOARD_REVISION:** **p** (fab-affecting: LS flyback + TVS on Q5–Q7; frame short fixes. Q1–Q7 stay NCE4080K)  
 **Create Board artifacts:** `boards/microcore-o/` is on main from rev o. **`boards/microcore-p/` after this rev is merged to `main`** (Create Board on a PR branch may run but fab files land on `main` only).
 
 ## Verdict
 
-**Not production-ready. Do not order boards.** Quintin chose **AOD4184A** (LCSC **C99124**) and TVS on the low-side channels for budget and reliability. Rev p puts that FET on all seven DPAK lands, adds the existing cheap injector clamps to Q5–Q7, and clears the real injector / VR shorts on frame copper. Hellen module noise is still there and is listed below.
+**Not production-ready. Do not order boards.** Budget and reliability first. Q1–Q7 stay **NCE4080K** (LCSC **C191380**): no FET or BOM upgrade, and the DPAK land is unchanged. Rev p adds the same cheap injector clamps already on the board (US1M + SMAJ33A) to Q5–Q7, and clears the real injector / VR shorts on frame copper. Proven clamps, not premium parts and not more copper complexity. Hellen module noise is still there and is listed below.
 
 `microcore.kicad_pcb` stays substantial (F.Cu+B.Cu GND zones refilled after the diode routes and two GND stitch vias). Drill origin unchanged: Edge.Cuts bottom-left `(107.5, 148.0872)`. Core EFI silkscreen kept; letter bumped to **rev P**.
 
 ## What landed (rev p)
 
-### 1. Power FET: NCE4080K → AOD4184A
+### 1. Power FET: NCE4080K stays
 
-All seven frame power FETs (Q1–Q7) are **AOD4184A**, LCSC **C99124**. Same footprint: `microcore-fp:DPAK` (TO-252 land, not redrawn). Pinout stays pin 1 gate, pin 2 drain tab, pin 3 source.
+All seven frame power FETs (Q1–Q7) stay **NCE4080K**, LCSC **C191380**. Same footprint: `microcore-fp:DPAK` (TO-252 land, not redrawn). Pinout stays pin 1 gate, pin 2 drain tab, pin 3 source. No FET upgrade on this rev.
 
 `bom_replace_microcore-p.csv` rows (ASCII comments, no ohm symbol):
 
-`Q1`…`Q7,"AOD4184A","DPAK","C99124"`
+`Q1`…`Q7,"NCE4080K","DPAK","C191380"`
 
 `U105` stays `STM32F407VGT6` / `LQFP100` / `C12345` on `mega-mcu100/0.3`. Not switched to mega-mcu64.
 
 ### 2. 3.3 V gate caveat
 
-AOD4184A is a discrete MOSFET, not a protected smart FET. No gate driver was added.
+NCE4080K is a discrete MOSFET, not a protected smart FET. No gate driver was added.
 
-- RDS(on) max **9.5 mohm at Vgs = 4.5 V**, ID = 15 A. Not specified at 3.3 V.
-- VGS(th) max **2.6 V**, so a 3.3 V MCU pin does turn the FET on.
-- At 3.3 V the part may not reach the 4.5 V RDS(on) spec, especially hot and at injector or fuel-pump current.
+- RDS(on) **< 7 mohm at Vgs = 10 V**, ID = 20 A. No RDS(on) row at 4.5 V or 2.5 V.
+- VGS(th) **1.2 / 1.8 / 2.5 V** (min / typ / max), so a 3.3 V MCU pin does turn the FET on.
+- At 3.3 V the part is not at the 10 V RDS(on) spec. On-resistance will be higher than 7 mohm, especially hot and at injector or fuel-pump current.
 
 Each gate is still the existing 12 ohm resistor (R1–R7) from the mega-mcu100 output.
 
 ### 3. Low-side flyback + TVS (Q5–Q7)
 
-Same cheap injector-class parts already on the board. No premium clamps. No series ballast on the LS channels.
+Same cheap injector-class parts already on the board. No premium clamps. No series ballast on the LS channels. Proven clamps, not extra copper protection.
 
 | Ref | Channel | AMPSEAL | Flyback | TVS |
 |---|---|---|---|---|
@@ -93,7 +93,7 @@ Command: `kicad-cli pcb drc --format json --severity-all --units mm --refill-zon
 - Unconnected: M2 pad S1 `(109.850001, 87.15)` vs F.Cu GND inside the keepout, plus one F.Cu GND island.
 - items_not_allowed 199, padstack 159, lib_footprint_issues 5, holes_co_located 1.
 
-**Not a fab order.** Create Board `boards/microcore-p/` is still required after merge. The 3.3 V gate vs 4.5 V RDS(on) caveat is still open; this rev does not add a gate driver.
+**Not a fab order.** Create Board `boards/microcore-p/` is still required after merge. The 3.3 V gate vs 10 V RDS(on) caveat is still open; this rev does not add a gate driver.
 
 ## Create Board / fab path
 
@@ -107,8 +107,8 @@ Workflow: `.github/workflows/create-board.yaml`
 
 ## Leftovers — before ordering boards
 
-1. Green Create Board `boards/microcore-p/` and confirm the JLC BOM shows `AOD4184A` / `C99124` on Q1–Q7, `STM32F407VGT6` / `C12345` on `U105`, D9–D11 US1M, and D12–D14 SMAJ33A.
-2. The 3.3 V gate does not have an RDS(on) spec. A driver, or accepting the 4.5 V figure as not guaranteed at 3.3 V, is still a human call.
+1. Green Create Board `boards/microcore-p/` and confirm the JLC BOM shows `NCE4080K` / `C191380` on Q1–Q7, `STM32F407VGT6` / `C12345` on `U105`, D9–D11 US1M, and D12–D14 SMAJ33A.
+2. The 3.3 V gate does not have an RDS(on) spec. The datasheet number is at 10 V only. A driver is not on this rev.
 3. Residual Hellen keepout / padstack / module pad G / edge noise listed above.
 4. Firmware `coreefi_micro` F407 target in the sibling tree (not this PR). This repo does not publish firmware.
 

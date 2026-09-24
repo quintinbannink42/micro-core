@@ -9,8 +9,8 @@
 		(date "2026-09-24")
 		(rev "P")
 		(company "Core EFI")
-		(comment 1 "rev p: Q5-Q7 AOD4184A C99124; US1M flyback + SMAJ33A")
-		(comment 2 "RDS(on) at 4.5 V; Vth max 2.6 V; MCU gate 3.3 V; no gate driver")
+		(comment 1 "rev p: Q5-Q7 stay NCE4080K C191380; US1M flyback + SMAJ33A")
+		(comment 2 "RDS(on) at 10 V only; Vth max 2.5 V; MCU gate 3.3 V; no gate driver")
 	)
 	(lib_symbols
 	(symbol "Power_Management:AUIPS2041L" (in_bom yes) (on_board yes)
@@ -245,7 +245,7 @@
 				)
 			)
 		)
-		(property "Value" "AOD4184A"
+		(property "Value" "NCE4080K"
 			(at 96.52 22.86 0)
 			(effects
 				(font
@@ -420,7 +420,7 @@
 				)
 			)
 		)
-		(property "Value" "AOD4184A"
+		(property "Value" "NCE4080K"
 			(at 96.52 53.339999999999996 0)
 			(effects
 				(font
@@ -595,7 +595,7 @@
 				)
 			)
 		)
-		(property "Value" "AOD4184A"
+		(property "Value" "NCE4080K"
 			(at 96.52 83.82 0)
 			(effects
 				(font
@@ -819,7 +819,7 @@
 		)
 		(uuid "659789c8-3581-42cc-914e-d4f823e74239")
 	)
-	(text "LS3 Low-side rev P\nQ5-Q7 AOD4184A TO-252 (LCSC C99124) on microcore-fp:DPAK\n12 ohm gate; US1M flyback (C112545) + SMAJ33A (C143131); no series ballast\nDiscrete MOSFET, not a protected smart FET. No gate driver.\nRDS(on) max 9.5 mohm at Vgs=4.5 V (not specified at 3.3 V). Vth max 2.6 V.\nMCU gate is 3.3 V, so the FET turns on but may not hit the 4.5 V RDS(on) spec."
+	(text "LS3 Low-side rev P\nQ5-Q7 stay NCE4080K TO-252 (LCSC C191380) on microcore-fp:DPAK\n12 ohm gate; US1M flyback (C112545) + SMAJ33A (C143131); no series ballast\nDiscrete MOSFET, not a protected smart FET. No gate driver. No premium clamps.\nRDS(on) < 7 mohm at Vgs=10 V, ID=20 A. No RDS(on) row at 4.5 V or 2.5 V.\nVth 1.2/1.8/2.5 V. MCU gate is 3.3 V, so the FET turns on but is not at the 10 V RDS(on) spec."
 		(at 120 100 0)
 		(effects
 			(font

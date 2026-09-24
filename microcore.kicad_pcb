@@ -12,7 +12,7 @@
 		(date "2026-09-24")
 		(rev "P")
 		(company "Core EFI")
-		(comment 1 "rev P: AOD4184A Q1-Q7; LS US1M+SMAJ33A; F407VGT6 stays")
+		(comment 1 "rev P: Q1-Q7 stay NCE4080K; LS US1M+SMAJ33A; F407VGT6 stays")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -111,7 +111,7 @@
 				)
 			)
 		)
-		(property "Value" "AOD4184A"
+		(property "Value" "NCE4080K"
 			(at 1.1 4.5 0)
 			(layer "F.Fab")
 			(uuid "5cc86756-7430-4921-8843-3378c5a2283e")
@@ -476,7 +476,7 @@
 				)
 			)
 		)
-		(property "Value" "AOD4184A"
+		(property "Value" "NCE4080K"
 			(at 1.1316 5.544 0)
 			(layer "F.Fab")
 			(uuid "564dd315-3378-47f7-9dd0-45a4ed2e4b2b")
@@ -1251,7 +1251,7 @@
 				)
 			)
 		)
-		(property "Value" "AOD4184A"
+		(property "Value" "NCE4080K"
 			(at 1.1 4.5 90)
 			(layer "F.Fab")
 			(uuid "ec72bdd1-28e2-4e91-97a9-bf00850cd413")
@@ -1921,7 +1921,7 @@
 				)
 			)
 		)
-		(property "Value" "AOD4184A"
+		(property "Value" "NCE4080K"
 			(at 1.1 4.5 0)
 			(layer "F.Fab")
 			(uuid "51fb7e99-0f00-41e8-91b7-7b4b376ca6e8")
@@ -3251,7 +3251,7 @@
 				)
 			)
 		)
-		(property "Value" "AOD4184A"
+		(property "Value" "NCE4080K"
 			(at 1.1316 6.7228 0)
 			(layer "F.Fab")
 			(uuid "ee360bb1-a59c-4ec6-9833-b7fa98bc4625")
@@ -3816,7 +3816,7 @@
 				)
 			)
 		)
-		(property "Value" "AOD4184A"
+		(property "Value" "NCE4080K"
 			(at 1.1 4.5 0)
 			(layer "F.Fab")
 			(uuid "d206ad9d-2a58-4317-9ceb-c5cb08482eb2")
@@ -4732,7 +4732,7 @@
 				)
 			)
 		)
-		(property "Value" "AOD4184A"
+		(property "Value" "NCE4080K"
 			(at 1.1 4.5 0)
 			(layer "F.Fab")
 			(uuid "58cda465-c9d9-4647-ae4e-02a8f718b2a4")
@@ -10214,7 +10214,7 @@
 			(justify top mirror)
 		)
 	)
-	(gr_text "Micro Core rev P\n90x76 4-layer\nmega-mcu100/0.3 F407VGT6 + power + vr-max9924/0.3\nUSB Mini-B + TE 776231-1 south; INJ diodes B.Cu\nQ1-Q7 AOD4184A; LS flyback+TVS on B.Cu"
+	(gr_text "Micro Core rev P\n90x76 4-layer\nmega-mcu100/0.3 F407VGT6 + power + vr-max9924/0.3\nUSB Mini-B + TE 776231-1 south; INJ diodes B.Cu\nQ1-Q7 stay NCE4080K; LS flyback+TVS on B.Cu"
 		(at 124 129.5 0)
 		(layer "Cmts.User")
 		(uuid "05346842-2b66-4bd1-9f66-3eef98340376")

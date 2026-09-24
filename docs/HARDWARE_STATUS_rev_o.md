@@ -1,6 +1,6 @@
 # Micro Core hardware status — rev o
 
-**Superseded by rev p (2026-09-24).** Quintin chose AOD4184A (LCSC C99124) plus LS TVS for budget and reliability. See `docs/HARDWARE_STATUS_rev_p.md`.
+**Superseded by rev p (2026-09-24).** Rev p keeps NCE4080K (C191380) and adds LS US1M flyback plus SMAJ33A. Budget and reliability first; no FET upgrade. See `docs/HARDWARE_STATUS_rev_p.md`.
 
 **Date:** 2026-09-22  
 **Repo:** `quintinbannink42/micro-core`  

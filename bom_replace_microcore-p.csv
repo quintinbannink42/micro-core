@@ -9,28 +9,27 @@
 # Note: hellen-one submodule points at quintinbannink42/hellen-one with
 # vr-max9924/0.3 D751 comment aligned to LED-GREEN-0603 (matches mega-mcu100).
 
-# rev p: Quintin chose AOD4184A (LCSC C99124) plus TVS for budget and reliability.
+# rev p: budget and reliability first. Q1-Q7 stay NCE4080K (C191380). No FET or BOM upgrade.
 # Keep Hellen module mega-mcu100/0.3 and STM32F407VGT6 (LCSC C12345).
-# Power FETs Q1-Q7: NCE4080K / C191380 -> AOD4184A TO-252 / C99124.
-# PCB footprint stays microcore-fp:DPAK (same land; AOD4184A is TO-252).
-# AOD4184A RDS(on) max 9.5 mohm at Vgs=4.5 V, ID=15 A. Not specified at 3.3 V.
-# Vth max 2.6 V, so a 3.3 V MCU gate turns the FET on but may not hit the 4.5 V RDS(on) spec.
-# No gate driver in this rev.
-# Q5-Q7 (FP / Idle / Boost) get the same cheap injector clamps: US1M flyback + SMAJ33A.
-# No series ballast on the LS channels. No premium clamps.
+# Power FETs Q1-Q7: NCE4080K / C191380. Footprint stays microcore-fp:DPAK (land not redrawn).
+# NCE4080K RDS(on) < 7 mohm at Vgs=10 V, ID=20 A. No RDS(on) row at 4.5 V or 2.5 V.
+# Vth min/typ/max 1.2/1.8/2.5 V. MCU gate is 3.3 V. No gate driver in this rev.
+# Q5-Q7 (FP / Idle / Boost) reuse the same cheap injector clamps already in the BOM:
+# US1M flyback (C112545) + SMAJ33A (C143131). No series ballast. No premium clamps.
+# Prefer proven clamps over more copper complexity.
 # Injector protection unchanged: gate R1-R4, ballast R8-R11, US1M + SMAJ33A.
 # Comments are ASCII-only.
 
 U105,"STM32F407VGT6","LQFP100","C12345"
 
 # Frame power FETs + gate resistors (7 channels)
-Q1,"AOD4184A","DPAK","C99124"
-Q2,"AOD4184A","DPAK","C99124"
-Q3,"AOD4184A","DPAK","C99124"
-Q4,"AOD4184A","DPAK","C99124"
-Q5,"AOD4184A","DPAK","C99124"
-Q6,"AOD4184A","DPAK","C99124"
-Q7,"AOD4184A","DPAK","C99124"
+Q1,"NCE4080K","DPAK","C191380"
+Q2,"NCE4080K","DPAK","C191380"
+Q3,"NCE4080K","DPAK","C191380"
+Q4,"NCE4080K","DPAK","C191380"
+Q5,"NCE4080K","DPAK","C191380"
+Q6,"NCE4080K","DPAK","C191380"
+Q7,"NCE4080K","DPAK","C191380"
 R1,"12","R0603","C22783"
 R2,"12","R0603","C22783"
 R3,"12","R0603","C22783"

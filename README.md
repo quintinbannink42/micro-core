@@ -2,11 +2,11 @@
 
 Core EFI Hellen-One rusEFI ECU. Microsquirt-class sealed box, 35-way AMPSEAL, **vertical header**.
 
-4-cylinder sequential wire-in. **STM32F407VGT6** on Hellen `mega-mcu100/0.3` (not mega-mcu64). Seven NCE4080K power FETs: 4 injector channels (2× high-Z each) plus fuel-pump, idle, and boost low-sides with US1M flyback and SMAJ33A.
+4-cylinder sequential wire-in. **STM32F407VGT6** on Hellen `mega-mcu100/0.3` (not mega-mcu64). Seven AOD4184A power FETs: 4 injector channels (2× high-Z each) plus fuel-pump, idle, and boost low-sides with US1M flyback and SMAJ33A.
 
 ## Status
 
-Spec locked in [docs/SPEC.md](docs/SPEC.md). Hardware on this branch: **rev p**. Budget and reliability first: Q1–Q7 stay NCE4080K (LCSC C191380) on the existing DPAK land — no FET or BOM upgrade. Q5–Q7 (AMPSEAL pins 8/9/10, FP / Idle / Boost) reuse the cheap US1M flyback and SMAJ33A already on the board. F407VGT6 on mega-mcu100 stays. `boards/microcore-p/` lands when Create Board succeeds on `main` after merge. See [docs/HARDWARE_STATUS_rev_p.md](docs/HARDWARE_STATUS_rev_p.md). **Not production-ready.** RDS(on) is specified at 10 V only (<7 mohm); Vth max is 2.5 V and there is no gate driver.
+Spec locked in [docs/SPEC.md](docs/SPEC.md). Hardware on this branch: **rev p**. Quintin chose AOD4184A (LCSC C99124) plus LS TVS for budget and reliability. Q1–Q7 are AOD4184A on the existing DPAK land; Q5–Q7 (AMPSEAL pins 8/9/10, FP / Idle / Boost) reuse the cheap US1M flyback and SMAJ33A already on the board. F407VGT6 on mega-mcu100 stays. `boards/microcore-p/` lands when Create Board succeeds on `main` after merge. See [docs/HARDWARE_STATUS_rev_p.md](docs/HARDWARE_STATUS_rev_p.md). **Not production-ready.** RDS(on) is specified at 4.5 V (max 9.5 mohm), not at 3.3 V; Vth max is 2.6 V and there is no gate driver. The earlier comparison is in [docs/FET_COMPARISON.md](docs/FET_COMPARISON.md); Quintin overrode it and picked AOD4184A.
 
 - Header: TE **776231-1** (straight / vertical)
 - Plug: TE **776164-1** black, key A

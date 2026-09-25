@@ -1,6 +1,6 @@
 # Micro Core hardware status — rev o
 
-**Superseded by rev p (2026-09-24).** Rev p keeps NCE4080K (C191380) and adds LS US1M flyback plus SMAJ33A. Budget and reliability first; no FET upgrade. See `docs/HARDWARE_STATUS_rev_p.md`.
+**Superseded by rev p (2026-09-25).** Quintin chose AOD4184A (LCSC C99124) plus LS US1M flyback and SMAJ33A for budget and reliability. See `docs/HARDWARE_STATUS_rev_p.md`.
 
 **Date:** 2026-09-22  
 **Repo:** `quintinbannink42/micro-core`  
@@ -119,7 +119,7 @@ Workflow: `.github/workflows/create-board.yaml`
 ## Leftovers — before ordering boards
 
 1. Green Create Board `boards/microcore-o/` and confirm the JLC BOM shows `NCE4080K` / `C191380` on Q1–Q7, `STM32F407VGT6` / `C12345` on `U105`, and R5–R7 present.
-2. Decide the 3.3 V gate vs 10 V RDS(on) question (driver, or a logic-level FET) before relying on injector or fuel-pump current.
+2. Decide the 3.3 V gate vs 10 V RDS(on) question (driver, or a logic-level FET) before relying on injector or fuel-pump current. Comparison and recommendation (keep NCE4080K; DMTH4004LK3 is the wrong swap at 3.3 V): [FET_COMPARISON.md](FET_COMPARISON.md).
 3. LS inductive loads have no external clamp.
 4. Residual Hellen keepout / padstack noise and the preexisting injector-VR shorts called out on rev n.
 5. Firmware `coreefi_micro` F407 target in the sibling tree (not this PR). This repo does not publish firmware.

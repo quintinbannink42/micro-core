@@ -2,16 +2,16 @@
 <export version="E">
   <design>
     <source>/home/runner/work/micro-core/micro-core/microcore.kicad_sch</source>
-    <date>2026-09-24T19:14:54</date>
+    <date>2026-09-25T18:01:47</date>
     <tool>Eeschema 10.0.6-10.0.6~ubuntu24.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Micro Core</title>
         <company>Core EFI</company>
-        <rev>O</rev>
-        <date>2026-09-22</date>
+        <rev>P</rev>
+        <date>2026-09-24</date>
         <source>microcore.kicad_sch</source>
-        <comment number="1" value="rev o: NCE4080K Q1-Q7; LS Q5-Q7 restored; F407VGT6 stays"/>
+        <comment number="1" value="rev p: AOD4184A Q1-Q7 C99124; LS flyback+TVS; F407VGT6 stays"/>
         <comment number="2" value="Firmware board: coreefi_micro — needs F407 target later; fw not in this repo"/>
         <comment number="3" value="PCB basename: microcore (no dashes/underscores)"/>
         <comment number="4" value=""/>
@@ -26,10 +26,10 @@
       <title_block>
         <title>INJ4 Injectors</title>
         <company>Core EFI</company>
-        <rev>O</rev>
-        <date>2026-09-22</date>
+        <rev>P</rev>
+        <date>2026-09-24</date>
         <source>INJ4.kicad_sch</source>
-        <comment number="1" value="rev o: Q1-Q4 NCE4080K C191380; D1-D8 and R8-R11 kept"/>
+        <comment number="1" value="rev p: Q1-Q4 AOD4184A C99124; D1-D8 and R8-R11 kept"/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
         <comment number="4" value=""/>
@@ -44,11 +44,11 @@
       <title_block>
         <title>LS3 Low-side</title>
         <company>Core EFI</company>
-        <rev>O</rev>
-        <date>2026-09-22</date>
+        <rev>P</rev>
+        <date>2026-09-24</date>
         <source>LS3.kicad_sch</source>
-        <comment number="1" value="rev o: NCE4080K TO-252-2L LCSC C191380; gate 12 ohm"/>
-        <comment number="2" value="no flyback/TVS on LS; not a protected smart FET"/>
+        <comment number="1" value="rev p: Q5-Q7 AOD4184A C99124; US1M flyback + SMAJ33A"/>
+        <comment number="2" value="RDS(on) at 4.5 V; Vth max 2.6 V; MCU gate 3.3 V; no gate driver"/>
         <comment number="3" value=""/>
         <comment number="4" value=""/>
         <comment number="5" value=""/>
@@ -537,7 +537,7 @@
       </units>
     </comp>
     <comp ref="Q1">
-      <value>NCE4080K</value>
+      <value>AOD4184A</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -562,7 +562,7 @@
       </units>
     </comp>
     <comp ref="Q2">
-      <value>NCE4080K</value>
+      <value>AOD4184A</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -587,7 +587,7 @@
       </units>
     </comp>
     <comp ref="Q3">
-      <value>NCE4080K</value>
+      <value>AOD4184A</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -612,7 +612,7 @@
       </units>
     </comp>
     <comp ref="Q4">
-      <value>NCE4080K</value>
+      <value>AOD4184A</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -820,8 +820,152 @@
         </unit>
       </units>
     </comp>
+    <comp ref="D9">
+      <value>US1M</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C112545</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C112545"/>
+      <property name="Sheetname" value="LS3"/>
+      <property name="Sheetfile" value="LS3.kicad_sch"/>
+      <sheetpath names="/LS3/" tstamps="/2681f3c6-8479-4cd3-8490-1f2d090e826c/"/>
+      <tstamps>cb3a9a79-2c4d-416e-971e-600fbb8ae2e4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D10">
+      <value>US1M</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C112545</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C112545"/>
+      <property name="Sheetname" value="LS3"/>
+      <property name="Sheetfile" value="LS3.kicad_sch"/>
+      <sheetpath names="/LS3/" tstamps="/2681f3c6-8479-4cd3-8490-1f2d090e826c/"/>
+      <tstamps>b019f625-7feb-40fe-ba07-1489972487fe</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D11">
+      <value>US1M</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C112545</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C112545"/>
+      <property name="Sheetname" value="LS3"/>
+      <property name="Sheetfile" value="LS3.kicad_sch"/>
+      <sheetpath names="/LS3/" tstamps="/2681f3c6-8479-4cd3-8490-1f2d090e826c/"/>
+      <tstamps>1eb309fb-4b94-49a5-8b6c-30643d75afe3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D12">
+      <value>SMAJ33A</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C143131</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C143131"/>
+      <property name="Sheetname" value="LS3"/>
+      <property name="Sheetfile" value="LS3.kicad_sch"/>
+      <sheetpath names="/LS3/" tstamps="/2681f3c6-8479-4cd3-8490-1f2d090e826c/"/>
+      <tstamps>c5acf1b4-c2ac-4c60-9541-ed6d22d0114b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D13">
+      <value>SMAJ33A</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C143131</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C143131"/>
+      <property name="Sheetname" value="LS3"/>
+      <property name="Sheetfile" value="LS3.kicad_sch"/>
+      <sheetpath names="/LS3/" tstamps="/2681f3c6-8479-4cd3-8490-1f2d090e826c/"/>
+      <tstamps>8b558401-8a29-431c-8104-b2d734d3296d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D14">
+      <value>SMAJ33A</value>
+      <footprint>microcore-fp:DO214AC</footprint>
+      <fields>
+        <field name="LCSC">C143131</field>
+        <field name="Footprint">microcore-fp:DO214AC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="hellen-one-common" part="1N4148WS" description=""/>
+      <property name="LCSC" value="C143131"/>
+      <property name="Sheetname" value="LS3"/>
+      <property name="Sheetfile" value="LS3.kicad_sch"/>
+      <sheetpath names="/LS3/" tstamps="/2681f3c6-8479-4cd3-8490-1f2d090e826c/"/>
+      <tstamps>8145da7e-34f3-4b2b-b04f-95265fe56c6a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="Q5">
-      <value>NCE4080K</value>
+      <value>AOD4184A</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -846,7 +990,7 @@
       </units>
     </comp>
     <comp ref="Q6">
-      <value>NCE4080K</value>
+      <value>AOD4184A</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -871,7 +1015,7 @@
       </units>
     </comp>
     <comp ref="Q7">
-      <value>NCE4080K</value>
+      <value>AOD4184A</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -1345,14 +1489,20 @@
       <node ref="R11" pin="1" pintype="passive"/>
     </net>
     <net code="23" name="/LS1_FP" class="Default">
+      <node ref="D12" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D9" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="J1" pin="8" pinfunction="8_8" pintype="passive"/>
       <node ref="Q5" pin="2" pinfunction="D_2" pintype="passive"/>
     </net>
     <net code="24" name="/LS2_IDLE" class="Default">
+      <node ref="D10" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D13" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J1" pin="9" pinfunction="9_9" pintype="passive"/>
       <node ref="Q6" pin="2" pinfunction="D_2" pintype="passive"/>
     </net>
     <net code="25" name="/LS3_BOOST" class="Default">
+      <node ref="D11" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D14" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J1" pin="10" pinfunction="10_10" pintype="passive"/>
       <node ref="Q7" pin="2" pinfunction="D_2" pintype="passive"/>
     </net>
@@ -1417,9 +1567,12 @@
     </net>
     <net code="40" name="/V12_RAW" class="Default">
       <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D10" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D11" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D2" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D3" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D4" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D9" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J1" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="M2" pin="V3" pinfunction="V12_RAW_V3" pintype="passive"/>
     </net>
@@ -1457,6 +1610,9 @@
       <node ref="M1" pin="N7" pinfunction="nReset_N7" pintype="passive"/>
     </net>
     <net code="50" name="GND" class="Default">
+      <node ref="D12" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D13" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D14" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D5" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D6" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D7" pin="2" pinfunction="A_2" pintype="passive"/>

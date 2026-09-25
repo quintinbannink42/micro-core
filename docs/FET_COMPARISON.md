@@ -3,11 +3,13 @@
 **Date:** 2026-09-24  
 **Repo:** `quintinbannink42/micro-core`  
 **Board:** rev o, Q1–Q7 on `microcore-fp:DPAK` (`footprints/DPAK.kicad_mod`)  
-**This document does not change the BOM, schematic, or PCB.** Q1–Q7 stay **NCE4080K / LCSC C191380**.
+**Written against rev o.** It compared parts and recommended keeping NCE4080K. It did not edit the BOM.
+
+**Quintin override (2026-09-25):** Q1–Q7 on rev p are **AOD4184A / LCSC C99124**, chosen for budget and reliability. That call replaces the recommendation below. Current parts are in `docs/HARDWARE_STATUS_rev_p.md`.
 
 ## Recommendation
 
-**Keep NCE4080K.** Do not swap the seven FETs to DMTH4004LK3.
+**This note recommended keeping NCE4080K** and not swapping to DMTH4004LK3. Quintin later chose AOD4184A instead. The numbers below are unchanged.
 
 DMTH4004LK3 publishes 5 mΩ at VGS = 4.5 V, and this board never makes 4.5 V. Its VGS(th) maximum is 3.0 V. An STM32F407 GPIO high is about 3.3 V, so a worst-case DMTH is only 0.3 V above threshold. That is less overdrive than the NCE (VGS(th) max 2.5 V). The 5 mΩ line is the wrong number for this gate.
 

@@ -1,5 +1,7 @@
 # Micro Core hardware status — rev p
 
+**Superseded by rev q (2026-09-26).** Q1–Q7 are NCE4080K again, with SLM27524CA-DG gate drivers on `/V12_RAW`. See `docs/HARDWARE_STATUS_rev_q.md`.
+
 **Date:** 2026-09-25  
 **Repo:** `quintinbannink42/micro-core`  
 **KiCad basename:** `microcore` (`BOARD_PREFIX=micro`, `BOARD_SUFFIX=core`)  

@@ -71,18 +71,20 @@ No ETB and no onboard LSU on this connector.
 Core pinout, not a Microsquirt copy.
 
 ## Power stage
-7× DPAK-class N-FET, all **AOD4184A** (TO-252, LCSC **C99124**) on the existing `microcore-fp:DPAK` land. Quintin chose this part, and TVS on the low-side channels, for budget and reliability. The land is not redrawn.
+7× DPAK-class N-FET, all **NCE4080K** (TO-252, LCSC **C191380**) on the existing `microcore-fp:DPAK` land. The land is not redrawn. Rev q restored this FET after rev p's AOD4184A trial and added a gate driver so the 3.3 V GPIO is not the gate voltage.
+
+Gate path, each used channel: mega-mcu100 GPIO to a **SLM27524CA-DG** input (LCSC **C2921387**, UCC27524-class dual non-inverting low-side driver), driver output through the existing 12 ohm gate resistor (R1–R7), then the FET gate. Four SOIC-8 drivers give eight channels; seven drive Q1–Q7 and U4 channel A has its input tied to GND. Driver VDD, and both enable pins, are the existing **`/V12_RAW`** rail (about 12 V on the gate). Each driver has 100 nF (C14663) and 1 uF (C559769) from VDD to the same GND as the FET sources. No boost converter.
 
 4× injector (Q1–Q4) + SMAJ33A + US1M flyback. Two 12 ohm high-Z per channel (gate R1–R4 + ballast R8–R11). FETs on the lid-facing copper, gap-pad, clear of the AMPSEAL well.
 
 3× low-side (Q5 fuel pump, Q6 idle / VVT, Q7 boost / spare) with gate R5–R7 at 12 ohm, plus the same cheap injector clamps per channel: US1M flyback (anode on the LS net, cathode on +12 V) and SMAJ33A (cathode on the LS net, anode on GND). No series ballast on Q5–Q7. No premium clamps. Pins 8/9/10 are those drains.
 
-AOD4184A is a discrete MOSFET, not a protected smart FET. RDS(on) max is 9.5 mohm at Vgs = 4.5 V (not specified at 3.3 V). VGS(th) max is 2.6 V, so a 3.3 V MCU gate turns it on, but RDS(on) at 3.3 V is not guaranteed. No gate driver on this rev. See `docs/HARDWARE_STATUS_rev_p.md`.
+NCE4080K is a discrete MOSFET, not a protected smart FET. Its RDS(on) figure is at VGS = 10 V. The driver, not the MCU pin, is what gets the gate there. See `docs/HARDWARE_STATUS_rev_q.md`.
 
 ## Hellen modules
 MCU **STM32F407VGT6** (LQFP100, LCSC **C12345**) inside Hellen `mega-mcu100/0.3`. Do not switch to `mega-mcu64`. Input lite (1× VR + Hall + analog), 4-ch Core injectors, 4-ch 5 V ign, power, 3× LS. Knock / WBO as pads or CAN.
 
-`bom_replace_microcore-p.csv` keeps `U105` `STM32F407VGT6` / `C12345` and sets Q1–Q7 to `AOD4184A` / `C99124`. D9–D11 are US1M / C112545 and D12–D14 are SMAJ33A / C143131. C15815 and C2252 are not this MCU (op-amp and 22.1184 MHz crystal).
+`bom_replace_microcore-q.csv` keeps `U105` `STM32F407VGT6` / `C12345`, sets Q1–Q7 to `NCE4080K` / `C191380`, and adds U1–U4 `SLM27524CA-DG` / `C2921387` plus the VDD bypass caps. D9–D11 are US1M / C112545 and D12–D14 are SMAJ33A / C143131. C15815 and C2252 are not this MCU (op-amp and 22.1184 MHz crystal).
 
 Firmware board: `coreefi_micro` (sibling tree `/workspace/fw-coreefi-micro`, not published from this hardware repo). That tree will need an **F407** target later; this rev does not add a firmware remote.
 

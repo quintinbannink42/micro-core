@@ -5,7 +5,9 @@
 **Board:** rev o, Q1–Q7 on `microcore-fp:DPAK` (`footprints/DPAK.kicad_mod`)  
 **Written against rev o.** It compared parts and recommended keeping NCE4080K. It did not edit the BOM.
 
-**Quintin override (2026-09-25):** Q1–Q7 on rev p are **AOD4184A / LCSC C99124**, chosen for budget and reliability. That call replaces the recommendation below. Current parts are in `docs/HARDWARE_STATUS_rev_p.md`.
+**Quintin override (2026-09-25):** Q1–Q7 on rev p were **AOD4184A / LCSC C99124**, chosen for budget and reliability. That call replaces the recommendation below. The numbers in this note are historical and are not rewritten.
+
+**Rev q (2026-09-26):** Q1–Q7 are **NCE4080K / C191380** again. The 3.3 V gate problem is handled with four **SLM27524CA-DG / C2921387** drivers on `/V12_RAW`, not with another FET. See `docs/HARDWARE_STATUS_rev_q.md`.
 
 ## Recommendation
 

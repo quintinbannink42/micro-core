@@ -101,7 +101,8 @@
 		(descr "DPAK / TO-252 SMD package, http://www.infineon.com/cms/en/product/packages/PG-TO252/PG-TO252-3-1/")
 		(tags "DPAK TO-252")
 		(property "Reference" "Q2"
-			(at 1.1 -4.5 0)
+			(at 1.1 -5.1 0)
+			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "47a39c21-fa38-4b80-88ae-660a955eb492")
 			(effects

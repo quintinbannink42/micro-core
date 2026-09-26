@@ -28,9 +28,9 @@ Drill origin is still `(aux_axis_origin 107.5 148.0872)`. Hellen modules M1/M2/M
 | `items_not_allowed` tracks | 67 | Frame tracks clipped by the M1/M2/M3 keepouts (some hits are counted twice because a board-level keepout copies the module keepout). Includes the shortened `/OUT_INJ1` segment from rev q. | ignore |
 | `padstack` | 159 | Hellen module. M2 111, M1 32, M3 16. | ignore |
 | `silk_over_copper` | 53 | Frame silk on Q/R/D, including the D9–D14 back silk noted on rev p. | done (follow-up) |
-| `silk_over_copper` | 28 | Hellen M2. | later |
+| `silk_over_copper` | 28 | Hellen M2. | later / ignore |
 | `silk_overlap` | 19 | Frame reference silk (injector FETs, ballast resistors, LS FETs). | done (follow-up) |
-| `silk_overlap` | 1 | Hellen M3 vs Q2. | later |
+| `silk_overlap` | 1 | Q2 reference vs Hellen M3 silk. | done |
 | `lib_footprint_issues` | 5 | Tooling. See below. | ignore |
 | `shorting_items` | 4 | Hellen pad G vs an empty-net pad, or vs one frame track. Exact pairs below. | ignore |
 | `clearance` | 2 | Hellen M3. PTH E4 `/V5_REF` vs empty pad G on B.Cu and In1.Cu. | ignore |
@@ -105,7 +105,7 @@ Two board-level vias, both `/INJ1`, both `(174.2, 90.35)`, size 0.8, drill 0.4. 
 
 Nothing beyond Hellen noise and a human copper review.
 
-`boards/microcore-q/` is already on `main`. This pass did not add a short, a clearance error, or a frame unconnected item. The remaining DRC errors are module keepout hits, the four pad-G shorts, the M3 E4 clearance/mask pair, the M3 edge hit, and M2 pad S1. Frame silk warnings and the duplicate `/INJ1` via are cleared in the follow-up below. Library-id parity warnings remain. A person should still look at the rev q gate-driver copper and at this stitch before ordering.
+`boards/microcore-q/` is already on `main`. This pass did not add a short, a clearance error, or a frame unconnected item. The remaining DRC errors are module keepout hits, the four pad-G shorts, the M3 E4 clearance/mask pair, the M3 edge hit, and M2 pad S1. Frame silk warnings (including the Q2 vs M3 overlap) and the duplicate `/INJ1` via are cleared in the follow-ups below. M2 silk stays later / ignore. Library-id parity warnings remain. A person should still look at the rev q gate-driver copper and at this stitch before ordering.
 
 ## Frame silk and duplicate via
 
@@ -120,10 +120,24 @@ Follow-up on the frame rows above. Hellen M1/M2/M3 were not edited. Drill origin
 | Unconnected items | 1 | 1 | 0 |
 | Schematic parity | 222 | 222 | 0 |
 
-Errors stayed 207. `items_not_allowed`, `padstack`, `shorting_items`, `clearance`, the M3 mask/edge pair, and M2 pad S1 did not move. The one remaining `silk_overlap` is Q2's reference against M3 silk. The 28 `silk_over_copper` hits are all M2.
+Errors stayed 207. `items_not_allowed`, `padstack`, `shorting_items`, `clearance`, the M3 mask/edge pair, and M2 pad S1 did not move. After that pass one `silk_overlap` remained: Q2's reference against M3 silk. The 28 `silk_over_copper` hits are all M2 and stay later / ignore.
 
 The extra `/INJ1` via `bb928a49-411f-561d-bb74-63aa78d8f3f6` is gone. The via kept at `(174.2, 90.35)` is `7e5055f5-3e87-43d5-ba01-377e73eca3d2` (0.8 / 0.4, F.Cu–B.Cu).
 
-Silk edits are on the frame footprints only. Reference text for Q3–Q6 and R8–R11 moved off the pad or the neighboring outline. Q/R/D outline silk, including the D9–D14 back silk, was shortened or dropped where it crossed a pad or another frame outline. Parts still have silk. M2 graphics and the Q2 reference were not moved.
+Silk edits are on the frame footprints only. Reference text for Q3–Q6 and R8–R11 moved off the pad or the neighboring outline. Q/R/D outline silk, including the D9–D14 back silk, was shortened or dropped where it crossed a pad or another frame outline. Parts still have silk. M2 graphics were not moved. The Q2 reference was still on the M3 silk after this pass; the next section moves it.
 
 `footprint_symbol_mismatch` (32) was left. Writing `microcore-fp:DPAK` / `R0603` / `DO214AC` on the embedded footprint clears that parity warning, then KiCad diffs the copy against `footprints/*.kicad_mod` and adds `lib_footprint_mismatch` (19 on the untouched board, more after these silk trims). The lands were not redrawn to force that match.
+
+## Q2 reference vs M3
+
+The last `silk_overlap` was Q2's reference at `(190.6, 82.0)` against M3's south F.SilkS segment (`6ade2831-95f2-41d0-b254-0a71b67e8e91`). Only that reference was unlocked and moved to relative `(1.1, -5.1)`, board `(190.6, 81.4)`. M3 graphics were not edited. Hellen M1/M2/M3 were not edited. Drill origin is still `(107.5, 148.0872)`. No fab pack.
+
+| Category | Before | After | Delta |
+|---|---:|---:|---|
+| Violations | 400 (207 error / 193 warning) | 399 (207 error / 192 warning) | -1 |
+| `silk_overlap` | 1 | 0 | -1 |
+| `silk_over_copper` | 28 | 28 | 0 (all M2, later / ignore) |
+| Unconnected items | 1 | 1 | 0 (M2 pad S1) |
+| Schematic parity | 222 | 222 | 0 |
+
+Errors stayed 207. `items_not_allowed`, `padstack`, `shorting_items`, `clearance`, the M3 mask/edge pair, and M2 pad S1 did not move.

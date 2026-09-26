@@ -1,0 +1,80 @@
+# removal example: R66006 would be removed from BOM
+# R66006,
+
+# replacement example - replace specific fuse part number
+# F42333310,"nSMD050-24V","SMD1206","C70076"
+
+# VR module: vr-max9924/0.3 (was vr-discrete/0.5 on rev b)
+
+# Note: hellen-one submodule points at quintinbannink42/hellen-one with
+# vr-max9924/0.3 D751 comment aligned to LED-GREEN-0603 (matches mega-mcu100).
+
+# rev q: Q1-Q7 back to NCE4080K (LCSC C191380). AOD4184A / C99124 rows removed.
+# Gate drive is four Sillumin SLM27524CA-DG (LCSC C2921387), UCC27524 class,
+# dual non-inverting low-side drivers. VDD is the existing /V12_RAW rail.
+# 7 of 8 channels used (Q1-Q7). U4 channel A input is tied to GND; OUTA unused.
+# Keep Hellen module mega-mcu100/0.3 and STM32F407VGT6 (LCSC C12345).
+# PCB footprint for the FETs stays microcore-fp:DPAK (same land; not redrawn).
+# Series gate resistors R1-R7 stay 12 ohm. MCU GPIO no longer drives the gates.
+# Local bypass at each driver VDD: 100 nF C14663 + 1 uF C559769.
+# 1 uF Samsung CL10A105KB8NNNC / C15849 was out of stock; C559769 is the
+# YAGEO CC0603KRX7R9BB105 1 uF 50 V X7R 0603 substitute.
+# LS clamps kept from rev p: D9-D11 US1M C112545, D12-D14 SMAJ33A C143131.
+# Injector D1-D8 and ballast R8-R11 unchanged.
+# Comments are ASCII-only.
+
+U105,"STM32F407VGT6","LQFP100","C12345"
+
+# Frame power FETs + gate resistors (7 channels)
+Q1,"NCE4080K","DPAK","C191380"
+Q2,"NCE4080K","DPAK","C191380"
+Q3,"NCE4080K","DPAK","C191380"
+Q4,"NCE4080K","DPAK","C191380"
+Q5,"NCE4080K","DPAK","C191380"
+Q6,"NCE4080K","DPAK","C191380"
+Q7,"NCE4080K","DPAK","C191380"
+R1,"12","R0603","C22783"
+R2,"12","R0603","C22783"
+R3,"12","R0603","C22783"
+R4,"12","R0603","C22783"
+R5,"12","R0603","C22783"
+R6,"12","R0603","C22783"
+R7,"12","R0603","C22783"
+
+# Dual low-side gate drivers (SOIC-8, microcore-fp:SOIC-8)
+U1,"SLM27524CA-DG","SOIC-8","C2921387"
+U2,"SLM27524CA-DG","SOIC-8","C2921387"
+U3,"SLM27524CA-DG","SOIC-8","C2921387"
+U4,"SLM27524CA-DG","SOIC-8","C2921387"
+
+# Driver VDD bypass, one 100 nF and one 1 uF at each IC
+C1,"100n","C0603","C14663"
+C3,"100n","C0603","C14663"
+C5,"100n","C0603","C14663"
+C7,"100n","C0603","C14663"
+C2,"1u","C0603","C559769"
+C4,"1u","C0603","C559769"
+C6,"1u","C0603","C559769"
+C8,"1u","C0603","C559769"
+
+# SPEC injector protection: 2nd 12 ohm high-Z ballast + UF flyback + 33V TVS (DO-214AC)
+R8,"12","R0603","C22783"
+R9,"12","R0603","C22783"
+R10,"12","R0603","C22783"
+R11,"12","R0603","C22783"
+D1,"US1M","DO214AC","C112545"
+D2,"US1M","DO214AC","C112545"
+D3,"US1M","DO214AC","C112545"
+D4,"US1M","DO214AC","C112545"
+D5,"SMAJ33A","DO214AC","C143131"
+D6,"SMAJ33A","DO214AC","C143131"
+D7,"SMAJ33A","DO214AC","C143131"
+D8,"SMAJ33A","DO214AC","C143131"
+
+# LS Q5-Q7 flyback + TVS (same parts as D1-D8; no ballast)
+D9,"US1M","DO214AC","C112545"
+D10,"US1M","DO214AC","C112545"
+D11,"US1M","DO214AC","C112545"
+D12,"SMAJ33A","DO214AC","C143131"
+D13,"SMAJ33A","DO214AC","C143131"
+D14,"SMAJ33A","DO214AC","C143131"

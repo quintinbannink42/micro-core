@@ -2,16 +2,16 @@
 <export version="E">
   <design>
     <source>/home/runner/work/micro-core/micro-core/microcore.kicad_sch</source>
-    <date>2026-09-25T18:01:47</date>
+    <date>2026-09-26T09:17:49</date>
     <tool>Eeschema 10.0.6-10.0.6~ubuntu24.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Micro Core</title>
         <company>Core EFI</company>
-        <rev>P</rev>
-        <date>2026-09-24</date>
+        <rev>Q</rev>
+        <date>2026-09-26</date>
         <source>microcore.kicad_sch</source>
-        <comment number="1" value="rev p: AOD4184A Q1-Q7 C99124; LS flyback+TVS; F407VGT6 stays"/>
+        <comment number="1" value="rev q: NCE4080K Q1-Q7 C191380; SLM27524 gate drivers; LS clamps kept"/>
         <comment number="2" value="Firmware board: coreefi_micro — needs F407 target later; fw not in this repo"/>
         <comment number="3" value="PCB basename: microcore (no dashes/underscores)"/>
         <comment number="4" value=""/>
@@ -26,10 +26,10 @@
       <title_block>
         <title>INJ4 Injectors</title>
         <company>Core EFI</company>
-        <rev>P</rev>
-        <date>2026-09-24</date>
+        <rev>Q</rev>
+        <date>2026-09-26</date>
         <source>INJ4.kicad_sch</source>
-        <comment number="1" value="rev p: Q1-Q4 AOD4184A C99124; D1-D8 and R8-R11 kept"/>
+        <comment number="1" value="rev q: Q1-Q4 NCE4080K C191380; SLM27524CA-DG gate drivers; D1-D8 kept"/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
         <comment number="4" value=""/>
@@ -44,11 +44,11 @@
       <title_block>
         <title>LS3 Low-side</title>
         <company>Core EFI</company>
-        <rev>P</rev>
-        <date>2026-09-24</date>
+        <rev>Q</rev>
+        <date>2026-09-26</date>
         <source>LS3.kicad_sch</source>
-        <comment number="1" value="rev p: Q5-Q7 AOD4184A C99124; US1M flyback + SMAJ33A"/>
-        <comment number="2" value="RDS(on) at 4.5 V; Vth max 2.6 V; MCU gate 3.3 V; no gate driver"/>
+        <comment number="1" value="rev q: Q5-Q7 NCE4080K C191380; SLM27524CA-DG; US1M + SMAJ33A kept"/>
+        <comment number="2" value="NCE4080K gates driven to V12_RAW by SLM27524; US1M + SMAJ33A kept"/>
         <comment number="3" value=""/>
         <comment number="4" value=""/>
         <comment number="5" value=""/>
@@ -344,6 +344,102 @@
         </unit>
       </units>
     </comp>
+    <comp ref="C1">
+      <value>100n</value>
+      <footprint>microcore-fp:C0603</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+        <field name="Footprint">microcore-fp:C0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="microcore" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>4fbf02a3-b404-4750-b3b2-01b23441626c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>1u</value>
+      <footprint>microcore-fp:C0603</footprint>
+      <fields>
+        <field name="LCSC">C559769</field>
+        <field name="Footprint">microcore-fp:C0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="microcore" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C559769"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>b5f0c044-d9ac-4d8e-9398-4812b86394cb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>100n</value>
+      <footprint>microcore-fp:C0603</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+        <field name="Footprint">microcore-fp:C0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="microcore" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>88c753a6-f5cf-4151-b10a-a7a75f89fe75</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>1u</value>
+      <footprint>microcore-fp:C0603</footprint>
+      <fields>
+        <field name="LCSC">C559769</field>
+        <field name="Footprint">microcore-fp:C0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="microcore" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C559769"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>c81690e2-cc80-44fe-a5f8-e9ff6e5dc932</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="D1">
       <value>US1M</value>
       <footprint>microcore-fp:DO214AC</footprint>
@@ -537,7 +633,7 @@
       </units>
     </comp>
     <comp ref="Q1">
-      <value>AOD4184A</value>
+      <value>NCE4080K</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -562,7 +658,7 @@
       </units>
     </comp>
     <comp ref="Q2">
-      <value>AOD4184A</value>
+      <value>NCE4080K</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -587,7 +683,7 @@
       </units>
     </comp>
     <comp ref="Q3">
-      <value>AOD4184A</value>
+      <value>NCE4080K</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -612,7 +708,7 @@
       </units>
     </comp>
     <comp ref="Q4">
-      <value>AOD4184A</value>
+      <value>NCE4080K</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -820,6 +916,162 @@
         </unit>
       </units>
     </comp>
+    <comp ref="U1">
+      <value>SLM27524CA-DG</value>
+      <footprint>microcore-fp:SOIC-8</footprint>
+      <fields>
+        <field name="LCSC">C2921387</field>
+        <field name="Footprint">microcore-fp:SOIC-8</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="microcore" part="SLM27524" description="Dual non-inverting low-side gate driver, SOIC-8, UCC27524 class"/>
+      <property name="LCSC" value="C2921387"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>c1f4b572-1ff0-49da-9b5c-8872bf59475a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="4"/>
+            <pin num="8"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>SLM27524CA-DG</value>
+      <footprint>microcore-fp:SOIC-8</footprint>
+      <fields>
+        <field name="LCSC">C2921387</field>
+        <field name="Footprint">microcore-fp:SOIC-8</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="microcore" part="SLM27524" description="Dual non-inverting low-side gate driver, SOIC-8, UCC27524 class"/>
+      <property name="LCSC" value="C2921387"/>
+      <property name="Sheetname" value="INJ4"/>
+      <property name="Sheetfile" value="INJ4.kicad_sch"/>
+      <sheetpath names="/INJ4/" tstamps="/62edc157-0304-4a0d-a7e9-01065a1d8b1e/"/>
+      <tstamps>28411325-9958-4c7c-94e7-a2594d365a16</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="4"/>
+            <pin num="8"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>100n</value>
+      <footprint>microcore-fp:C0603</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+        <field name="Footprint">microcore-fp:C0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="microcore" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value="LS3"/>
+      <property name="Sheetfile" value="LS3.kicad_sch"/>
+      <sheetpath names="/LS3/" tstamps="/2681f3c6-8479-4cd3-8490-1f2d090e826c/"/>
+      <tstamps>70d7f383-8857-4bd3-b234-67bb32bf2754</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>1u</value>
+      <footprint>microcore-fp:C0603</footprint>
+      <fields>
+        <field name="LCSC">C559769</field>
+        <field name="Footprint">microcore-fp:C0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="microcore" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C559769"/>
+      <property name="Sheetname" value="LS3"/>
+      <property name="Sheetfile" value="LS3.kicad_sch"/>
+      <sheetpath names="/LS3/" tstamps="/2681f3c6-8479-4cd3-8490-1f2d090e826c/"/>
+      <tstamps>40a8ecf9-b997-4b78-91b3-13cbcded32ac</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>100n</value>
+      <footprint>microcore-fp:C0603</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+        <field name="Footprint">microcore-fp:C0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="microcore" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value="LS3"/>
+      <property name="Sheetfile" value="LS3.kicad_sch"/>
+      <sheetpath names="/LS3/" tstamps="/2681f3c6-8479-4cd3-8490-1f2d090e826c/"/>
+      <tstamps>1848200a-4875-47ad-952d-d623486ea78d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>1u</value>
+      <footprint>microcore-fp:C0603</footprint>
+      <fields>
+        <field name="LCSC">C559769</field>
+        <field name="Footprint">microcore-fp:C0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="microcore" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C559769"/>
+      <property name="Sheetname" value="LS3"/>
+      <property name="Sheetfile" value="LS3.kicad_sch"/>
+      <sheetpath names="/LS3/" tstamps="/2681f3c6-8479-4cd3-8490-1f2d090e826c/"/>
+      <tstamps>3229758a-64fd-4f11-87e5-709c3851937a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="D9">
       <value>US1M</value>
       <footprint>microcore-fp:DO214AC</footprint>
@@ -965,7 +1217,7 @@
       </units>
     </comp>
     <comp ref="Q5">
-      <value>AOD4184A</value>
+      <value>NCE4080K</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -990,7 +1242,7 @@
       </units>
     </comp>
     <comp ref="Q6">
-      <value>AOD4184A</value>
+      <value>NCE4080K</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -1015,7 +1267,7 @@
       </units>
     </comp>
     <comp ref="Q7">
-      <value>AOD4184A</value>
+      <value>NCE4080K</value>
       <footprint>microcore-fp:DPAK</footprint>
       <fields>
         <field name="Footprint">microcore-fp:DPAK</field>
@@ -1099,6 +1351,66 @@
       <units>
         <unit name="A">
           <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>SLM27524CA-DG</value>
+      <footprint>microcore-fp:SOIC-8</footprint>
+      <fields>
+        <field name="LCSC">C2921387</field>
+        <field name="Footprint">microcore-fp:SOIC-8</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="microcore" part="SLM27524" description="Dual non-inverting low-side gate driver, SOIC-8, UCC27524 class"/>
+      <property name="LCSC" value="C2921387"/>
+      <property name="Sheetname" value="LS3"/>
+      <property name="Sheetfile" value="LS3.kicad_sch"/>
+      <sheetpath names="/LS3/" tstamps="/2681f3c6-8479-4cd3-8490-1f2d090e826c/"/>
+      <tstamps>2386d685-8578-427e-a50a-93b125ef64c8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="4"/>
+            <pin num="8"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>SLM27524CA-DG</value>
+      <footprint>microcore-fp:SOIC-8</footprint>
+      <fields>
+        <field name="LCSC">C2921387</field>
+        <field name="Footprint">microcore-fp:SOIC-8</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="microcore" part="SLM27524" description="Dual non-inverting low-side gate driver, SOIC-8, UCC27524 class"/>
+      <property name="LCSC" value="C2921387"/>
+      <property name="Sheetname" value="LS3"/>
+      <property name="Sheetfile" value="LS3.kicad_sch"/>
+      <sheetpath names="/LS3/" tstamps="/2681f3c6-8479-4cd3-8490-1f2d090e826c/"/>
+      <tstamps>fe9a2d24-fb97-42ce-9183-becbbdd0e087</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="4"/>
+            <pin num="8"/>
             <pin num="1"/>
             <pin num="2"/>
           </pins>
@@ -1374,6 +1686,43 @@
         <pin num="35" name="17" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="microcore" part="C">
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint">microcore-fp:C0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+        <field name="LCSC"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="microcore" part="SLM27524">
+      <description>Dual non-inverting low-side gate driver, SOIC-8, UCC27524 class</description>
+      <docs>https://www.lcsc.com/datasheet/C2921387.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SLM27524CA-DG</field>
+        <field name="Footprint">microcore-fp:SOIC-8</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/C2921387.pdf</field>
+        <field name="Description">Dual non-inverting low-side gate driver, SOIC-8, UCC27524 class</field>
+        <field name="LCSC">C2921387</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ENA" type="input"/>
+        <pin num="2" name="INA" type="input"/>
+        <pin num="3" name="GND" type="passive"/>
+        <pin num="4" name="INB" type="input"/>
+        <pin num="5" name="OUTB" type="output"/>
+        <pin num="6" name="VDD" type="passive"/>
+        <pin num="7" name="OUTA" type="output"/>
+        <pin num="8" name="ENB" type="input"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
     <library logical="hellen-one-common">
@@ -1512,31 +1861,31 @@
     </net>
     <net code="27" name="/OUT_INJ1" class="Default">
       <node ref="M1" pin="E17" pinfunction="OUT_INJ1_(PD3)_E17" pintype="passive"/>
-      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="INB_4" pintype="input"/>
     </net>
     <net code="28" name="/OUT_INJ2" class="Default">
       <node ref="M1" pin="E16" pinfunction="OUT_INJ2_(PA9)_E16" pintype="passive"/>
-      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="INA_2" pintype="input"/>
     </net>
     <net code="29" name="/OUT_INJ3" class="Default">
       <node ref="M1" pin="E15" pinfunction="OUT_INJ3_(PD11)_E15" pintype="passive"/>
-      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="INB_4" pintype="input"/>
     </net>
     <net code="30" name="/OUT_INJ4" class="Default">
       <node ref="M1" pin="E14" pinfunction="OUT_INJ4_(PD10)_E14" pintype="passive"/>
-      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="INA_2" pintype="input"/>
     </net>
     <net code="31" name="/OUT_LS1" class="Default">
       <node ref="M1" pin="E18" pinfunction="OUT_PWM1_(PD13)_E18" pintype="passive"/>
-      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="INB_4" pintype="input"/>
     </net>
     <net code="32" name="/OUT_LS2" class="Default">
       <node ref="M1" pin="E19" pinfunction="OUT_PWM2_(PC6)_E19" pintype="passive"/>
-      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U3" pin="2" pinfunction="INA_2" pintype="input"/>
     </net>
     <net code="33" name="/OUT_LS3" class="Default">
       <node ref="M1" pin="E20" pinfunction="OUT_PWM3_(PC7)_E20" pintype="passive"/>
-      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U4" pin="4" pinfunction="INB_4" pintype="input"/>
     </net>
     <net code="34" name="/SGND" class="Default">
       <node ref="J1" pin="20" pinfunction="20_20" pintype="passive"/>
@@ -1566,6 +1915,14 @@
       <node ref="M3" pin="E4" pinfunction="V5_IN_E4" pintype="passive"/>
     </net>
     <net code="40" name="/V12_RAW" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
       <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D10" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D11" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -1575,6 +1932,18 @@
       <node ref="D9" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J1" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="M2" pin="V3" pinfunction="V12_RAW_V3" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="ENA_1" pintype="input"/>
+      <node ref="U1" pin="6" pinfunction="VDD_6" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="ENB_8" pintype="input"/>
+      <node ref="U2" pin="1" pinfunction="ENA_1" pintype="input"/>
+      <node ref="U2" pin="6" pinfunction="VDD_6" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="ENB_8" pintype="input"/>
+      <node ref="U3" pin="1" pinfunction="ENA_1" pintype="input"/>
+      <node ref="U3" pin="6" pinfunction="VDD_6" pintype="passive"/>
+      <node ref="U3" pin="8" pinfunction="ENB_8" pintype="input"/>
+      <node ref="U4" pin="1" pinfunction="ENA_1" pintype="input"/>
+      <node ref="U4" pin="6" pinfunction="VDD_6" pintype="passive"/>
+      <node ref="U4" pin="8" pinfunction="ENB_8" pintype="input"/>
     </net>
     <net code="41" name="/V33" class="Default">
       <node ref="M1" pin="N21" pinfunction="V33_N21" pintype="passive"/>
@@ -1610,6 +1979,14 @@
       <node ref="M1" pin="N7" pinfunction="nReset_N7" pintype="passive"/>
     </net>
     <net code="50" name="GND" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
       <node ref="D12" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D13" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D14" pin="2" pinfunction="A_2" pintype="passive"/>
@@ -1632,6 +2009,11 @@
       <node ref="Q5" pin="3" pinfunction="S_3" pintype="power_in"/>
       <node ref="Q6" pin="3" pinfunction="S_3" pintype="power_in"/>
       <node ref="Q7" pin="3" pinfunction="S_3" pintype="power_in"/>
+      <node ref="U1" pin="3" pinfunction="GND_3" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="GND_3" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="GND_3" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="INA_2" pintype="input"/>
+      <node ref="U4" pin="3" pinfunction="GND_3" pintype="passive"/>
     </net>
     <net code="51" name="Net-(Q1-D)" class="Default">
       <node ref="Q1" pin="2" pinfunction="D_2" pintype="passive"/>
@@ -1677,164 +2059,195 @@
       <node ref="Q7" pin="1" pinfunction="IN_1" pintype="input"/>
       <node ref="R7" pin="1" pintype="passive"/>
     </net>
-    <net code="62" name="unconnected-(M1-I2C_SCL_(PB10)-PadE3)" class="Default">
+    <net code="62" name="Net-(U1-OUTA)" class="Default">
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="OUTA_7" pintype="output"/>
+    </net>
+    <net code="63" name="Net-(U1-OUTB)" class="Default">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="OUTB_5" pintype="output"/>
+    </net>
+    <net code="64" name="Net-(U2-OUTA)" class="Default">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="OUTA_7" pintype="output"/>
+    </net>
+    <net code="65" name="Net-(U2-OUTB)" class="Default">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="OUTB_5" pintype="output"/>
+    </net>
+    <net code="66" name="Net-(U3-OUTA)" class="Default">
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U3" pin="7" pinfunction="OUTA_7" pintype="output"/>
+    </net>
+    <net code="67" name="Net-(U3-OUTB)" class="Default">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U3" pin="5" pinfunction="OUTB_5" pintype="output"/>
+    </net>
+    <net code="68" name="Net-(U4-OUTB)" class="Default">
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U4" pin="5" pinfunction="OUTB_5" pintype="output"/>
+    </net>
+    <net code="69" name="unconnected-(M1-I2C_SCL_(PB10)-PadE3)" class="Default">
       <node ref="M1" pin="E3" pinfunction="I2C_SCL_(PB10)_E3" pintype="passive"/>
     </net>
-    <net code="63" name="unconnected-(M1-I2C_SDA_(PB11)-PadE4)" class="Default">
+    <net code="70" name="unconnected-(M1-I2C_SDA_(PB11)-PadE4)" class="Default">
       <node ref="M1" pin="E4" pinfunction="I2C_SDA_(PB11)_E4" pintype="passive"/>
     </net>
-    <net code="64" name="unconnected-(M1-IN_AUX3_(PA7)-PadS7)" class="Default">
+    <net code="71" name="unconnected-(M1-IN_AUX3_(PA7)-PadS7)" class="Default">
       <node ref="M1" pin="S7" pinfunction="IN_AUX3_(PA7)_S7" pintype="passive"/>
     </net>
-    <net code="65" name="unconnected-(M1-IN_AUX4_(PC5)-PadS6)" class="Default">
+    <net code="72" name="unconnected-(M1-IN_AUX4_(PC5)-PadS6)" class="Default">
       <node ref="M1" pin="S6" pinfunction="IN_AUX4_(PC5)_S6" pintype="passive"/>
     </net>
-    <net code="66" name="unconnected-(M1-IN_D3_(PE14)-PadS2)" class="Default">
+    <net code="73" name="unconnected-(M1-IN_D3_(PE14)-PadS2)" class="Default">
       <node ref="M1" pin="S2" pinfunction="IN_D3_(PE14)_S2" pintype="passive"/>
     </net>
-    <net code="67" name="unconnected-(M1-IN_D4_(PE15)-PadS1)" class="Default">
+    <net code="74" name="unconnected-(M1-IN_D4_(PE15)-PadS1)" class="Default">
       <node ref="M1" pin="S1" pinfunction="IN_D4_(PE15)_S1" pintype="passive"/>
     </net>
-    <net code="68" name="unconnected-(M1-IN_KNOCK_(PA2)-PadS15)" class="Default">
+    <net code="75" name="unconnected-(M1-IN_KNOCK_(PA2)-PadS15)" class="Default">
       <node ref="M1" pin="S15" pinfunction="IN_KNOCK_(PA2)_S15" pintype="passive"/>
     </net>
-    <net code="69" name="unconnected-(M1-IN_MAP2_(PC1)-PadS12)" class="Default">
+    <net code="76" name="unconnected-(M1-IN_MAP2_(PC1)-PadS12)" class="Default">
       <node ref="M1" pin="S12" pinfunction="IN_MAP2_(PC1)_S12" pintype="passive"/>
     </net>
-    <net code="70" name="unconnected-(M1-IN_O2S2_(PA1)-PadS10)" class="Default">
+    <net code="77" name="unconnected-(M1-IN_O2S2_(PA1)-PadS10)" class="Default">
       <node ref="M1" pin="S10" pinfunction="IN_O2S2_(PA1)_S10" pintype="passive"/>
     </net>
-    <net code="71" name="unconnected-(M1-IN_O2S_{slash}_CAN_WAKEUP_(PA0)-PadS11)" class="Default">
+    <net code="78" name="unconnected-(M1-IN_O2S_{slash}_CAN_WAKEUP_(PA0)-PadS11)" class="Default">
       <node ref="M1" pin="S11" pinfunction="IN_O2S_/_CAN_WAKEUP_(PA0)_S11" pintype="passive"/>
     </net>
-    <net code="72" name="unconnected-(M1-IN_PPS_(PA3)-PadS19)" class="Default">
+    <net code="79" name="unconnected-(M1-IN_PPS_(PA3)-PadS19)" class="Default">
       <node ref="M1" pin="S19" pinfunction="IN_PPS_(PA3)_S19" pintype="passive"/>
     </net>
-    <net code="73" name="unconnected-(M1-IN_VSS_(PE11)-PadS17)" class="Default">
+    <net code="80" name="unconnected-(M1-IN_VSS_(PE11)-PadS17)" class="Default">
       <node ref="M1" pin="S17" pinfunction="IN_VSS_(PE11)_S17" pintype="passive"/>
     </net>
-    <net code="74" name="unconnected-(M1-LED_GREEN-PadN14a)" class="Default">
+    <net code="81" name="unconnected-(M1-LED_GREEN-PadN14a)" class="Default">
       <node ref="M1" pin="N14a" pinfunction="LED_GREEN_N14a" pintype="passive"/>
     </net>
-    <net code="75" name="unconnected-(M1-LED_YELLOW-PadN14b)" class="Default">
+    <net code="82" name="unconnected-(M1-LED_YELLOW-PadN14b)" class="Default">
       <node ref="M1" pin="N14b" pinfunction="LED_YELLOW_N14b" pintype="passive"/>
     </net>
-    <net code="76" name="unconnected-(M1-OUT_INJ5_(PD2)-PadE13)" class="Default">
+    <net code="83" name="unconnected-(M1-OUT_INJ5_(PD2)-PadE13)" class="Default">
       <node ref="M1" pin="E13" pinfunction="OUT_INJ5_(PD2)_E13" pintype="passive"/>
     </net>
-    <net code="77" name="unconnected-(M1-OUT_INJ6_(PA8)-PadE12)" class="Default">
+    <net code="84" name="unconnected-(M1-OUT_INJ6_(PA8)-PadE12)" class="Default">
       <node ref="M1" pin="E12" pinfunction="OUT_INJ6_(PA8)_E12" pintype="passive"/>
     </net>
-    <net code="78" name="unconnected-(M1-OUT_INJ7_(PD15)-PadE11)" class="Default">
+    <net code="85" name="unconnected-(M1-OUT_INJ7_(PD15)-PadE11)" class="Default">
       <node ref="M1" pin="E11" pinfunction="OUT_INJ7_(PD15)_E11" pintype="passive"/>
     </net>
-    <net code="79" name="unconnected-(M1-OUT_INJ8_(PD12)-PadE10)" class="Default">
+    <net code="86" name="unconnected-(M1-OUT_INJ8_(PD12)-PadE10)" class="Default">
       <node ref="M1" pin="E10" pinfunction="OUT_INJ8_(PD12)_E10" pintype="passive"/>
     </net>
-    <net code="80" name="unconnected-(M1-OUT_PWM4_(PC8)-PadE21)" class="Default">
+    <net code="87" name="unconnected-(M1-OUT_PWM4_(PC8)-PadE21)" class="Default">
       <node ref="M1" pin="E21" pinfunction="OUT_PWM4_(PC8)_E21" pintype="passive"/>
     </net>
-    <net code="81" name="unconnected-(M1-OUT_PWM5_(PC9)-PadE22)" class="Default">
+    <net code="88" name="unconnected-(M1-OUT_PWM5_(PC9)-PadE22)" class="Default">
       <node ref="M1" pin="E22" pinfunction="OUT_PWM5_(PC9)_E22" pintype="passive"/>
     </net>
-    <net code="82" name="unconnected-(M1-OUT_PWM6_(PD14)-PadE23)" class="Default">
+    <net code="89" name="unconnected-(M1-OUT_PWM6_(PD14)-PadE23)" class="Default">
       <node ref="M1" pin="E23" pinfunction="OUT_PWM6_(PD14)_E23" pintype="passive"/>
     </net>
-    <net code="83" name="unconnected-(M1-OUT_PWR_EN_(PE10)-PadN20)" class="Default">
+    <net code="90" name="unconnected-(M1-OUT_PWR_EN_(PE10)-PadN20)" class="Default">
       <node ref="M1" pin="N20" pinfunction="OUT_PWR_EN_(PE10)_N20" pintype="passive"/>
     </net>
-    <net code="84" name="unconnected-(M1-SPI2_CS_{slash}_CAN2_RX_(PB12)-PadE6)" class="Default">
+    <net code="91" name="unconnected-(M1-SPI2_CS_{slash}_CAN2_RX_(PB12)-PadE6)" class="Default">
       <node ref="M1" pin="E6" pinfunction="SPI2_CS_/_CAN2_RX_(PB12)_E6" pintype="passive"/>
     </net>
-    <net code="85" name="unconnected-(M1-SPI2_MISO_(PB14)-PadE8)" class="Default">
+    <net code="92" name="unconnected-(M1-SPI2_MISO_(PB14)-PadE8)" class="Default">
       <node ref="M1" pin="E8" pinfunction="SPI2_MISO_(PB14)_E8" pintype="passive"/>
     </net>
-    <net code="86" name="unconnected-(M1-SPI2_MOSI_(PB15)-PadE9)" class="Default">
+    <net code="93" name="unconnected-(M1-SPI2_MOSI_(PB15)-PadE9)" class="Default">
       <node ref="M1" pin="E9" pinfunction="SPI2_MOSI_(PB15)_E9" pintype="passive"/>
     </net>
-    <net code="87" name="unconnected-(M1-SPI2_SCK_{slash}_CAN2_TX_(PB13)-PadE7)" class="Default">
+    <net code="94" name="unconnected-(M1-SPI2_SCK_{slash}_CAN2_TX_(PB13)-PadE7)" class="Default">
       <node ref="M1" pin="E7" pinfunction="SPI2_SCK_/_CAN2_TX_(PB13)_E7" pintype="passive"/>
     </net>
-    <net code="88" name="unconnected-(M1-SPI3_CS_(PA15)-PadN9)" class="Default">
+    <net code="95" name="unconnected-(M1-SPI3_CS_(PA15)-PadN9)" class="Default">
       <node ref="M1" pin="N9" pinfunction="SPI3_CS_(PA15)_N9" pintype="passive"/>
     </net>
-    <net code="89" name="unconnected-(M1-SPI3_MISO_(PC11)-PadN11)" class="Default">
+    <net code="96" name="unconnected-(M1-SPI3_MISO_(PC11)-PadN11)" class="Default">
       <node ref="M1" pin="N11" pinfunction="SPI3_MISO_(PC11)_N11" pintype="passive"/>
     </net>
-    <net code="90" name="unconnected-(M1-SPI3_MOSI_(PC12)-PadN12)" class="Default">
+    <net code="97" name="unconnected-(M1-SPI3_MOSI_(PC12)-PadN12)" class="Default">
       <node ref="M1" pin="N12" pinfunction="SPI3_MOSI_(PC12)_N12" pintype="passive"/>
     </net>
-    <net code="91" name="unconnected-(M1-SPI3_SCK_(PC10)-PadN10)" class="Default">
+    <net code="98" name="unconnected-(M1-SPI3_SCK_(PC10)-PadN10)" class="Default">
       <node ref="M1" pin="N10" pinfunction="SPI3_SCK_(PC10)_N10" pintype="passive"/>
     </net>
-    <net code="92" name="unconnected-(M1-SWCLK_(PA14)-PadN6)" class="Default">
+    <net code="99" name="unconnected-(M1-SWCLK_(PA14)-PadN6)" class="Default">
       <node ref="M1" pin="N6" pinfunction="SWCLK_(PA14)_N6" pintype="passive"/>
     </net>
-    <net code="93" name="unconnected-(M1-SWDIO_(PA13)-PadN5)" class="Default">
+    <net code="100" name="unconnected-(M1-SWDIO_(PA13)-PadN5)" class="Default">
       <node ref="M1" pin="N5" pinfunction="SWDIO_(PA13)_N5" pintype="passive"/>
     </net>
-    <net code="94" name="unconnected-(M1-SWO_(PB3)-PadN8)" class="Default">
+    <net code="101" name="unconnected-(M1-SWO_(PB3)-PadN8)" class="Default">
       <node ref="M1" pin="N8" pinfunction="SWO_(PB3)_N8" pintype="passive"/>
     </net>
-    <net code="95" name="unconnected-(M1-UART2_RX_(PD6)-PadN14)" class="Default">
+    <net code="102" name="unconnected-(M1-UART2_RX_(PD6)-PadN14)" class="Default">
       <node ref="M1" pin="N14" pinfunction="UART2_RX_(PD6)_N14" pintype="passive"/>
     </net>
-    <net code="96" name="unconnected-(M1-UART2_TX_(PD5)-PadN13)" class="Default">
+    <net code="103" name="unconnected-(M1-UART2_TX_(PD5)-PadN13)" class="Default">
       <node ref="M1" pin="N13" pinfunction="UART2_TX_(PD5)_N13" pintype="passive"/>
     </net>
-    <net code="97" name="unconnected-(M1-UART8_RX_(PE0)-PadN18)" class="Default">
+    <net code="104" name="unconnected-(M1-UART8_RX_(PE0)-PadN18)" class="Default">
       <node ref="M1" pin="N18" pinfunction="UART8_RX_(PE0)_N18" pintype="passive"/>
     </net>
-    <net code="98" name="unconnected-(M1-UART8_TX_(PE1)-PadN19)" class="Default">
+    <net code="105" name="unconnected-(M1-UART8_TX_(PE1)-PadN19)" class="Default">
       <node ref="M1" pin="N19" pinfunction="UART8_TX_(PE1)_N19" pintype="passive"/>
     </net>
-    <net code="99" name="unconnected-(M1-V5A_SWITCHABLE-PadE1)" class="Default">
+    <net code="106" name="unconnected-(M1-V5A_SWITCHABLE-PadE1)" class="Default">
       <node ref="M1" pin="E1" pinfunction="V5A_SWITCHABLE_E1" pintype="passive"/>
     </net>
-    <net code="100" name="unconnected-(M1-V5A_SWITCHABLE-PadW2)" class="Default">
+    <net code="107" name="unconnected-(M1-V5A_SWITCHABLE-PadW2)" class="Default">
       <node ref="M1" pin="W2" pinfunction="V5A_SWITCHABLE_W2" pintype="passive"/>
     </net>
-    <net code="101" name="unconnected-(M1-V5A_SWITCHABLE-PadW14)" class="Default">
+    <net code="108" name="unconnected-(M1-V5A_SWITCHABLE-PadW14)" class="Default">
       <node ref="M1" pin="W14" pinfunction="V5A_SWITCHABLE_W14" pintype="passive"/>
     </net>
-    <net code="102" name="unconnected-(M1-V33-PadN23)" class="Default">
+    <net code="109" name="unconnected-(M1-V33-PadN23)" class="Default">
       <node ref="M1" pin="N23" pinfunction="V33_N23" pintype="passive"/>
     </net>
-    <net code="103" name="unconnected-(M1-V33_REF-PadW13)" class="Default">
+    <net code="110" name="unconnected-(M1-V33_REF-PadW13)" class="Default">
       <node ref="M1" pin="W13" pinfunction="V33_REF_W13" pintype="passive"/>
     </net>
-    <net code="104" name="unconnected-(M1-V33_SWITCHABLE-PadN15)" class="Default">
+    <net code="111" name="unconnected-(M1-V33_SWITCHABLE-PadN15)" class="Default">
       <node ref="M1" pin="N15" pinfunction="V33_SWITCHABLE_N15" pintype="passive"/>
     </net>
-    <net code="105" name="unconnected-(M1-VCC-PadN22)" class="Default">
+    <net code="112" name="unconnected-(M1-VCC-PadN22)" class="Default">
       <node ref="M1" pin="N22" pinfunction="VCC_N22" pintype="passive"/>
     </net>
-    <net code="106" name="unconnected-(M1-VREF1-PadS22)" class="Default">
+    <net code="113" name="unconnected-(M1-VREF1-PadS22)" class="Default">
       <node ref="M1" pin="S22" pinfunction="VREF1_S22" pintype="passive"/>
     </net>
-    <net code="107" name="unconnected-(M1-VREF2-PadS5)" class="Default">
+    <net code="114" name="unconnected-(M1-VREF2-PadS5)" class="Default">
       <node ref="M1" pin="S5" pinfunction="VREF2_S5" pintype="passive"/>
     </net>
-    <net code="108" name="unconnected-(M2-5VP-PadV4)" class="Default">
+    <net code="115" name="unconnected-(M2-5VP-PadV4)" class="Default">
       <node ref="M2" pin="V4" pinfunction="5VP_V4" pintype="passive"/>
     </net>
-    <net code="109" name="unconnected-(M2-EN_5VP-PadE5)" class="Default">
+    <net code="116" name="unconnected-(M2-EN_5VP-PadE5)" class="Default">
       <node ref="M2" pin="E5" pinfunction="EN_5VP_E5" pintype="passive"/>
     </net>
-    <net code="110" name="unconnected-(M2-PG_5VP-PadE6)" class="Default">
+    <net code="117" name="unconnected-(M2-PG_5VP-PadE6)" class="Default">
       <node ref="M2" pin="E6" pinfunction="PG_5VP_E6" pintype="passive"/>
     </net>
-    <net code="111" name="unconnected-(M2-V12-PadE2)" class="Default">
+    <net code="118" name="unconnected-(M2-V12-PadE2)" class="Default">
       <node ref="M2" pin="E2" pinfunction="V12_E2" pintype="passive"/>
     </net>
-    <net code="112" name="unconnected-(M2-V12_PERM-PadV1)" class="Default">
+    <net code="119" name="unconnected-(M2-V12_PERM-PadV1)" class="Default">
       <node ref="M2" pin="V1" pinfunction="V12_PERM_V1" pintype="passive"/>
     </net>
-    <net code="113" name="unconnected-(M3-HALL_EN-PadE1)" class="Default">
+    <net code="120" name="unconnected-(M3-HALL_EN-PadE1)" class="Default">
       <node ref="M3" pin="E1" pinfunction="HALL_EN_E1" pintype="passive"/>
     </net>
-    <net code="114" name="unconnected-(M3-NC-PadE2)" class="Default">
+    <net code="121" name="unconnected-(M3-NC-PadE2)" class="Default">
       <node ref="M3" pin="E2" pinfunction="NC_E2" pintype="passive"/>
+    </net>
+    <net code="122" name="unconnected-(U4-OUTA-Pad7)" class="Default">
+      <node ref="U4" pin="7" pinfunction="OUTA_7" pintype="output+no_connect"/>
     </net>
   </nets>
 </export>

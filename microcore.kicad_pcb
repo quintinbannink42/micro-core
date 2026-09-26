@@ -13335,6 +13335,14 @@
 		(uuid "c46e7379-30a3-4b3d-8c72-e99018bc1d1f")
 	)
 	(via
+		(at 131.3 82)
+		(size 0.8)
+		(drill 0.4)
+		(layers "F.Cu" "B.Cu")
+		(net "GND")
+		(uuid "a7c3e1d4-6b28-4f05-9c71-2e8d4b6a91f0")
+	)
+	(via
 		(at 186.9 88.3)
 		(size 0.8)
 		(drill 0.4)

@@ -97,7 +97,7 @@ Workflow: `.github/workflows/create-board.yaml` runs on push to `main`, then `bi
 ## Leftovers — before ordering boards
 
 1. Green Create Board `boards/microcore-q/` and confirm the JLC BOM shows NCE4080K / C191380 on Q1–Q7, SLM27524CA-DG / C2921387 on U1–U4, C14663 and C559769 on the bypass caps, STM32F407VGT6 / C12345 on U105, and the rev p clamps still present.
-2. Residual Hellen keepout / padstack / module pad-G / edge noise, same counts as rev p.
+2. Residual Hellen keepout / padstack / module pad-G / edge noise, same counts as rev p. Owner table and the one frame fix: [DRC_TRIAGE_rev_q.md](DRC_TRIAGE_rev_q.md). The F.Cu GND island in the unconnected pair above is stitched at `(131.3, 82)` there. M2 pad S1 stays unconnected (inside the M2 keepout). Violation counts in the table above did not change.
 3. Firmware `coreefi_micro` F407 target in the sibling tree (not this PR).
 
 ## Incident guard
